@@ -1,0 +1,9 @@
+{
+  "name": "Pine Hotel",
+  "short_name": "Pine Hotel",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A hotel for your great escape.",
+  "icons": []
+}
