@@ -1,0 +1,104 @@
+{
+  "Metadata": {
+    "siteName": "The Pines Hotel",
+    "siteDescription": "Un hotel rural boutique de 4★ ubicado en una casa de campo del siglo XIX cuidadosamente restaurada, rodeado de pinos al pie de la montaña."
+  },
+  "Navigation": {
+    "home": "Inicio",
+    "rooms": "Habitaciones",
+    "dine": "Gastronomía",
+    "experiences": "Experiencias",
+    "extras": "Servicios",
+    "contact": "Contacto",
+    "booking": "Reservar"
+  },
+  "Home": {
+    "heroTitle": "Bienvenido a The Pines Hotel",
+    "heroSubtitle": "Un refugio tranquilo en el corazón del campo",
+    "introTitle": "The Pines Retreat",
+    "introText": "Una casa de campo del siglo XIX cuidadosamente restaurada, transformada en un hotel rural boutique de 4★ rodeado de pinos al pie de la montaña.",
+    "amenities": "Servicios",
+    "amenityRestaurant": "Restaurante",
+    "amenityPool": "Piscina Estacional",
+    "amenityGardens": "Jardines",
+    "amenityParking": "Aparcamiento Gratuito",
+    "exploreRooms": "Explora Nuestras Habitaciones",
+    "bookNow": "Reserva Tu Estancia",
+    "roomTypes": {
+      "double": "Habitación Doble",
+      "suite": "Suite",
+      "family": "Habitación Familiar"
+    }
+  },
+  "Rooms": {
+    "title": "Nuestras Habitaciones",
+    "subtitle": "Espacios cuidadosamente diseñados que combinan confort y elegancia",
+    "doubleRoom": "Habitación Doble",
+    "suite": "Suite",
+    "familyRoom": "Habitación Familiar",
+    "features": "Características",
+    "gallery": "Galería",
+    "bookRoom": "Reservar Esta Habitación",
+    "startingFrom": "desde"
+  },
+  "Dine": {
+    "title": "Restaurante La Ruta",
+    "subtitle": "Gastronomía relajada en una atmósfera cálida y acogedora",
+    "description": "Nuestro restaurante La Ruta ofrece una experiencia culinaria cálida y acogedora en un entorno rural. Celebramos los sabores locales e ingredientes de temporada, creando una experiencia que complemente la paz del entorno.",
+    "openingHours": "Horario",
+    "menu": "Menú",
+    "reservations": "Hacer una Reserva",
+    "localCuisine": "Cocina Local",
+    "seasonalMenus": "Menús de Temporada"
+  },
+  "Experiences": {
+    "title": "Experiencias",
+    "subtitle": "Descubre la belleza del viaje lento",
+    "nature": "Naturaleza",
+    "countryside": "Exploración Rural",
+    "relaxation": "Relajación y Bienestar",
+    "adventure": "Exploración de Montaña",
+    "description": "Sumérgete en el tranquilo entorno rural y descubre actividades que celebran la naturaleza, la relajación y la exploración."
+  },
+  "Extras": {
+    "title": "Servicios Adicionales",
+    "subtitle": "Mejora tu estancia con nuestros servicios adicionales",
+    "spa": "Servicios de Spa",
+    "transfers": "Traslados al Aeropuerto",
+    "events": "Eventos Privados",
+    "cycling": "Tours en Bicicleta",
+    "description": "Servicios adicionales para personalizar tu experiencia en The Pines Hotel."
+  },
+  "Contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Nos encantaría saber de ti",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "contactForm": "Formulario de Contacto",
+    "followUs": "Síguenos",
+    "hoursTitle": "Horario de Apertura",
+    "location": "The Pines Hotel, Mountain Valley, España"
+  },
+  "Footer": {
+    "copyright": "© 2025 The Pines Hotel. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos y Condiciones",
+    "followUs": "Síguenos"
+  },
+  "Common": {
+    "description": "Descripción",
+    "price": "Precio",
+    "capacity": "Capacidad",
+    "area": "Área",
+    "amenities": "Servicios",
+    "loading": "Cargando...",
+    "error": "Algo salió mal",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "close": "Cerrar"
+  }
+}

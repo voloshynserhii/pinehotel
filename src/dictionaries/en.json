@@ -1,0 +1,104 @@
+{
+  "Metadata": {
+    "siteName": "The Pines Hotel",
+    "siteDescription": "A 4★ boutique countryside hotel set in a beautifully restored 19th-century farmhouse, surrounded by pine trees at the foot of the mountains."
+  },
+  "Navigation": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "dine": "Dine",
+    "experiences": "Experiences",
+    "extras": "Extras",
+    "contact": "Contact",
+    "booking": "Book Now"
+  },
+  "Home": {
+    "heroTitle": "Welcome to The Pines Hotel",
+    "heroSubtitle": "A peaceful retreat in the heart of the countryside",
+    "introTitle": "The Pines Retreat",
+    "introText": "A beautifully restored 19th-century farmhouse, thoughtfully converted into a 4★ boutique countryside hotel set among pine trees at the foot of the mountains.",
+    "amenities": "Amenities",
+    "amenityRestaurant": "On-site Restaurant",
+    "amenityPool": "Seasonal Pool",
+    "amenityGardens": "Lush Gardens",
+    "amenityParking": "Free Parking",
+    "exploreRooms": "Explore Our Rooms",
+    "bookNow": "Book Your Stay",
+    "roomTypes": {
+      "double": "Double Room",
+      "suite": "Suite",
+      "family": "Family Room"
+    }
+  },
+  "Rooms": {
+    "title": "Our Rooms",
+    "subtitle": "Carefully designed spaces combining comfort and elegance",
+    "doubleRoom": "Double Room",
+    "suite": "Suite",
+    "familyRoom": "Family Room",
+    "features": "Features",
+    "gallery": "Gallery",
+    "bookRoom": "Book This Room",
+    "startingFrom": "starting from"
+  },
+  "Dine": {
+    "title": "La Ruta Restaurant",
+    "subtitle": "Relaxed dining in a warm and social atmosphere",
+    "description": "Our on-site restaurant La Ruta offers a warm, social dining experience in a countryside setting. We celebrate local flavors and seasonal ingredients, creating a culinary experience that complements the peaceful surroundings.",
+    "openingHours": "Opening Hours",
+    "menu": "Menu",
+    "reservations": "Make a Reservation",
+    "localCuisine": "Local Cuisine",
+    "seasonalMenus": "Seasonal Menus"
+  },
+  "Experiences": {
+    "title": "Experiences",
+    "subtitle": "Discover the beauty of slow travel",
+    "nature": "Nature",
+    "countryside": "Countryside Exploration",
+    "relaxation": "Relaxation & Wellness",
+    "adventure": "Mountain Exploration",
+    "description": "Immerse yourself in the peaceful countryside surroundings and discover activities that celebrate nature, relaxation, and exploration."
+  },
+  "Extras": {
+    "title": "Extras & Services",
+    "subtitle": "Enhance your stay with our additional services",
+    "spa": "Spa Services",
+    "transfers": "Airport Transfers",
+    "events": "Private Events",
+    "cycling": "Guided Cycling Tours",
+    "description": "Add-on services to personalize your experience at The Pines Hotel."
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "contactForm": "Contact Form",
+    "followUs": "Follow Us",
+    "hoursTitle": "Opening Hours",
+    "location": "The Pines Hotel, Mountain Valley, Spain"
+  },
+  "Footer": {
+    "copyright": "© 2025 The Pines Hotel. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "followUs": "Follow Us"
+  },
+  "Common": {
+    "description": "Description",
+    "price": "Price",
+    "capacity": "Capacity",
+    "area": "Area",
+    "amenities": "Amenities",
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close"
+  }
+}
