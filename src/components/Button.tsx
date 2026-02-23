@@ -20,7 +20,7 @@ export function Button({
   };
 
   const variantClasses = {
-    primary: 'bg-sage-700 text-cream-50 hover:bg-sage-800 focus:ring-sage-500',
+    primary: 'bg-[#c8b89a] text-cream-50 hover:bg-[#b8a882] focus:ring-sage-500',
     secondary: 'bg-cream-100 text-stone-900 hover:bg-cream-200 focus:ring-cream-500',
     outline: 'border-2 border-sage-700 text-sage-700 hover:bg-sage-50 focus:ring-sage-500',
   };

@@ -1,32 +1,51 @@
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
+import BookingBar from './BookingBar';
 
 interface HeroProps {
   title: string;
   subtitle?: string;
-  backgroundImage?: string;
+  videoSrc?: string;
+  imgSrc?: string;
   isDark?: boolean;
 }
 
-export function Hero({ title, subtitle, backgroundImage, isDark = false }: HeroProps) {
+export function Hero({
+  title,
+  subtitle,
+  imgSrc,
+  videoSrc = "https://media.istockphoto.com/id/1622710632/es/v%C3%ADdeo/hermoso-patio-de-campo-en-toscana-rodeado-de-campos-de-cipr%C3%A9s-t%C3%ADpicos-de-toscana.mp4?s=mp4-640x640-is&k=20&c=Y6LioyhiolLeza5ivi8xqSLcZ40-dYPX_nF_6qfuOKw=",
+  isDark = false,
+}: HeroProps) {
   return (
     <section
       className={cn(
-        'w-full py-24 md:py-32 lg:py-40',
+        'w-full relative h-screen',
         isDark ? 'bg-stone-900 text-cream-50' : 'bg-cream-50 text-stone-900'
       )}
-      style={
-        backgroundImage
-          ? {
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${backgroundImage})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              color: 'white',
-            }
-          : undefined
-      }
     >
-      <div className="container mx-auto px-gutter text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 leading-tight">
+      {imgSrc ? (
+        <Image
+          src={imgSrc}
+          alt="Background"
+          fill
+          style={{ objectFit: 'cover' }}
+          className="z-0"
+          priority
+        />
+      ) : (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover z-0"
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      )}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 container px-gutter text-center bg-white px-12 py-8 rounded-lg backdrop-blur-sm bg-opacity-30 w-max">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-10 leading-tight">
           {title}
         </h1>
         {subtitle && (
@@ -35,6 +54,11 @@ export function Hero({ title, subtitle, backgroundImage, isDark = false }: HeroP
           </p>
         )}
       </div>
+
+      <div className="absolute bottom-[50px] left-0 w-full z-10 px-[5%]">
+        <BookingBar />
+      </div>
+
     </section>
   );
 }

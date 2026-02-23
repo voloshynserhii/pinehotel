@@ -12,7 +12,7 @@ export function BookingButton({ slug }: { slug: string }) {
   return (
     <button
       onClick={handleClick}
-      className="w-full bg-sage-700 text-cream-50 py-3 rounded font-semibold hover:bg-sage-800 transition-colors"
+      className="w-full bg-[#c8b89a] text-cream-50 py-3 rounded font-semibold hover:bg-[#b8a882] transition-colors"
     >
       Book This Room
     </button>

@@ -2,11 +2,13 @@ import { notFound } from 'next/navigation';
 import { getRoomBySlug, getAllRoomSlugs } from '@/content/rooms';
 import { formatPrice } from '@/lib/utils';
 import type { Metadata } from 'next';
-import { BookingButton } from '@/components';
+import { BookingButton, RoomsSlider } from '@/components';
+import Image from 'next/image';
+import { Locale, getDictionary } from '@/get-dictionary';
 
 interface RoomPageProps {
   params: {
-    locale: string;
+    lang: Locale;
     slug: string;
   };
 }
@@ -44,7 +46,9 @@ export default async function RoomPage({
 }: {
   params: Promise<RoomPageProps['params']>;
 }) {
-  const { slug, locale } = await params;
+  const { slug, lang } = await params;
+  console.log(await params)
+  const dict = await getDictionary(lang);
   const room = getRoomBySlug(slug);
 
   if (!room) {
@@ -54,7 +58,7 @@ export default async function RoomPage({
   return (
     <>
       {/* Hero with Room Name */}
-      <section className="bg-cream-50 py-12 md:py-16">
+      <section className="bg-cream-50 pt-12 md:py-16 mt-16">
         <div className="container mx-auto px-gutter">
           <h1 className="text-5xl font-serif font-bold text-stone-900 mb-2">
             {room.name}
@@ -70,18 +74,26 @@ export default async function RoomPage({
           <div className="lg:col-span-2">
             {/* Room Image Gallery */}
             <div className="mb-12">
-              <div className="aspect-video bg-gradient-to-br from-stone-200 to-stone-300 rounded-lg mb-6 flex items-center justify-center">
-                <span className="text-stone-500">
-                  Room Gallery - Placeholder
-                </span>
+              <div className="aspect-video mb-6 relative overflow-hidden">
+                <Image
+                  src={room.images[0]}
+                  alt={room.name}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="grid grid-cols-3 gap-4">
-                {[1, 2, 3].map((i) => (
+                {room.images.map((image, i) => (
                   <div
                     key={i}
-                    className="aspect-square bg-gradient-to-br from-stone-200 to-stone-300 rounded flex items-center justify-center text-stone-500 text-sm"
+                    className="aspect-square relative overflow-hidden"
                   >
-                    Photo {i}
+                    <Image
+                      src={image}
+                      alt={`${room.name} photo ${i + 1}`}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 ))}
               </div>
@@ -178,7 +190,8 @@ export default async function RoomPage({
           <h2 className="text-3xl font-serif font-bold mb-8 text-center text-stone-900">
             Other Room Types
           </h2>
-          {/* Could implement room slider or other rooms display here */}
+
+          <RoomsSlider dict={dict} locale={lang} />
         </div>
       </section>
     </>

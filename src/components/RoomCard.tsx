@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Room } from '@/app/types';
 import { formatPrice } from '@/lib/utils';
 
@@ -14,10 +15,13 @@ export function RoomCard({ room, locale }: RoomCardProps) {
     <Link href={roomPagePath}>
       <div className="group cursor-pointer">
         {/* Image */}
-        <div className="aspect-video bg-stone-200 rounded-lg overflow-hidden mb-4">
-          <div className="w-full h-full bg-gradient-to-br from-stone-200 to-stone-300 flex items-center justify-center">
-            <span className="text-stone-500 text-sm">Room Image</span>
-          </div>
+        <div className="aspect-video bg-stone-200 overflow-hidden mb-4 relative">
+          <Image
+            src={room.images[0]}
+            alt={room.name}
+            fill
+            className="object-cover"
+          />
         </div>
 
         {/* Content */}

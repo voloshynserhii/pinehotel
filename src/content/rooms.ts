@@ -27,9 +27,9 @@ export const rooms: Room[] = [
       'Robes and slippers',
     ],
     images: [
-      '/images/rooms/double-1.jpg',
-      '/images/rooms/double-2.jpg',
-      '/images/rooms/double-3.jpg',
+      '/images/rooms/ROOM_1_1.jpg',
+      '/images/rooms/ROOM_1_2.jpg',
+      '/images/rooms/ROOM_1_3.jpg',
     ],
   },
   {
@@ -59,9 +59,9 @@ export const rooms: Room[] = [
       'Bluetooth speaker',
     ],
     images: [
-      '/images/rooms/suite-1.jpg',
-      '/images/rooms/suite-2.jpg',
-      '/images/rooms/suite-3.jpg',
+     '/images/rooms/ROOM_3_1.jpg',
+      '/images/rooms/ROOM_3_2.jpg',
+      '/images/rooms/ROOM_3_3.jpg',
     ],
   },
   {
@@ -90,9 +90,9 @@ export const rooms: Room[] = [
       'Extra storage',
     ],
     images: [
-      '/images/rooms/family-1.jpg',
-      '/images/rooms/family-2.jpg',
-      '/images/rooms/family-3.jpg',
+     '/images/rooms/ROOM_5_1.jpg',
+      '/images/rooms/ROOM_5_2.jpg',
+      '/images/rooms/ROOM_5_3.jpg',
     ],
   },
 ];

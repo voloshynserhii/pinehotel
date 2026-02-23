@@ -55,7 +55,7 @@ export default async function ExtrasPage({
             Select your add-on services when booking your room, or contact our
             team to arrange services during your stay.
           </p>
-          <button className="px-8 py-3 bg-sage-700 text-cream-50 rounded font-semibold hover:bg-sage-800 transition-colors">
+          <button className="px-8 py-3 bg-[#c8b89a] text-cream-50 rounded font-semibold hover:bg-[#b8a882] transition-colors">
             Contact Our Team
           </button>
         </div>

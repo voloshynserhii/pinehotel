@@ -69,7 +69,7 @@ export function BookingForm({
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="px-6 py-2 bg-sage-700 text-cream-50 rounded font-semibold hover:bg-sage-800 transition-colors"
+          className="px-6 py-2 bg-[#c8b89a] text-cream-50 rounded font-semibold hover:bg-[#b8a882] transition-colors"
         >
           Make Another Booking
         </button>
@@ -198,7 +198,7 @@ export function BookingForm({
 
           <button
             type="submit"
-            className="w-full bg-sage-700 text-cream-50 py-3 rounded font-semibold hover:bg-sage-800 transition-colors"
+            className="w-full bg-[#c8b89a] text-cream-50 py-3 rounded font-semibold hover:bg-[#b8a882] transition-colors"
           >
             Continue to Payment
           </button>

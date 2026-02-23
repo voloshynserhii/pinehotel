@@ -102,7 +102,7 @@ export default async function DinePage({
           <p className="text-stone-700 mb-6">
             For reservations and special dietary requirements, please contact us
           </p>
-          <button className="px-8 py-3 bg-sage-700 text-cream-50 rounded font-semibold hover:bg-sage-800 transition-colors">
+          <button className="px-8 py-3 bg-[#c8b89a] text-cream-50 rounded font-semibold hover:bg-[#b8a882] transition-colors">
             Reserve a Table
           </button>
         </div>

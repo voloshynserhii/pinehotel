@@ -8,3 +8,8 @@ export { ContactForm } from './ContactForm';
 export { DictionaryProvider } from './DictionaryProvider';
 export { BookingForm } from './BookingForm';
 export { BookingButton } from './BookingButton';
+export { Introduction } from './Introduction';
+export { Amenities } from './Amenities';
+export { Rooms } from './Rooms';
+export { CTA } from './CTA';
+export { RoomsSlider } from './RoomsSlider';
