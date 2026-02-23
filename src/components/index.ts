@@ -13,3 +13,4 @@ export { Amenities } from './Amenities';
 export { Rooms } from './Rooms';
 export { CTA } from './CTA';
 export { RoomsSlider } from './RoomsSlider';
+export { BookingBar } from './BookingBar';

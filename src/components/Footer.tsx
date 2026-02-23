@@ -102,7 +102,20 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-stone-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-cream-300">
-          <p>{footer.copyright}</p>
+          <div className="space-y-2 text-center md:text-left">
+            <p>© {new Date().getFullYear()} {footer.copyright}</p>
+            <p>
+              {footer.developedBy}{' '}
+              <a
+                href="https://vosquery-lab.site/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cream-50 transition-colors underline"
+              >
+                Vo$QueryLab
+              </a>
+            </p>
+          </div>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-cream-50 transition-colors">
               {footer.privacy}

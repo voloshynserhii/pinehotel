@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import KidsAgeModal from './KidsAgeModal'
 
-export default function BookingBar() {
+export function BookingBar() {
   const [checkIn, setCheckIn] = useState('2026-02-23')
   const [checkOut, setCheckOut] = useState('2026-02-24')
   const [adults, setAdults] = useState(2)

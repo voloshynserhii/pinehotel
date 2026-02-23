@@ -84,7 +84,8 @@
     "location": "The Pines Hotel, Mountain Valley, Spain"
   },
   "Footer": {
-    "copyright": "© 2025 The Pines Hotel. All rights reserved.",
+    "copyright": "The Pines Hotel. All rights reserved.",
+    "developedBy": "Website developed by",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
     "followUs": "Follow Us"

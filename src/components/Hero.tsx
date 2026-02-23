@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import BookingBar from './BookingBar';
+import { BookingBar } from '@/components';
 
 interface HeroProps {
   title: string;
@@ -44,7 +44,7 @@ export function Hero({
           <source src={videoSrc} type="video/mp4" />
         </video>
       )}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 container px-gutter text-center bg-white px-12 py-8 rounded-lg backdrop-blur-sm bg-opacity-30 w-max">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-11/12 max-w-4xl text-center bg-white px-6 sm:px-12 py-8 rounded-lg backdrop-blur-sm bg-opacity-30">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-10 leading-tight">
           {title}
         </h1>
@@ -55,7 +55,7 @@ export function Hero({
         )}
       </div>
 
-      <div className="absolute bottom-[50px] left-0 w-full z-10 px-[5%]">
+      <div className="absolute bottom-[50px] left-0 w-full z-10 px-[5%] hidden md:block">
         <BookingBar />
       </div>
 
