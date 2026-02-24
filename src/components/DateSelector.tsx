@@ -134,7 +134,7 @@ export function DateSelector({
   }
 
   return (
-    <div className="absolute bottom-[75px] left-0 z-50 bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white shadow-lg p-6 w-[500px]">
+    <div className="absolute top-full mt-2 lg:top-auto lg:bottom-[75px] left-0 z-50 bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white shadow-lg p-6 w-full lg:w-[500px]">
       {renderHeader()}
       {renderDays()}
       {renderCells()}

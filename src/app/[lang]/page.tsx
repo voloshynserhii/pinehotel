@@ -23,6 +23,7 @@ export default async function Home({
       <Hero
         title={dict.Home.heroTitle}
         subtitle={dict.Home.heroSubtitle}
+        showBookingBar
         isDark={false}
       />
       <Introduction dict={dict} />

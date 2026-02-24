@@ -14,7 +14,7 @@ export default async function ExtrasPage({
 
   return (
     <>
-      <Hero imgSrc='https://static11.com-hotel.com/uploads/hotel/306737/photo/hotel-mas-el-cuquello_17265616845.jpg' title={t.title} subtitle={t.subtitle} />
+      <Hero showBookingBar imgSrc='https://static11.com-hotel.com/uploads/hotel/306737/photo/hotel-mas-el-cuquello_17265616845.jpg' title={t.title} subtitle={t.subtitle} />
 
       <section className="py-section container mx-auto px-gutter">
         <p className="text-center text-lg text-stone-700 mb-12 max-w-2xl mx-auto">

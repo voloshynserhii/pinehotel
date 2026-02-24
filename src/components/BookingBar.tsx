@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { format, addDays } from 'date-fns'
+import { GuestInfo } from 'app/types'
 import { GuestSelector } from './GuestSelector'
 import { DateSelector } from './DateSelector'
 
@@ -10,9 +11,12 @@ export function BookingBar() {
   const [checkOut, setCheckOut] = useState(
     format(addDays(new Date(), 2), 'yyyy-MM-dd')
   )
-  const [adults, setAdults] = useState(2)
-  const [kids, setKids] = useState(0)
-  const [rooms, setRooms] = useState(1)
+  const [guestInfo, setGuestInfo] = useState<GuestInfo>({
+    adults: 2,
+    kids: 0,
+    rooms: 1,
+    kidAges: [],
+  })
   const [showGuestSelector, setShowGuestSelector] = useState(false)
   const [showDateSelector, setShowDateSelector] = useState(false)
   const guestSelectorRef = useRef<HTMLDivElement>(null)
@@ -96,28 +100,28 @@ export function BookingBar() {
           </span>
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <span className="text-4xl font-bold">{adults + kids}</span>
+              <span className="text-4xl font-bold">
+                {guestInfo.adults + guestInfo.kids}
+              </span>
               <div className="ml-2">
-                <div className="font-light text-sm">Adults: {adults}</div>
-                <div className="font-light text-sm">Kids: {kids}</div>
+                <div className="font-light text-sm">
+                  Adults: {guestInfo.adults}
+                </div>
+                <div className="font-light text-sm">Kids: {guestInfo.kids}</div>
               </div>
             </div>
             <div className="flex items-center">
               <div className="mr-2 text-right">
                 <div className="font-light text-sm">Rooms</div>
-                <div className="text-lg font-bold">{rooms}</div>
+                <div className="text-lg font-bold">{guestInfo.rooms}</div>
               </div>
             </div>
           </div>
 
           {showGuestSelector && (
             <GuestSelector
-              adults={adults}
-              setAdults={setAdults}
-              kids={kids}
-              setKids={setKids}
-              rooms={rooms}
-              setRooms={setRooms}
+              guestInfo={guestInfo}
+              setGuestInfo={setGuestInfo}
               setShowGuestSelector={setShowGuestSelector}
             />
           )}

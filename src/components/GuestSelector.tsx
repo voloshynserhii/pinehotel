@@ -1,50 +1,65 @@
 'use client'
 
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction } from 'react'
+import { GuestInfo } from 'app/types'
 
 interface GuestSelectorProps {
-  adults: number
-  setAdults: Dispatch<SetStateAction<number>>
-  kids: number
-  setKids: Dispatch<SetStateAction<number>>
-  rooms: number
-  setRooms: Dispatch<SetStateAction<number>>
+  guestInfo: GuestInfo
+  setGuestInfo: Dispatch<SetStateAction<GuestInfo>>
   setShowGuestSelector: Dispatch<SetStateAction<boolean>>
 }
 
 export function GuestSelector({
-  adults,
-  setAdults,
-  kids,
-  setKids,
-  rooms,
-  setRooms,
+  guestInfo,
+  setGuestInfo,
   setShowGuestSelector,
 }: GuestSelectorProps) {
-  const [kidAges, setKidAges] = useState<number[]>([])
+  const { adults, kids, rooms, kidAges } = guestInfo
 
   const handleAddKid = () => {
-    setKids(kids + 1)
-    setKidAges([...kidAges, 0])
+    setGuestInfo((prev) => ({
+      ...prev,
+      kids: prev.kids + 1,
+      kidAges: [...prev.kidAges, 0],
+    }))
   }
 
   const handleRemoveKid = () => {
     if (kids > 0) {
-      setKids(kids - 1)
-      setKidAges(kidAges.slice(0, kids - 1))
+      setGuestInfo((prev) => ({
+        ...prev,
+        kids: prev.kids - 1,
+        kidAges: prev.kidAges.slice(0, prev.kids - 1),
+      }))
     }
   }
 
   const handleAgeChange = (index: number, age: number) => {
-    const newAges = [...kidAges]
-    newAges[index] = age
-    setKidAges(newAges)
+    setGuestInfo((prev) => {
+      const newAges = [...prev.kidAges]
+      newAges[index] = age
+      return { ...prev, kidAges: newAges }
+    })
+  }
+
+  const handleAdultsChange = (amount: number) => {
+    setGuestInfo((prev) => ({
+      ...prev,
+      adults: Math.max(1, prev.adults + amount),
+    }))
+  }
+
+  const handleRoomsChange = (amount: number) => {
+    setGuestInfo((prev) => ({
+      ...prev,
+      rooms: Math.max(1, prev.rooms + amount),
+    }))
   }
 
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className="absolute bottom-[75px] left-0 right-0 z-50 bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white shadow-lg p-6 w-[500px]"
+      className="absolute top-full mt-2 lg:top-auto lg:bottom-[75px] left-0 right-0 z-50 bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white shadow-lg p-6 w-full lg:w-[500px]"
     >
       <div className="flex flex-col gap-4">
         {/* Adults */}
@@ -52,7 +67,7 @@ export function GuestSelector({
           <span className="text-lg font-light">Adults</span>
           <div className="flex items-center gap-4">
             <button
-              onClick={() => setAdults(Math.max(1, adults - 1))}
+              onClick={() => handleAdultsChange(-1)}
               className="w-8 h-8 border border-white/40 text-lg"
             >
               −
@@ -61,7 +76,7 @@ export function GuestSelector({
               {adults}
             </span>
             <button
-              onClick={() => setAdults(adults + 1)}
+              onClick={() => handleAdultsChange(1)}
               className="w-8 h-8 border border-white/40 text-lg"
             >
               +
@@ -102,7 +117,9 @@ export function GuestSelector({
                     min="0"
                     max="17"
                     value={kidAges[i] || ''}
-                    onChange={(e) => handleAgeChange(i, parseInt(e.target.value))}
+                    onChange={(e) =>
+                      handleAgeChange(i, parseInt(e.target.value))
+                    }
                     className="border p-1 rounded w-16 bg-stone-800 text-white"
                   />
                 </div>
@@ -116,14 +133,14 @@ export function GuestSelector({
           <span className="text-lg font-light">Rooms</span>
           <div className="flex items-center gap-4">
             <button
-              onClick={() => setRooms(Math.max(1, rooms - 1))}
+              onClick={() => handleRoomsChange(-1)}
               className="w-8 h-8 border border-white/40 text-lg"
             >
               −
             </button>
             <span className="text-xl font-light w-8 text-center">{rooms}</span>
             <button
-              onClick={() => setRooms(rooms + 1)}
+              onClick={() => handleRoomsChange(1)}
               className="w-8 h-8 border border-white/40 text-lg"
             >
               +

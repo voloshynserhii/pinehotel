@@ -5,6 +5,7 @@ import { BookingBar, PageTabs } from '@/components';
 interface HeroProps {
   title: string;
   subtitle?: string;
+  showBookingBar?: boolean;
   videoSrc?: string;
   imgSrc?: string;
   isDark?: boolean;
@@ -13,6 +14,7 @@ interface HeroProps {
 export function Hero({
   title,
   subtitle,
+  showBookingBar,
   imgSrc = 'https://www.collealberti.com/images/header-country-house.jpg',
   videoSrc = "https://media.istockphoto.com/id/1622710632/es/v%C3%ADdeo/hermoso-patio-de-campo-en-toscana-rodeado-de-campos-de-cipr%C3%A9s-t%C3%ADpicos-de-toscana.mp4?s=mp4-640x640-is&k=20&c=Y6LioyhiolLeza5ivi8xqSLcZ40-dYPX_nF_6qfuOKw=",
   isDark = false,
@@ -56,9 +58,11 @@ export function Hero({
           )}
         </div> */}
 
-        <div className="absolute bottom-[50px] left-0 w-full z-10 px-[5%] flex items-center justify-center">
-          <BookingBar />
-        </div>
+        {showBookingBar && (
+          <div className="absolute bottom-[50px] left-0 w-full z-10 px-[5%] flex items-center justify-center">
+            <BookingBar />
+          </div>
+        )}
 
       </section>
 
