@@ -8,7 +8,10 @@ const dictionaries = {
 export type Locale = keyof typeof dictionaries;
 
 export const getDictionary = async (locale: Locale) => {
-
+  const validLocales: Locale[] = ['en', 'es'];
+  if (!validLocales.includes(locale)) {
+    return dictionaries['en']();
+  }
   return dictionaries[locale]();
 };
 

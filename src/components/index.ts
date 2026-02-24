@@ -14,3 +14,4 @@ export { Rooms } from './Rooms';
 export { CTA } from './CTA';
 export { RoomsSlider } from './RoomsSlider';
 export { BookingBar } from './BookingBar';
+export { PageTabs } from './PageTabs';

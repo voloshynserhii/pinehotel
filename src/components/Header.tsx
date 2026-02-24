@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -24,49 +25,48 @@ export function Header() {
     <header
       className="
         fixed top-0 left-0 w-full z-[9999]
-        h-[95px]
-        bg-black/50
+        h-[82px]
+        bg-black/20
         transition-all duration-700
+        text-sm uppercase tracking-wider
       "
     >
-      <div className="max-w-[1400px] mx-auto h-full px-6 flex items-center justify-between">
+      <div className="max-w-auto mx-auto h-full px-6 flex items-center justify-between lg:justify-center relative">
         {/* Logo */}
         <Link
           href={`/${lang}`}
-          className="text-white text-xl font-serif tracking-wide"
+          className="text-white text-xl tracking-wide"
         >
-          The Pines Hotel
+          <Image src="/images/logo.svg" alt="The Pines Hotel" width={250} height={70} />
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-10">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-white text-sm uppercase tracking-wider hover:opacity-80 transition"
-            >
-              {item.label}
-            </Link>
-          ))}
+        <Link
+          key={`/${lang}/contact`}
+          href={`/${lang}/contact`}
+          className="absolute right-[35px] text-center text-white text-xs uppercase tracking-wider transition hidden xl:block border-b-2 border-transparent hover:border-white"
+        >
+          {navigation.contact}
+        </Link>
 
-          <Link
-            href={`/${lang}/booking`}
-            className="
-              ml-6 px-6 py-2
+        <div className="absolute right-[130px] lg:right-[200px] top-1/2 -translate-y-1/2">
+          <nav className="hidden md:block items-center">
+            <Link
+              href={`/${lang}/booking`}
+              className="
+              xl:w-[145px] xl:h-[55px] w-[100px] h-[40px] flex items-center justify-center
               bg-[#c8b89a]
-              text-black text-sm uppercase tracking-wider
+              text-white text-sm uppercase tracking-wider
               hover:bg-[#b8a882]
               transition
             "
-          >
-            {navigation.booking}
-          </Link>
-        </nav>
-
+            >
+              {navigation.booking}
+            </Link>
+          </nav>
+        </div>
         {/* Mobile Menu Button */}
         <button
-          className="xl:hidden text-white"
+          className="xl:hidden text-white absolute right-[50px] top-1/2 -translate-y-1/2"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >
@@ -111,7 +111,7 @@ export function Header() {
               className="absolute top-6 left-6 text-white text-xl font-serif tracking-wide"
               onClick={() => setIsOpen(false)}
             >
-              The Pines Hotel
+              <Image src="/images/logo.svg" alt="The Pines Hotel" width={100} height={40} />
             </Link>
 
             {/* Navigation */}

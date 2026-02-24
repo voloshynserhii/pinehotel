@@ -38,7 +38,7 @@ export function RoomsSlider({ dict, locale }: RoomsProps) {
                         <div className="flex justify-center">
                             <a
                                 href={`/${locale}/rooms`}
-                                className="px-6 py-3 bg-[#c8b89a] text-cream-50 rounded font-medium hover:bg-[#b8a882] transition-colors inline-block"
+                                className="px-6 py-3 bg-[#c8b89a] text-cream-50 font-medium hover:bg-[#b8a882] transition-colors inline-block"
                             >
                                 {dict.Home.exploreRooms}
                             </a>

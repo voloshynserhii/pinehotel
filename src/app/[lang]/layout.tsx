@@ -39,6 +39,7 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
+  console.log('Current language:', lang);
   const dict = await getDictionary(lang as Locale);
 
   return (
