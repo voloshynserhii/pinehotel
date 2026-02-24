@@ -47,7 +47,6 @@ export default async function RoomPage({
   params: Promise<RoomPageProps['params']>;
 }) {
   const { slug, lang } = await params;
-  console.log(await params)
   const dict = await getDictionary(lang);
   const room = getRoomBySlug(slug);
 
@@ -83,7 +82,7 @@ export default async function RoomPage({
                 />
               </div>
               <div className="grid grid-cols-3 gap-4">
-                {room.images.map((image, i) => (
+                {room.images.map((image: string, i: number) => (
                   <div
                     key={i}
                     className="aspect-square relative overflow-hidden"
@@ -105,7 +104,7 @@ export default async function RoomPage({
                 About This Room
               </h2>
               <div className="prose prose-stone max-w-none space-y-4">
-                {room.longDescription.split('\n\n').map((paragraph, i) => (
+                {room.longDescription.split('\n\n').map((paragraph: string, i: number) => (
                   <p key={i} className="text-stone-700 leading-relaxed">
                     {paragraph}
                   </p>
@@ -119,7 +118,7 @@ export default async function RoomPage({
                 Room Features
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {room.features.map((feature, i) => (
+                {room.features.map((feature: string, i: number) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="text-sage-700 mt-1">✓</span>
                     <span className="text-stone-700">{feature}</span>
@@ -134,7 +133,7 @@ export default async function RoomPage({
                 Amenities
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {room.amenities.map((amenity, i) => (
+                {room.amenities.map((amenity: string, i: number) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="text-sage-700 mt-1">●</span>
                     <span className="text-stone-700">{amenity}</span>
