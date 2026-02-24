@@ -1,7 +1,7 @@
 'use client'
 
 import { Dispatch, SetStateAction } from 'react'
-import { GuestInfo } from 'app/types'
+import { GuestInfo } from '@/app/types'
 
 interface GuestSelectorProps {
   guestInfo: GuestInfo
