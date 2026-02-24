@@ -13,7 +13,7 @@ export default async function ExperiencesPage({
 
   return (
     <>
-      <Hero title={t.title} subtitle={t.subtitle} />
+      <Hero imgSrc='https://static11.com-hotel.com/uploads/hotel/306737/photo/hotel-mas-el-cuquello_172656168714.jpg' title={t.title} subtitle={t.subtitle} />
 
       <section className="py-section container mx-auto px-gutter">
         <div className="max-w-3xl mx-auto text-center mb-16">

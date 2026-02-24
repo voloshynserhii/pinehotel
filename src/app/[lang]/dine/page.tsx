@@ -12,7 +12,7 @@ export default async function DinePage({
 
   return (
     <>
-      <Hero title={t.title} subtitle={t.subtitle} />
+      <Hero imgSrc='https://static11.com-hotel.com/uploads/hotel/306737/photo/hotel-mas-el-cuquello_17265616858.jpg' title={t.title} subtitle={t.subtitle} />
 
       <section className="py-section container mx-auto px-gutter">
         <div className="max-w-3xl mx-auto mb-12">

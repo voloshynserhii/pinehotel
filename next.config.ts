@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: 'www.collealberti.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'static11.com-hotel.com',
+            },
         ],
     },
 };

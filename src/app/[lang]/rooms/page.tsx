@@ -14,7 +14,7 @@ export default async function RoomsPage({
 
   return (
     <>
-      <Hero title={t.title} subtitle={t.subtitle} />
+      <Hero imgSrc='https://static11.com-hotel.com/uploads/hotel/306737/photo/hotel-mas-el-cuquello_172656168612.jpg' title={t.title} subtitle={t.subtitle} />
 
       <section className="py-section container mx-auto px-gutter">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
