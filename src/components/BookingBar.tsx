@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import { format, addDays } from 'date-fns'
-import { GuestInfo } from 'app/types'
+import { GuestInfo } from '@/app/types'
 import { GuestSelector } from './GuestSelector'
 import { DateSelector } from './DateSelector'
 
