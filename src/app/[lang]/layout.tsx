@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+import { Roboto, Lora } from 'next/font/google';
 import '../globals.css';
 import { Header, Footer, DictionaryProvider } from '@/components';
 import { getDictionary, Locale } from '@/get-dictionary';
@@ -8,6 +8,12 @@ const roboto = Roboto({
   weight: ['400', '700'],
   subsets: ['latin'],
   variable: '--font-roboto',
+});
+
+const lora = Lora({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-lora',
 });
 
 export const metadata: Metadata = {
@@ -45,7 +51,7 @@ export default async function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${roboto.variable} font-sans antialiased bg-cream-50 text-stone-900`}
+        className={`${roboto.variable} ${lora.variable} font-sans antialiased bg-cream-50 text-stone-900`}
       >
         <DictionaryProvider dictionary={dict}>
           <Header />

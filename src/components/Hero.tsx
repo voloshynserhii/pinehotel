@@ -20,7 +20,7 @@ export function Hero({
   isDark = false,
 }: HeroProps) {
   return (
-    <>
+    <div className="relative pb-4">
       <section
         className={cn(
           'w-full relative h-[85vh]',
@@ -69,6 +69,6 @@ export function Hero({
       <div className='hidden lg:block'>
         <PageTabs />
       </div>
-    </>
+    </div>
   );
 }

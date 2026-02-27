@@ -19,6 +19,10 @@ body {
   color: var(--foreground);
 }
 
+.font-lora-important {
+  font-family: var(--font-lora), Georgia, Times, serif !important;
+}
+
 .date-input::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
