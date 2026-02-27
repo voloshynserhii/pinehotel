@@ -56,7 +56,7 @@ export default async function Home({
         </div>
       </section>
       
-      <CTA dict={dict} locale={locale} />
+      {/* <CTA dict={dict} locale={locale} /> */}
     </>
   );
 }

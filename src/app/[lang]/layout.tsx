@@ -52,7 +52,11 @@ export default async function RootLayout({
     <html lang={lang}>
       <body
         className={`${roboto.variable} ${lora.variable} font-sans antialiased bg-cream-50 text-stone-900`}
+        data-region={process.env.NEXT_PUBLIC_REGION ?? ''}
+        data-channelcode={process.env.NEXT_PUBLIC_CHANNELCODE ?? ''}
       >
+        {/* booking engine widget library – must come after any GA/Tag Manager code for cross-domain data */}
+        <script src="//widget.siteminder.com/ibe.min.js" async />
         <DictionaryProvider dictionary={dict}>
           <Header />
           <main className="flex-1">{children}</main>

@@ -50,9 +50,9 @@ export function Header() {
 
         <div className="absolute right-[130px] lg:right-[200px] top-1/2 -translate-y-1/2">
           <nav className="hidden md:block items-center">
-            <Link
-              href={`/${lang}/booking`}
-              className="
+            <a
+              href="#"
+              className="ibe
               xl:w-[145px] xl:h-[55px] w-[100px] h-[40px] flex items-center justify-center
               bg-[#c8b89a]
               text-white text-sm uppercase tracking-wider
@@ -61,7 +61,7 @@ export function Header() {
             "
             >
               {navigation.booking}
-            </Link>
+            </a>
           </nav>
         </div>
         {/* Mobile Menu Button */}
@@ -127,10 +127,10 @@ export function Header() {
                 </Link>
               ))}
 
-              <Link
-                href={`/${lang}/booking`}
+              <a
+                href="#"
                 onClick={() => setIsOpen(false)}
-                className="
+                className="ibe
                   mt-6 px-8 py-3
                   bg-[#c8b89a]
                   text-black text-lg font-bold uppercase tracking-wider
@@ -139,7 +139,7 @@ export function Header() {
                 "
               >
                 {navigation.booking}
-              </Link>
+              </a>
             </nav>
           </div>
         </div>

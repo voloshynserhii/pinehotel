@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { format, addDays } from 'date-fns'
+import { format, addDays, differenceInCalendarDays } from 'date-fns'
 import { GuestInfo } from '@/app/types'
 import { GuestSelector } from './GuestSelector'
 import { DateSelector } from './DateSelector'
@@ -127,10 +127,21 @@ export function BookingBar() {
           )}
         </div>
 
-        {/* CTA */}
-        <button className="bg-[#cbb8a3] text-white w-full lg:w-auto py-4 lg:py-0 lg:px-12 text-sm tracking-widest transition-colors duration-300 ease-in-out border border-transparent hover:border-white hover:bg-[#a99a8b]">
-          CHECK AVAILABILITY
-        </button>
+        {/* CTA – converted to an anchor so that the Siteminder widget can pick up the
+            query parameters; the body tag already contains data-region/data-channelcode */}
+        <a
+          className="ibe bg-[#cbb8a3] text-white w-full lg:w-auto py-4 lg:py-0 lg:px-12 text-sm tracking-widest transition-colors duration-300 ease-in-out border border-transparent hover:border-white hover:bg-[#a99a8b] flex items-center justify-center"
+          href="#"
+          data-query-check_in_date={checkIn}
+          data-query-check_out_date={checkOut}
+          data-query-number_adults={guestInfo.adults}
+          data-query-number_children={guestInfo.kids}
+          data-query-numbernights={differenceInCalendarDays(new Date(checkOut), new Date(checkIn))}
+        >
+          <p>
+            CHECK AVAILABILITY
+          </p>
+        </a>
       </div>
     </>
   )
