@@ -30,7 +30,7 @@ export function PageTabs() {
             <div className="max-w-[1200px] mx-auto px-6">
                 <div className="-mb-px flex h-[70px] items-center justify-center overflow-x-auto">
                     <Link
-                        href={roomsTab.href}
+                        href={''}
                         className={`border-b-2 w-1/4 height-[100%] flex items-center justify-center h-full cursor-pointer text-black ${active || isRoomsDropdownOpen
                             ? 'border-black'
                             : 'border-transparent hover:border-black'

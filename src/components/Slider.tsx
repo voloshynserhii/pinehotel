@@ -119,7 +119,7 @@ export function Slider({ slides }: SliderProps) {
                 <>
                     <button className="gallery-prev absolute left-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-12 h-12 flex items-center justify-center">
                         <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                            width="60px" height="126.056px" viewBox="225.957 476.972 60 126.056" enable-background="new 225.957 476.972 60 126.056"
+                            width="60px" height="126.056px" viewBox="225.957 476.972 60 126.056" enableBackground="new 225.957 476.972 60 126.056"
                         >
                             <g id="_">
                                 <path fill="#FFFFFF" d="M285.187,603.028c-0.205,0-0.411-0.103-0.564-0.256l-58.473-62.269c-0.257-0.308-0.257-0.769,0-1.026
@@ -130,7 +130,7 @@ export function Slider({ slides }: SliderProps) {
                     </button>
                     <button className="gallery-next absolute right-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-12 h-12 flex items-center justify-center">
                         <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                            width="60px" height="126.056px" viewBox="225.957 476.972 60 126.056" enable-background="new 225.957 476.972 60 126.056"
+                            width="60px" height="126.056px" viewBox="225.957 476.972 60 126.056" enableBackground="new 225.957 476.972 60 126.056"
                         >
                             <g id="_">
                                 <path fill="#FFFFFF" d="M226.728,476.972c0.205,0,0.411,0.103,0.564,0.256l58.473,62.269c0.257,0.308,0.257,0.769,0,1.026
