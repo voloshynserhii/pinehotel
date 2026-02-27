@@ -146,14 +146,6 @@ export default async function RoomPage({
           {/* Right Column - Booking Card */}
           <div className="lg:col-span-1">
             <div className="bg-cream-50 rounded-lg p-8 sticky top-24 space-y-6">
-              {/* Price */}
-              <div className="border-b border-stone-200 pb-6">
-                <p className="text-stone-600 text-sm mb-2">Per night</p>
-                <p className="text-4xl font-serif font-bold text-sage-700">
-                  {formatPrice(room.price)}
-                </p>
-              </div>
-
               {/* Details */}
               <div className="space-y-4">
                 <div>

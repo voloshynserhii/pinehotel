@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Room } from '@/app/types';
-import { formatPrice } from '@/lib/utils';
 
 interface RoomCardProps {
   room: Room;
@@ -33,9 +32,6 @@ export function RoomCard({ room, locale }: RoomCardProps) {
             {room.shortDescription}
           </p>
           <div className="flex items-center justify-between pt-2">
-            <span className="text-lg font-semibold text-sage-700">
-              {formatPrice(room.price)}
-            </span>
             <span className="text-sm text-stone-500">
               {room.capacity} {room.capacity === 1 ? 'guest' : 'guests'}
             </span>

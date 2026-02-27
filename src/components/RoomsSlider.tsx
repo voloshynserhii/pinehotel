@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import Image from 'next/image';
@@ -20,12 +20,13 @@ interface RoomsProps {
 }
 
 export function RoomsSlider({ dict, locale }: RoomsProps) {
-    const allImages = rooms.flatMap((room) =>
-        room.images.map((image) => ({
-            ...room,
-            image: image,
-        }))
-    );
+    const allImages = rooms.map((room) => ({
+        ...room,
+        image: room.images[0],
+    }));
+
+    const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
 
     return (
         <section className="py-section bg-cream-50">
@@ -54,6 +55,14 @@ export function RoomsSlider({ dict, locale }: RoomsProps) {
                         navigation={{
                             nextEl: '.custom-next',
                             prevEl: '.custom-prev',
+                        }}
+                        onInit={(swiper) => {
+                            setIsBeginning(swiper.isBeginning);
+                            setIsEnd(swiper.isEnd);
+                        }}
+                        onSlideChange={(swiper) => {
+                            setIsBeginning(swiper.isBeginning);
+                            setIsEnd(swiper.isEnd);
                         }}
                         breakpoints={{
                             640: { slidesPerView: 2 },
@@ -95,7 +104,7 @@ export function RoomsSlider({ dict, locale }: RoomsProps) {
                     </Swiper>
 
                     {/* Кастомні стрілки (як на скріншоті) */}
-                    <button className="custom-prev absolute left-5 top-1/2 -translate-y-1/2 z-20 bg-white w-10 h-10 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button className={`custom-prev absolute left-5 top-1/2 -translate-y-1/2 z-20 bg-white w-10 h-10 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity ${isBeginning ? 'hidden' : ''}`}>
                         <svg
                             width="20"
                             height="20"
@@ -107,7 +116,7 @@ export function RoomsSlider({ dict, locale }: RoomsProps) {
                             <path d="M15 18l-6-6 6-6" />
                         </svg>
                     </button>
-                    <button className="custom-next absolute right-5 top-1/2 -translate-y-1/2 z-20 bg-white w-10 h-10 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button className={`custom-next absolute right-5 top-1/2 -translate-y-1/2 z-20 bg-white w-10 h-10 flex items-center justify-center shadow-md opacity-0 group-hover:opacity-100 transition-opacity ${isEnd ? 'hidden' : ''}`}>
                         <svg
                             width="20"
                             height="20"

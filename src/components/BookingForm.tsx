@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { rooms } from '@/content/rooms';
 import type { Room } from '@/app/types';
 
 export function BookingForm({
@@ -55,7 +54,6 @@ export function BookingForm({
     ? rooms.find((r) => r.slug === bookingData.rooms)
     : null;
   const nights = calculateNights();
-  const totalPrice = selectedRoom ? selectedRoom.price * nights : 0;
 
   if (submitted) {
     return (
@@ -136,7 +134,7 @@ export function BookingForm({
                 <option value="">Select a room...</option>
                 {rooms.map((room) => (
                   <option key={room.id} value={room.slug}>
-                    {room.name} (€{room.price}/night)
+                    {room.name}
                   </option>
                 ))}
               </select>
@@ -234,17 +232,9 @@ export function BookingForm({
               </div>
               <div className="border-t border-stone-200 pt-4">
                 <p className="text-sm text-stone-600 mb-1">
-                  {nights} night{nights !== 1 ? 's' : ''} × €
-                  {selectedRoom.price}
-                </p>
-                <p className="text-2xl font-serif font-bold text-sage-700">
-                  €{totalPrice}
+                  {nights} night{nights !== 1 ? 's' : ''}
                 </p>
               </div>
-              <p className="text-xs text-stone-600">
-                This is an estimate. Final price may vary based on availability
-                and seasonal rates.
-              </p>
             </div>
           ) : (
             <p className="text-stone-600 text-sm">
