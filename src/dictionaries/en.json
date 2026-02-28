@@ -40,7 +40,12 @@
     "features": "Features",
     "gallery": "Gallery",
     "bookRoom": "Book This Room",
-    "startingFrom": "starting from"
+    "startingFrom": "starting from",
+    "roomFeatures": "Room Features",
+    "roomSize": "Room Size",
+    "guest": "guest",
+    "guests": "guests",
+    "otherRoomTypes": "Other Room Types"
   },
   "Dine": {
     "title": "La Ruta Restaurant",

@@ -40,7 +40,12 @@
     "features": "Características",
     "gallery": "Galería",
     "bookRoom": "Reservar Esta Habitación",
-    "startingFrom": "desde"
+    "startingFrom": "desde",
+    "roomFeatures": "Características de la habitación",
+    "roomSize": "Tamaño de la habitación",
+    "guest": "huésped",
+    "guests": "huéspedes",
+    "otherRoomTypes": "Otros tipos de habitaciones"
   },
   "Dine": {
     "title": "Restaurante La Ruta",

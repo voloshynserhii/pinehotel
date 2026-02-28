@@ -2,8 +2,8 @@ import { notFound } from 'next/navigation';
 import { getRoomBySlug, getAllRoomSlugs, rooms } from '@/content/rooms';
 import type { Metadata } from 'next';
 import { BookingButton, Introduction, Hero, Slider } from '@/components';
-import Image from 'next/image';
 import { Locale, getDictionary } from '@/get-dictionary';
+import en from '@/dictionaries/en.json';
 
 interface RoomPageProps {
   params: {
@@ -46,7 +46,7 @@ export default async function RoomPage({
   params: Promise<RoomPageProps['params']>;
 }) {
   const { slug, lang } = await params;
-  const dict = await getDictionary(lang);
+  const dict = (await getDictionary(lang)) as typeof en;
   const room = getRoomBySlug(slug);
 
   if (!room) {
@@ -81,7 +81,7 @@ export default async function RoomPage({
           <div className="lg:col-span-2">
             <div className="mb-12">
               <h3 className="text-2xl font-serif font-bold mb-6 text-stone-900">
-                Room Features
+                {dict.Rooms.roomFeatures}
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -96,7 +96,7 @@ export default async function RoomPage({
 
             <div>
               <h3 className="text-2xl font-serif font-bold mb-6 text-stone-900">
-                Amenities
+                {dict.Common.amenities}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {room.amenities.map((amenity: string, i: number) => (
@@ -115,14 +115,14 @@ export default async function RoomPage({
               {/* Details */}
               <div className="space-y-4">
                 <div>
-                  <p className="text-stone-600 text-sm mb-1">Capacity</p>
+                  <p className="text-stone-600 text-sm mb-1">{dict.Common.capacity}</p>
                   <p className="font-semibold text-stone-900">
                     {room.capacity}{' '}
-                    {room.capacity === 1 ? 'guest' : 'guests'}
+                    {room.capacity === 1 ? dict.Rooms.guest : dict.Rooms.guests}
                   </p>
                 </div>
                 <div>
-                  <p className="text-stone-600 text-sm mb-1">Room Size</p>
+                  <p className="text-stone-600 text-sm mb-1">{dict.Rooms.roomSize}</p>
                   <p className="font-semibold text-stone-900">
                     {room.area} m²
                   </p>
@@ -130,7 +130,7 @@ export default async function RoomPage({
               </div>
 
               {/* CTA Button */}
-              <BookingButton slug={room.slug} />
+              <BookingButton slug={room.slug} title={dict.Rooms.bookRoom} />
             </div>
           </div>
         </div>
@@ -140,9 +140,9 @@ export default async function RoomPage({
       <section className="bg-cream-50 py-section">
         <div className="container mx-auto px-gutter">
           <h2 className="text-3xl font-serif font-bold mb-8 text-center text-stone-900">
-            Other Room Types
+            {dict.Rooms.otherRoomTypes}
           </h2>
-
+          
           <Slider slides={slides} />
         </div>
       </section>

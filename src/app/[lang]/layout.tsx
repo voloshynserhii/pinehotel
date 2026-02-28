@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Roboto, Lora } from 'next/font/google';
+import Script from 'next/script';
 import '../globals.css';
 import { Header, Footer, DictionaryProvider } from '@/components';
 import { getDictionary, Locale } from '@/get-dictionary';
@@ -56,7 +57,7 @@ export default async function RootLayout({
         data-channelcode={process.env.NEXT_PUBLIC_CHANNELCODE ?? ''}
       >
         {/* booking engine widget library – must come after any GA/Tag Manager code for cross-domain data */}
-        <script src="//widget.siteminder.com/ibe.min.js" async />
+        <Script src="//widget.siteminder.com/ibe.min.js" strategy="afterInteractive" />
         <DictionaryProvider dictionary={dict}>
           <Header />
           <main className="flex-1">{children}</main>

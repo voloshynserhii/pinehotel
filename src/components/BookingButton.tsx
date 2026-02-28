@@ -1,20 +1,24 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { useState } from 'react';
+import { format, addDays, differenceInCalendarDays } from 'date-fns';
 
-export function BookingButton({ slug }: { slug: string }) {
-  const pathname = usePathname();
-  const lang = pathname.split('/')[1];
-  const handleClick = () => {
-    window.location.href = `/${lang}/booking?room=${slug}`;
-  };
+export function BookingButton({ slug, title }: { slug: string; title: string }) {
+  const [checkIn] = useState(format(new Date(), 'yyyy-MM-dd'));
+  const [checkOut] = useState(format(addDays(new Date(), 2), 'yyyy-MM-dd'));
+  const nights = differenceInCalendarDays(new Date(checkOut), new Date(checkIn));
 
   return (
-    <button
-      onClick={handleClick}
-      className="w-full bg-[#c8b89a] text-cream-50 py-3 rounded font-semibold hover:bg-[#b8a882] transition-colors"
+    <a
+      href="#"
+      className="ibe w-full bg-[#c8b89a] text-cream-50 py-3 font-semibold hover:bg-[#b8a882] transition-colors block text-center"
+      data-query-check_in_date={checkIn}
+      data-query-check_out_date={checkOut}
+      data-query-number_adults={2}
+      data-query-number_children={0}
+      data-query-numbernights={nights}
     >
-      Book This Room
-    </button>
+      {title}
+    </a>
   );
 }
