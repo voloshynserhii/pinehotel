@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { useDictionary } from '@/context/DictionaryContext';
+import { format, addDays } from 'date-fns';
 
 export function Header() {
   const dict = useDictionary();
@@ -20,6 +21,10 @@ export function Header() {
     { label: navigation.extras, href: `/${lang}/extras` },
     { label: navigation.contact, href: `/${lang}/contact` },
   ];
+
+  const checkIn = format(new Date(), 'yyyy-MM-dd');
+  const checkOut = format(addDays(new Date(), 2), 'yyyy-MM-dd');
+  const bookingUrl = `${process.env.NEXT_PUBLIC_BOOKING_URL}?locale=${lang}&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=EUR&checkInDate=${checkIn}&checkOutDate=${checkOut}&trackPage=no`;
 
   return (
     <header
@@ -51,8 +56,10 @@ export function Header() {
         <div className="absolute right-[130px] lg:right-[200px] top-1/2 -translate-y-1/2">
           <nav className="hidden md:block items-center">
             <a
-              href="#"
-              className="ibe
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
               xl:w-[145px] xl:h-[55px] w-[100px] h-[40px] flex items-center justify-center
               bg-[#c8b89a]
               text-white text-sm uppercase tracking-wider
@@ -128,7 +135,9 @@ export function Header() {
               ))}
 
               <a
-                href="#"
+                href={bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
                 className="ibe
                   mt-6 px-8 py-3

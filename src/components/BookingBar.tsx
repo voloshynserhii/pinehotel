@@ -1,12 +1,15 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 import { format, addDays, differenceInCalendarDays } from 'date-fns'
 import { GuestInfo } from '@/app/types'
 import { GuestSelector } from './GuestSelector'
 import { DateSelector } from './DateSelector'
 
 export function BookingBar() {
+  const pathname = usePathname()
+  const locale = pathname?.split('/')[1] || 'en'
   const [checkIn, setCheckIn] = useState(format(new Date(), 'yyyy-MM-dd'))
   const [checkOut, setCheckOut] = useState(
     format(addDays(new Date(), 2), 'yyyy-MM-dd')
@@ -43,6 +46,10 @@ export function BookingBar() {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [guestSelectorRef, dateSelectorRef])
+
+  const infants = guestInfo.kidAges.filter((age) => age < 2).length
+  const children = guestInfo.kids - infants
+  const bookingUrl = `${process.env.NEXT_PUBLIC_BOOKING_URL}?locale=${locale}&items[0][adults]=${guestInfo.adults}&items[0][children]=${children}&items[0][infants]=${infants}&currency=EUR&checkInDate=${checkIn}&checkOutDate=${checkOut}&trackPage=no`
 
   return (
     <>
@@ -130,13 +137,10 @@ export function BookingBar() {
         {/* CTA – converted to an anchor so that the Siteminder widget can pick up the
             query parameters; the body tag already contains data-region/data-channelcode */}
         <a
-          className="ibe bg-[#cbb8a3] text-white w-full lg:w-auto py-4 lg:py-0 lg:px-12 text-sm tracking-widest transition-colors duration-300 ease-in-out border border-transparent hover:border-white hover:bg-[#a99a8b] flex items-center justify-center"
-          href="#"
-          data-query-check_in_date={checkIn}
-          data-query-check_out_date={checkOut}
-          data-query-number_adults={guestInfo.adults}
-          data-query-number_children={guestInfo.kids}
-          data-query-numbernights={differenceInCalendarDays(new Date(checkOut), new Date(checkIn))}
+          className="bg-[#cbb8a3] text-white w-full lg:w-auto py-4 lg:py-0 lg:px-12 text-sm tracking-widest transition-colors duration-300 ease-in-out border border-transparent hover:border-white hover:bg-[#a99a8b] flex items-center justify-center"
+          href={bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <p>
             CHECK AVAILABILITY
