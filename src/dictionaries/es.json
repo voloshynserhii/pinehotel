@@ -15,9 +15,9 @@
   "Home": {
     "heroTitle": "Bienvenido a The Pines Hotel",
     "heroSubtitle": "Un refugio tranquilo en el corazón del campo",
-    "introTitle": "The Pines Retreat",
-    "introText": "The Pines Retreat es una casa de campo del siglo XIX bellamente restaurada, convertida en un hotel rural boutique de 4★ situado entre pinos a los pies de las montañas.",
-    "introParagraph": "El carácter original de la propiedad se ha conservado cuidadosamente, con una arquitectura tradicional y detalles rurales complementados con comodidades modernas y un diseño contemporáneo. El resultado es un refugio tranquilo y acogedor que se siente a la vez auténtico y refinado.\n\nLos huéspedes pueden disfrutar de La Ruta, nuestro restaurante en el lugar, que ofrece una cena relajada en un ambiente cálido y social. En el exterior, la propiedad se abre a jardines bien cuidados, zonas de estar al aire libre y una piscina de temporada, que brinda espacio para relajarse, socializar o simplemente disfrutar de un entorno tranquilo.\n\nCon aparcamiento en el lugar, generosas zonas comunes y un entorno que invita tanto al descanso como a la exploración, The Pines Retreat es una base ideal para los huéspedes que buscan experimentar el campo español con comodidad y estilo.",
+    "introTitle": "The Pines Hotel",
+    "introText": "The Pines Hotel es una casa de campo del siglo XIX bellamente restaurada, convertida en un hotel rural boutique de 4★ situado entre pinos a los pies de las montañas.",
+    "introParagraph": "El carácter original de la propiedad se ha conservado cuidadosamente, con una arquitectura tradicional y detalles rurales complementados con comodidades modernas y un diseño contemporáneo. El resultado es un refugio tranquilo y acogedor que se siente a la vez auténtico y refinado.\n\nLos huéspedes pueden disfrutar de La Ruta, nuestro restaurante en el lugar, que ofrece una cena relajada en un ambiente cálido y social. En el exterior, la propiedad se abre a jardines bien cuidados, zonas de estar al aire libre y una piscina de temporada, que brinda espacio para relajarse, socializar o simplemente disfrutar de un entorno tranquilo.\n\nCon aparcamiento en el lugar, generosas zonas comunes y un entorno que invita tanto al descanso como a la exploración, The Pines Hotel es una base ideal para los huéspedes que buscan experimentar el campo español con comodidad y estilo.",
     "amenities": "Servicios",
     "amenityRestaurant": "Restaurante",
     "amenityPool": "Piscina Estacional",
@@ -88,10 +88,18 @@
     "hoursTitle": "Horario de Apertura",
     "location": "The Pines Hotel, Mountain Valley, España"
   },
+  "Terms": {
+    "title": "Términos y Condiciones",
+    "subtitle": "Por favor, lea nuestros términos y condiciones cuidadosamente"
+  },
+  "Cookies": {
+    "title": "Política de Cookies",
+    "subtitle": "Cómo usamos las cookies"
+  },
   "Footer": {
     "copyright": "The Pines Hotel. Todos los derechos reservados.",
     "developedBy": "Sitio web desarrollado por",
-    "privacy": "Política de Privacidad",
+    "cookies": "Política de Cookies",
     "terms": "Términos y Condiciones",
     "followUs": "Síguenos"
   },

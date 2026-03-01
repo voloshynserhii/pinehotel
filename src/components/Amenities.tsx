@@ -33,7 +33,7 @@ export function Amenities({ dict }: AmenitiesProps) {
             <h3 className="font-serif text-xl font-bold mb-2 text-stone-900">
               {dict.Home.amenityPool}
             </h3>
-            <p className="text-stone-600 text-sm">Seasonal swimming pool</p>
+            <p className="text-stone-600 text-sm">Swimming pool</p>
           </div>
           <div className="text-center">
             <div className="text-5xl mb-4">🌿</div>

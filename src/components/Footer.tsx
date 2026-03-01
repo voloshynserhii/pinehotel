@@ -68,22 +68,22 @@ export function Footer() {
                   href="tel:+34123456789"
                   className="hover:text-sage-300 transition-colors"
                 >
-                  +34 (0) 123 456 789
+                  +34 624 088 378
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@thepineshotel.com"
+                  href="mailto:info@thepines-hotel.com"
                   className="hover:text-sage-300 transition-colors"
                 >
-                  info@thepineshotel.com
+                  info@thepines-hotel.com
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Social */}
-          <div>
+{/*           <div>
             <h4 className="font-semibold mb-4">{footer.followUs}</h4>
             <ul className="space-y-2 text-sm">
               <li>
@@ -97,7 +97,7 @@ export function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom */}
@@ -117,10 +117,16 @@ export function Footer() {
             </p>
           </div>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-cream-50 transition-colors">
-              {footer.privacy}
+            <Link
+              href={`/${lang}/cookies`}
+              className="hover:text-cream-50 transition-colors"
+            >
+              {footer.cookies}
             </Link>
-            <Link href="#" className="hover:text-cream-50 transition-colors">
+            <Link
+              href={`/${lang}/terms`}
+              className="hover:text-cream-50 transition-colors"
+            >
               {footer.terms}
             </Link>
           </div>

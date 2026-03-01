@@ -16,7 +16,7 @@ export function PageTabs() {
     const tabs = [
         { label: navigation.dine, href: `/${lang}/dine` },
         { label: navigation.experiences, href: `/${lang}/experiences` },
-        { label: navigation.extras, href: `/${lang}/extras` },
+        /* { label: navigation.extras, href: `/${lang}/extras` }, */
     ];
 
     const roomsTab = { label: navigation.rooms, href: `/${lang}/rooms` };

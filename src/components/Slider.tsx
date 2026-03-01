@@ -27,7 +27,7 @@ const isSlide = (slide: Slide | string): slide is Slide => {
 export function Slider({ slides }: SliderProps) {
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
-console.log(slides);
+
     const isImageGallery = slides && slides.length > 0 && typeof slides[0] === 'string';
 
     return (
@@ -37,8 +37,9 @@ console.log(slides);
                 spaceBetween={isImageGallery ? 0 : 20}
                 slidesPerView={1}
                 loop={isImageGallery}
+                speed={1000}
                 autoplay={isImageGallery ? {
-                    delay: 3000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 } : false}
                 navigation={{

@@ -8,7 +8,7 @@ export const rooms: Room[] = [
     type: 'Standard Double Room',
     shortDescription: 'Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.',
     longDescription:
-      'Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.\n\nEach room features warm, natural tones, soft lighting, and carefully chosen furnishings that reflect the rural setting of The Pines Retreat. Original features sit comfortably alongside contemporary comforts, creating a relaxed and welcoming space to unwind.',
+      'Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.\n\nEach room features warm, natural tones, soft lighting, and carefully chosen furnishings that reflect the rural setting of The Pines Hotel. Original features sit comfortably alongside contemporary comforts, creating a relaxed and welcoming space to unwind.',
     capacity: 2,
     area: 28,
     features: [
@@ -36,7 +36,7 @@ export const rooms: Room[] = [
     type: 'Standard Double Room',
     shortDescription: 'Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.',
     longDescription:
-      'Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.\n\nEach room features warm, natural tones, soft lighting, and carefully chosen furnishings that reflect the rural setting of The Pines Retreat. Original features sit comfortably alongside contemporary comforts, creating a relaxed and welcoming space to unwind.',
+      'Our Double Rooms offer a calm and comfortable retreat, blending traditional countryside charm with modern design details.\n\nEach room features warm, natural tones, soft lighting, and carefully chosen furnishings that reflect the rural setting of The Pines Hotel. Original features sit comfortably alongside contemporary comforts, creating a relaxed and welcoming space to unwind.',
     capacity: 2,
     area: 35,
     features: [
@@ -99,7 +99,7 @@ export const rooms: Room[] = [
     type: 'Superior Double/Twin Room',
     shortDescription: 'Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.',
     longDescription:
-      'Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.\n\nGenerously sized and thoughtfully designed, these rooms feature warm, natural tones, soft ambient lighting, and carefully selected furnishings that reflect the rural setting of The Pines Retreat. Original architectural features sit seamlessly alongside contemporary comforts, creating an elegant yet relaxed space to truly unwind.\n\nThe larger layout includes an expanded bathroom and the choice of a spacious king-size/twin bed, making it ideal for couples, friends, or solo travellers seeking extra room to relax.',
+      'Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.\n\nGenerously sized and thoughtfully designed, these rooms feature warm, natural tones, soft ambient lighting, and carefully selected furnishings that reflect the rural setting of The Pines Hotel. Original architectural features sit seamlessly alongside contemporary comforts, creating an elegant yet relaxed space to truly unwind.\n\nThe larger layout includes an expanded bathroom and the choice of a spacious king-size/twin bed, making it ideal for couples, friends, or solo travellers seeking extra room to relax.',
     capacity: 2,
     area: 28,
     features: [
@@ -134,7 +134,7 @@ export const rooms: Room[] = [
     type: 'Superior Double/Twin Room',
     shortDescription: 'Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.',
     longDescription:
-      'Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.\n\nGenerously sized and thoughtfully designed, these rooms feature warm, natural tones, soft ambient lighting, and carefully selected furnishings that reflect the rural setting of The Pines Retreat. Original architectural features sit seamlessly alongside contemporary comforts, creating an elegant yet relaxed space to truly unwind.\n\nThe larger layout includes an expanded bathroom and the choice of a spacious king-size/twin bed, making it ideal for couples, friends, or solo travellers seeking extra room to relax.',
+      'Our Superior Double / Twin Rooms offer an enhanced sense of space and comfort, blending traditional countryside charm with refined modern design details.\n\nGenerously sized and thoughtfully designed, these rooms feature warm, natural tones, soft ambient lighting, and carefully selected furnishings that reflect the rural setting of The Pines Hotel. Original architectural features sit seamlessly alongside contemporary comforts, creating an elegant yet relaxed space to truly unwind.\n\nThe larger layout includes an expanded bathroom and the choice of a spacious king-size/twin bed, making it ideal for couples, friends, or solo travellers seeking extra room to relax.',
     capacity: 2,
     area: 35,
     features: [

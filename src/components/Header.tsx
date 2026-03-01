@@ -18,7 +18,7 @@ export function Header() {
     { label: navigation.rooms, href: `/${lang}/rooms` },
     { label: navigation.dine, href: `/${lang}/dine` },
     { label: navigation.experiences, href: `/${lang}/experiences` },
-    { label: navigation.extras, href: `/${lang}/extras` },
+    /* { label: navigation.extras, href: `/${lang}/extras` }, */
     { label: navigation.contact, href: `/${lang}/contact` },
   ];
 

@@ -35,7 +35,7 @@ export default async function ContactPage({
                 href="tel:+34123456789"
                 className="text-sage-700 hover:text-sage-800 font-semibold"
               >
-                +34 (0) 123 456 789
+                +34 624 088 378
               </a>
             </div>
 
@@ -45,10 +45,10 @@ export default async function ContactPage({
                 {t.email}
               </h3>
               <a
-                href="mailto:info@thepineshotel.com"
+                href="mailto:info@thepines-hotel.com"
                 className="text-sage-700 hover:text-sage-800 font-semibold"
               >
-                info@thepineshotel.com
+                info@thepines-hotel.com
               </a>
             </div>
 

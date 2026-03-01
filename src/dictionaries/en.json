@@ -15,12 +15,12 @@
   "Home": {
     "heroTitle": "Welcome to The Pines Hotel",
     "heroSubtitle": "A peaceful retreat in the heart of the countryside",
-    "introTitle": "The Pines Retreat",
+    "introTitle": "The Pines Hotel",
     "introText": "A beautifully restored 19th-century farmhouse, thoughtfully converted into a 4★ boutique countryside hotel set among pine trees at the foot of the mountains.",
-    "introParagraph": "The original character of the property has been carefully preserved, with traditional architecture and rural details complemented by modern comforts and contemporary design. The result is a calm, welcoming retreat that feels both authentic and refined.\n\nGuests can enjoy La Ruta, our on-site restaurant, offering relaxed dining in a warm and social setting. Outside, the property opens onto well-maintained gardens, outdoor seating areas, and a seasonal swimming pool, providing space to unwind, socialise, or simply enjoy the peaceful surroundings.\n\nWith on-site parking, generous communal areas, and a setting that invites both rest and exploration, The Pines Retreat is an ideal base for guests looking to experience the Spanish countryside in comfort and style.",
+    "introParagraph": "The original character of the property has been carefully preserved, with traditional architecture and rural details complemented by modern comforts and contemporary design. The result is a calm, welcoming retreat that feels both authentic and refined.\n\nGuests can enjoy La Ruta, our on-site restaurant, offering relaxed dining in a warm and social setting. Outside, the property opens onto well-maintained gardens, outdoor seating areas, and a swimming pool, providing space to unwind, socialise, or simply enjoy the peaceful surroundings.\n\nWith on-site parking, generous communal areas, and a setting that invites both rest and exploration, The Pines Hotel is an ideal base for guests looking to experience the Spanish countryside in comfort and style.",
     "amenities": "Amenities",
     "amenityRestaurant": "On-site Restaurant",
-    "amenityPool": "Seasonal Pool",
+    "amenityPool": "Swimming Pool",
     "amenityGardens": "Lush Gardens",
     "amenityParking": "Free Parking",
     "exploreRooms": "Explore Our Rooms",
@@ -86,12 +86,20 @@
     "contactForm": "Contact Form",
     "followUs": "Follow Us",
     "hoursTitle": "Opening Hours",
-    "location": "The Pines Hotel, Mountain Valley, Spain"
+    "location": "The Pines Hotel, Ctra Els Ivarsos a Culla KM1, Castellon, Valencia, Spain"
+  },
+  "Terms": {
+    "title": "Terms & Conditions",
+    "subtitle": "Please read our terms and conditions carefully"
+  },
+  "Cookies": {
+    "title": "Cookies Policy",
+    "subtitle": "How we use cookies"
   },
   "Footer": {
     "copyright": "The Pines Hotel. All rights reserved.",
     "developedBy": "Website developed by",
-    "privacy": "Privacy Policy",
+    "cookies": "Cookies Policy",
     "terms": "Terms & Conditions",
     "followUs": "Follow Us"
   },
