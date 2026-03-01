@@ -5,11 +5,9 @@ import {
   Hero,
   Introduction,
   Slider,
-  Maintenance,
 } from '@/components';
 import { Locale } from '@/get-dictionary';
 import { rooms } from '@/content/rooms';
-import { headers } from 'next/headers';
 
 export default async function Home({
   params,
@@ -17,14 +15,6 @@ export default async function Home({
   params: Promise<{ lang: Locale }>;
 }) {
   const { lang } = await params;
-
-  const headersList = await headers();
-  const host = headersList.get('host');
-
-  if (host === 'thepines-hotel.com' || host === 'www.thepines-hotel.com') {
-    return <Maintenance />;
-  }
-
   const dict = await getDictionary(lang);
   const locale = lang;
 

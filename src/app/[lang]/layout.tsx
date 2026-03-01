@@ -38,6 +38,9 @@ export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'es' }];
 }
 
+import { headers } from 'next/headers';
+import { Maintenance } from '@/components';
+
 export default async function RootLayout({
   children,
   params,
@@ -46,7 +49,22 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
-  console.log('Current language:', lang);
+
+  const headersList = await headers();
+  const host = headersList.get('host');
+
+  if (host === 'thepines-hotel.com' || host === 'www.thepines-hotel.com') {
+    return (
+      <html lang={lang}>
+        <body
+          className={`${roboto.variable} ${lora.variable} font-sans antialiased bg-cream-50 text-stone-900`}
+        >
+          <Maintenance />
+        </body>
+      </html>
+    );
+  }
+
   const dict = await getDictionary(lang as Locale);
 
   return (
