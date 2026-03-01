@@ -53,7 +53,7 @@ export default async function RoomPage({
     notFound();
   }
 
-  const slides = rooms.filter((r) => r.slug !== slug).map(room => ({
+  const slides = rooms.filter((r) => r.slug !== slug && r.images && r.images.length > 0).map(room => ({
     image: room.images[0],
     title: room.name,
     subtitle: room.shortDescription,

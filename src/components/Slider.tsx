@@ -27,7 +27,7 @@ const isSlide = (slide: Slide | string): slide is Slide => {
 export function Slider({ slides }: SliderProps) {
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
-
+console.log(slides);
     const isImageGallery = slides && slides.length > 0 && typeof slides[0] === 'string';
 
     return (

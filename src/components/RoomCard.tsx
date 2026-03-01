@@ -15,12 +15,12 @@ export function RoomCard({ room, locale }: RoomCardProps) {
       <div className="group cursor-pointer">
         {/* Image */}
         <div className="aspect-video bg-stone-200 overflow-hidden mb-4 relative">
-          <Image
+          {room.images[0] && <Image
             src={room.images[0]}
             alt={room.name}
             fill
             className="object-cover"
-          />
+          />}
         </div>
 
         {/* Content */}

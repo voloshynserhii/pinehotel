@@ -18,7 +18,7 @@ export default async function Home({
   const dict = await getDictionary(lang);
   const locale = lang;
 
-  const slides = rooms.map(room => ({
+  const slides = rooms.filter(room => room.images && room.images.length > 0).map(room => ({
     image: room.images[0],
     title: room.name,
     subtitle: room.shortDescription,
