@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import { getDictionary, Locale } from '@/get-dictionary';
-import { Hero } from '@/components';
+import { Hero, Introduction } from '@/components';
 
 export default async function DinePage({
   params,
@@ -15,50 +16,35 @@ export default async function DinePage({
       <Hero imgSrc='https://static11.com-hotel.com/uploads/hotel/306737/photo/hotel-mas-el-cuquello_17265616858.jpg' title={t.title} subtitle={t.subtitle} />
 
       <section className="py-section container mx-auto px-gutter">
-        <div className="max-w-3xl mx-auto mb-12">
-          <h2 className="text-3xl font-serif font-bold mb-6 text-stone-900">
-            Welcome to La Ruta
-          </h2>
-          <p className="text-lg text-stone-700 leading-relaxed mb-6">
-            {t.description}
-          </p>
-          <p className="text-stone-700 leading-relaxed">
-            Our chef sources local ingredients from nearby farms and producers,
-            celebrating the flavors of the region. Whether it's a leisurely
-            breakfast, relaxed lunch, or intimate dinner, La Ruta provides the
-            perfect setting for culinary experiences that honor both tradition
-            and contemporary taste.
-          </p>
-        </div>
+        <Introduction title={t.welcome} text={t.description} paragraph={t.welcomeDescription} />
 
         {/* Restaurant Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12 text-center">
           <div className="space-y-4">
             <div className="text-5xl">🍴</div>
             <h3 className="text-xl font-serif font-bold text-stone-900">
-              Local Cuisine
+              {t.localCuisineTitle}
             </h3>
             <p className="text-stone-700">
-              Seasonal menus featuring regional specialties and local producers
+              {t.localCuisineDescription}
             </p>
           </div>
           <div className="space-y-4">
             <div className="text-5xl">🍷</div>
             <h3 className="text-xl font-serif font-bold text-stone-900">
-              Wine Selection
+              {t.wineSelectionTitle}
             </h3>
             <p className="text-stone-700">
-              Curated wines from Spanish vineyards and international producers
+              {t.wineSelectionDescription}
             </p>
           </div>
           <div className="space-y-4">
             <div className="text-5xl">👥</div>
             <h3 className="text-xl font-serif font-bold text-stone-900">
-              Social Dining
+              {t.socialDiningTitle}
             </h3>
             <p className="text-stone-700">
-              Intimate atmosphere perfect for meeting other guests or private
-              celebrations
+              {t.socialDiningDescription}
             </p>
           </div>
         </div>
@@ -70,26 +56,20 @@ export default async function DinePage({
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <p className="font-semibold text-stone-900 mb-2">Breakfast</p>
-              <p className="text-stone-700">7:00 AM - 10:00 AM daily</p>
+              <p className="font-semibold text-stone-900 mb-2">{t.breakfast}</p>
+              <p className="text-stone-700">{t.breakfastHours}</p>
             </div>
             <div>
-              <p className="font-semibold text-stone-900 mb-2">Lunch</p>
+              <p className="font-semibold text-stone-900 mb-2">{t.dinner}</p>
               <p className="text-stone-700">
-                12:30 PM - 3:00 PM (closed Mondays)
-              </p>
-            </div>
-            <div>
-              <p className="font-semibold text-stone-900 mb-2">Dinner</p>
-              <p className="text-stone-700">
-                7:00 PM - 11:00 PM (closed Tuesdays)
+                {t.dinnerHours}
               </p>
             </div>
             <div>
               <p className="font-semibold text-stone-900 mb-2">
-                Weekend Brunch
+                {t.weekends}
               </p>
-              <p className="text-stone-700">10:00 AM - 1:00 PM (Sat & Sun)</p>
+              <p className="text-stone-700">{t.weekendsHours}</p>
             </div>
           </div>
         </div>
@@ -97,14 +77,14 @@ export default async function DinePage({
         {/* CTA */}
         <div className="text-center">
           <h3 className="text-2xl font-serif font-bold mb-4 text-stone-900">
-            Make a Reservation
+            {t.makeReservation}
           </h3>
           <p className="text-stone-700 mb-6">
-            For reservations and special dietary requirements, please contact us
+            {t.reservationInfo}
           </p>
-          <button className="px-8 py-3 bg-[#c8b89a] text-cream-50 rounded font-semibold hover:bg-[#b8a882] transition-colors">
-            Reserve a Table
-          </button>
+          <Link href="https://wa.me/34624088379" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 bg-[#c8b89a] text-cream-50 font-semibold hover:bg-[#b8a882] transition-colors">
+            {t.reserveTable}
+          </Link>
         </div>
       </section>
     </>

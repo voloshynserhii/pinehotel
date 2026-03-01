@@ -1,6 +1,8 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Room } from '@/app/types';
+import { useDictionary } from '@/context/DictionaryContext';
 
 interface RoomCardProps {
   room: Room;
@@ -8,6 +10,7 @@ interface RoomCardProps {
 }
 
 export function RoomCard({ room, locale }: RoomCardProps) {
+  const dictionary = useDictionary();
   const roomPagePath = `/${locale}/rooms/${room.slug}`;
 
   return (
@@ -33,7 +36,10 @@ export function RoomCard({ room, locale }: RoomCardProps) {
           </p>
           <div className="flex items-center justify-between pt-2">
             <span className="text-sm text-stone-500">
-              {room.capacity} {room.capacity === 1 ? 'guest' : 'guests'}
+              {room.capacity}{' '}
+              {room.capacity === 1
+                ? dictionary.Rooms.guest
+                : dictionary.Rooms.guests}
             </span>
           </div>
         </div>

@@ -24,7 +24,7 @@ export function ContactForm({
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.SubmitEvent) => {
     e.preventDefault();
     // Handle form submission here (API call, email service, etc.)
     console.log('Form submitted:', formData);
@@ -43,7 +43,7 @@ export function ContactForm({
             htmlFor="name"
             className="block text-sm font-semibold text-stone-900 mb-2"
           >
-            Name
+            {contact.nameLabel}
           </label>
           <input
             type="text"
@@ -53,7 +53,7 @@ export function ContactForm({
             onChange={handleChange}
             required
             className="w-full px-4 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-sage-700"
-            placeholder="Your name"
+            placeholder={contact.namePlaceholder}
           />
         </div>
         <div>
@@ -61,7 +61,7 @@ export function ContactForm({
             htmlFor="email"
             className="block text-sm font-semibold text-stone-900 mb-2"
           >
-            Email
+            {contact.emailLabel}
           </label>
           <input
             type="email"
@@ -71,7 +71,7 @@ export function ContactForm({
             onChange={handleChange}
             required
             className="w-full px-4 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-sage-700"
-            placeholder="your@email.com"
+            placeholder={contact.emailPlaceholder}
           />
         </div>
       </div>
@@ -82,7 +82,7 @@ export function ContactForm({
             htmlFor="phone"
             className="block text-sm font-semibold text-stone-900 mb-2"
           >
-            Phone
+            {contact.phoneLabel}
           </label>
           <input
             type="tel"
@@ -91,7 +91,7 @@ export function ContactForm({
             value={formData.phone}
             onChange={handleChange}
             className="w-full px-4 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-sage-700"
-            placeholder="+34 123 456 789"
+            placeholder={contact.phonePlaceholder}
           />
         </div>
         <div>
@@ -99,7 +99,7 @@ export function ContactForm({
             htmlFor="subject"
             className="block text-sm font-semibold text-stone-900 mb-2"
           >
-            Subject
+            {contact.subjectLabel}
           </label>
           <input
             type="text"
@@ -108,7 +108,7 @@ export function ContactForm({
             value={formData.subject}
             onChange={handleChange}
             className="w-full px-4 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-sage-700"
-            placeholder="How can we help?"
+            placeholder={contact.subjectPlaceholder}
           />
         </div>
       </div>
@@ -128,20 +128,20 @@ export function ContactForm({
           required
           rows={6}
           className="w-full px-4 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-sage-700"
-          placeholder="Your message..."
+          placeholder={contact.messagePlaceholder}
         />
       </div>
 
       <button
         type="submit"
-        className="w-full bg-[#c8b89a] text-cream-50 py-3 rounded font-semibold hover:bg-[#b8a882] transition-colors"
+        className="w-full bg-[#c8b89a] text-cream-50 py-3 font-semibold hover:bg-[#b8a882] transition-colors"
       >
         {contact.send}
       </button>
 
       {submitted && (
         <div className="bg-sage-100 text-sage-800 p-4 rounded text-center">
-          Thank you for your message. We'll be in touch soon!
+          {contact.thankYouMessage}
         </div>
       )}
     </form>

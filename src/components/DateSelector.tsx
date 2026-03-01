@@ -1,6 +1,6 @@
 'use client'
 
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction, useState, useContext } from 'react'
 import {
   format,
   addMonths,
@@ -15,6 +15,7 @@ import {
   isBefore,
   isAfter,
 } from 'date-fns'
+import { DictionaryContext } from '@/context/DictionaryContext'
 
 interface DateSelectorProps {
   checkIn: string
@@ -31,6 +32,7 @@ export function DateSelector({
   setCheckOut,
   setShowDateSelector,
 }: DateSelectorProps) {
+  const dict = useContext(DictionaryContext)
   const [currentMonth, setCurrentMonth] = useState(new Date())
 
   const handleDateClick = (day: Date) => {
@@ -51,6 +53,10 @@ export function DateSelector({
       }
     }
   }
+
+  if (!dict) return null
+
+  const t = dict.DateSelector
 
   const renderHeader = () => {
     return (
@@ -75,7 +81,7 @@ export function DateSelector({
   }
 
   const renderDays = () => {
-    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    const days = [t.sun, t.mon, t.tue, t.wed, t.thu, t.fri, t.sat]
     return (
       <div className="grid grid-cols-7 text-center text-xs opacity-70">
         {days.map((day) => (
@@ -142,7 +148,7 @@ export function DateSelector({
         onClick={() => setShowDateSelector(false)}
         className="w-full mt-6 bg-[#cbb8a3] text-white py-3 text-sm tracking-widest"
       >
-        DONE
+        {t.done}
       </button>
     </div>
   )

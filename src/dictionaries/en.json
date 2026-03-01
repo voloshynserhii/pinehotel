@@ -51,11 +51,24 @@
     "title": "La Ruta Restaurant",
     "subtitle": "Relaxed dining in a warm and social atmosphere",
     "description": "Our on-site restaurant La Ruta offers a warm, social dining experience in a countryside setting. We celebrate local flavors and seasonal ingredients, creating a culinary experience that complements the peaceful surroundings.",
+    "welcome": "Welcome to La Ruta",
+    "welcomeDescription": "Our chef sources local ingredients from nearby farms and producers, celebrating the flavors of the region. Whether it's a leisurely breakfast, relaxed lunch, or intimate dinner, La Ruta provides the perfect setting for culinary experiences that honor both tradition and contemporary taste.",
+    "localCuisineTitle": "Local Cuisine",
+    "localCuisineDescription": "Seasonal menus featuring regional specialties and local producers",
+    "wineSelectionTitle": "Wine Selection",
+    "wineSelectionDescription": "Curated wines from Spanish vineyards and international producers",
+    "socialDiningTitle": "Social Dining",
+    "socialDiningDescription": "Intimate atmosphere perfect for meeting other guests or private celebrations",
     "openingHours": "Opening Hours",
-    "menu": "Menu",
-    "reservations": "Make a Reservation",
-    "localCuisine": "Local Cuisine",
-    "seasonalMenus": "Seasonal Menus"
+    "breakfast": "Breakfast",
+    "breakfastHours": "8:00 AM - 10:00 AM daily",
+    "dinner": "Dinner",
+    "dinnerHours": "7:00 PM - 11:00 PM daily",
+    "weekends": "Weekends",
+    "weekendsHours": "Open all day",
+    "makeReservation": "Make a Reservation",
+    "reservationInfo": "For reservations and special dietary requirements, please contact us",
+    "reserveTable": "Reserve a Table"
   },
   "Experiences": {
     "title": "Experiences",
@@ -86,22 +99,133 @@
     "contactForm": "Contact Form",
     "followUs": "Follow Us",
     "hoursTitle": "Opening Hours",
-    "location": "The Pines Hotel, Ctra Els Ivarsos a Culla KM1, Castellon, Valencia, Spain"
+    "location": "The Pines Hotel, Ctra Els Ivarsos a Culla KM1, Castellon, Valencia, Spain",
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email",
+    "emailPlaceholder": "your@email.com",
+    "phoneLabel": "Phone",
+    "phonePlaceholder": "+34 123 456 789",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "How can we help?",
+    "messagePlaceholder": "Your message...",
+    "thankYouMessage": "Thank you for your message. We'll be in touch soon!",
+    "mondayFriday": "Monday - Friday:",
+    "mondayFridayHours": "9:00 AM - 6:00 PM",
+    "saturday": "Saturday:",
+    "saturdayHours": "10:00 AM - 4:00 PM",
+    "sunday": "Sunday:",
+    "sundayStatus": "Closed",
+    "ourLocation": "Our Location",
+    "mapPlaceholder": "Google Maps Embed - Placeholder"
+  },
+  "BookingBar": {
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Guests",
+    "adults": "Adults:",
+    "kids": "Kids:",
+    "rooms": "Rooms",
+    "checkAvailability": "CHECK AVAILABILITY"
+  },
+  "GuestSelector": {
+    "adults": "Adults",
+    "kids": "Kids",
+    "ageOfChildren": "Age of children",
+    "child": "Child",
+    "rooms": "Rooms",
+    "done": "DONE"
+  },
+  "DateSelector": {
+    "sun": "Sun",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "done": "DONE"
   },
   "Terms": {
     "title": "Terms & Conditions",
-    "subtitle": "Please read our terms and conditions carefully"
+    "subtitle": "Please read our terms and conditions carefully",
+    "heading": "Terms and Conditions",
+    "welcome": "Welcome to The Pines Hotel. Please read our terms and conditions carefully before making a reservation. By making a reservation, you agree to be bound by these terms and conditions.",
+    "reservationsTitle": "1. Reservations",
+    "reservationsList": [
+      "All reservations are subject to availability.",
+      "Reservations can be made online through our website, by phone, or by email.",
+      "A valid credit card is required to guarantee your reservation.",
+      "Special requests are subject to availability and may incur additional charges."
+    ],
+    "checkInTitle": "2. Check-in and Check-out",
+    "checkInList": [
+      "Check-in time is from 3:00 PM on the day of arrival.",
+      "Check-out time is by 12:00 PM on the day of departure.",
+      "Early check-in and late check-out are subject to availability and may incur additional charges.",
+      "Guests are required to present a valid photo ID and the credit card used for the reservation upon check-in."
+    ],
+    "cancellationTitle": "3. Cancellation Policy",
+    "cancellationList": [
+      "Cancellations made more than 7 days prior to the arrival date will receive a full refund.",
+      "Cancellations made within 7 days of the arrival date will be charged for the first night of the stay.",
+      "No-shows will be charged for the entire reservation.",
+      "For group reservations, a different cancellation policy may apply. Please contact us for more information."
+    ],
+    "paymentTitle": "4. Payment",
+    "paymentList": [
+      "We accept major credit cards (Visa, MasterCard, American Express) and cash.",
+      "Full payment is required upon check-in.",
+      "All prices are in Euros (€) and include applicable taxes."
+    ],
+    "behaviorTitle": "5. Guest Behavior",
+    "behaviorList": [
+      "Guests are expected to behave in a respectful and responsible manner at all times.",
+      "Smoking is not permitted in any indoor areas of the hotel. A cleaning fee will be charged for smoking in the rooms.",
+      "Pets are not allowed, with the exception of service animals.",
+      "Any damage to hotel property will be charged to the guest's credit card."
+    ],
+    "liabilityTitle": "6. Liability",
+    "liabilityList": [
+      "The Pines Hotel is not responsible for any lost, stolen, or damaged personal belongings.",
+      "The hotel is not liable for any accidents or injuries that occur on the premises.",
+      "Guests are responsible for their own safety and security."
+    ],
+    "privacyTitle": "7. Privacy Policy",
+    "privacyText": "We are committed to protecting your privacy. Please review our Privacy Policy for more information on how we collect, use, and protect your personal data.",
+    "contactTitle": "8. Contact Information",
+    "contactText": "If you have any questions or concerns, please do not hesitate to contact us:",
+    "address": "Address:",
+    "addressDetails": "The Pines Hotel, Ctra Els Ivarsos a Culla KM1, Castellon, Valencia, Spain",
+    "phone": "Phone:",
+    "email": "Email:"
   },
   "Cookies": {
     "title": "Cookies Policy",
-    "subtitle": "How we use cookies"
+    "subtitle": "How we use cookies",
+    "heading": "Cookie Policy",
+    "welcome": "Welcome to The Pines Hotel. This Cookie Policy explains how we use cookies and similar technologies on our website.",
+    "whatAreCookiesTitle": "What are cookies?",
+    "whatAreCookiesText": "Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work, or work more efficiently, as well as to provide information to the owners of the site.",
+    "howWeUseCookiesTitle": "How we use cookies",
+    "howWeUseCookiesText": "We use a minimal number of cookies on our website. We do not use cookies to collect personal information or to track your browsing habits. The cookies we use are for essential functionallity only.",
+    "essentialCookiesTitle": "Essential Cookies:",
+    "essentialCookiesText": "These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.",
+    "thirdPartyCookiesTitle": "Third-party cookies",
+    "thirdPartyCookiesText": "We do not use any third-party cookies for advertising or tracking purposes.",
+    "yourChoicesTitle": "Your choices",
+    "yourChoicesText": "Because we only use essential cookies, there is no mechanism for you to opt-out of them, other than to cease using the website, or to configure your browser to block cookies. However, as stated above, this may affect the functionality of the website.",
+    "contactTitle": "Contact Us",
+    "contactText": "If you have any questions about our use of cookies, please contact us at:",
+    "email": "Email:"
   },
   "Footer": {
     "copyright": "The Pines Hotel. All rights reserved.",
     "developedBy": "Website developed by",
     "cookies": "Cookies Policy",
     "terms": "Terms & Conditions",
-    "followUs": "Follow Us"
+    "followUs": "Follow Us",
+    "quickLinks": "Quick Links"
   },
   "Common": {
     "description": "Description",

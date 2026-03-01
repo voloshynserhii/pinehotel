@@ -1,4 +1,5 @@
 import { getDictionary, Locale } from '@/get-dictionary';
+import { CONTACT } from '@/lib/constants';
 
 export default async function TermsPage({
   params,
@@ -10,23 +11,79 @@ export default async function TermsPage({
   const t = dict.Terms;
 
   return (
-    <>
-      <section className="py-section container mx-auto px-gutter pt-40">
-        <div className="prose lg:prose-xl max-w-none">
-          <h2>Terms and Conditions</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <h2>Consectetur Adipiscing Elit</h2>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          </p>
-          <h2>Neque Porro Quisquam Est</h2>
-          <p>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-          </p>
+    <section className="py-20 container mx-auto px-gutter">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-serif font-bold mb-8">{t.title}</h1>
+        <div className="space-y-8 text-lg text-stone-700">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">{t.heading}</h2>
+            <p>
+              {t.welcome}
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">{t.reservationsTitle}</h2>
+            <ul className="list-disc list-inside space-y-2">
+              {t.reservationsList.map((item: string) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">{t.checkInTitle}</h2>
+            <ul className="list-disc list-inside space-y-2">
+              {t.checkInList.map((item: string) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">{t.cancellationTitle}</h2>
+            <ul className="list-disc list-inside space-y-2">
+              {t.cancellationList.map((item: string) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">{t.paymentTitle}</h2>
+            <ul className="list-disc list-inside space-y-2">
+              {t.paymentList.map((item: string) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">{t.behaviorTitle}</h2>
+            <ul className="list-disc list-inside space-y-2">
+              {t.behaviorList.map((item: string) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">{t.liabilityTitle}</h2>
+            <ul className="list-disc list-inside space-y-2">
+              {t.liabilityList.map((item: string) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">{t.privacyTitle}</h2>
+            <p>
+              {t.privacyText}
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h2 className="text-2xl font-serif font-bold text-stone-900">{t.contactTitle}</h2>
+            <p>
+              {t.contactText}
+            </p>
+            <ul className="list-disc list-inside space-y-2">
+              <li><strong>{t.address}</strong> {t.addressDetails}</li>
+              <li><strong>{t.phone}</strong> {CONTACT.phone}</li>
+              <li><strong>{t.email}</strong> {CONTACT.email}</li>
+            </ul>
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

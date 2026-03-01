@@ -3,12 +3,20 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useDictionary } from '@/context/DictionaryContext';
+import { CONTACT } from '@/lib/constants';
 
 export function Footer() {
   const dict = useDictionary();
-  const { Footer: footer, Contact: contact } = dict;
+  const { Footer: footer, Contact: contact, Navigation: nav } = dict;
   const pathname = usePathname();
   const lang = pathname.split('/')[1];
+
+  const navItems = [
+    { label: nav.rooms, href: `/${lang}/rooms` },
+    { label: nav.dine, href: `/${lang}/dine` },
+    { label: nav.experiences, href: `/${lang}/experiences` },
+    { label: nav.contact, href: `/${lang}/contact` },
+  ];
 
   return (
     <footer className="bg-stone-900 text-cream-50 py-section">
@@ -22,40 +30,18 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <h4 className="font-semibold mb-4">{footer.quickLinks}</h4>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href={`/${lang}/rooms`}
-                  className="hover:text-sage-300 transition-colors"
-                >
-                  Rooms
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={`/${lang}/dine`}
-                  className="hover:text-sage-300 transition-colors"
-                >
-                  Dine
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={`/${lang}/experiences`}
-                  className="hover:text-sage-300 transition-colors"
-                >
-                  Experiences
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={`/${lang}/contact`}
-                  className="hover:text-sage-300 transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
+              {navItems.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-sage-300 transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -65,18 +51,18 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="tel:+34123456789"
+                  href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
                   className="hover:text-sage-300 transition-colors"
                 >
-                  +34 624 088 378
+                  {CONTACT.phone}
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@thepines-hotel.com"
+                  href={`mailto:${CONTACT.email}`}
                   className="hover:text-sage-300 transition-colors"
                 >
-                  info@thepines-hotel.com
+                  {CONTACT.email}
                 </a>
               </li>
             </ul>

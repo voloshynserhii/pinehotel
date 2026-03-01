@@ -1,14 +1,16 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useContext } from 'react'
 import { usePathname } from 'next/navigation'
-import { format, addDays, differenceInCalendarDays } from 'date-fns'
+import { format, addDays } from 'date-fns'
 import { GuestInfo } from '@/app/types'
 import { GuestSelector } from './GuestSelector'
 import { DateSelector } from './DateSelector'
+import { DictionaryContext } from '@/context/DictionaryContext'
 
 export function BookingBar() {
   const pathname = usePathname()
+  const dict = useContext(DictionaryContext)
   const locale = pathname?.split('/')[1] || 'en'
   const [checkIn, setCheckIn] = useState(format(new Date(), 'yyyy-MM-dd'))
   const [checkOut, setCheckOut] = useState(
@@ -51,6 +53,10 @@ export function BookingBar() {
   const children = guestInfo.kids - infants
   const bookingUrl = `${process.env.NEXT_PUBLIC_BOOKING_URL}?locale=${locale}&items[0][adults]=${guestInfo.adults}&items[0][children]=${children}&items[0][infants]=${infants}&currency=EUR&checkInDate=${checkIn}&checkOutDate=${checkOut}&trackPage=no`
 
+  if (!dict) return null
+
+  const t = dict.BookingBar
+
   return (
     <>
       <div className="w-full lg:w-[1200px] bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white h-auto lg:h-[75px] flex flex-col lg:flex-row lg:items-stretch">
@@ -63,7 +69,7 @@ export function BookingBar() {
             onClick={() => setShowDateSelector(!showDateSelector)}
           >
             <span className="text-xs uppercase tracking-wide opacity-70">
-              Check-in
+              {t.checkIn}
             </span>
             <span className="text-lg font-light">{checkIn}</span>
           </div>
@@ -88,7 +94,7 @@ export function BookingBar() {
           onClick={() => setShowDateSelector(!showDateSelector)}
         >
           <span className="text-xs uppercase tracking-wide opacity-70">
-            Check-out
+            {t.checkOut}
           </span>
           <span className="text-lg font-light">{checkOut}</span>
         </div>
@@ -103,7 +109,7 @@ export function BookingBar() {
           ref={guestSelectorRef}
         >
           <span className="text-xs uppercase tracking-wide opacity-70">
-            Guests
+            {t.guests}
           </span>
           <div className="flex justify-between items-center">
             <div className="flex items-center">
@@ -112,14 +118,14 @@ export function BookingBar() {
               </span>
               <div className="ml-2">
                 <div className="font-light text-sm">
-                  Adults: {guestInfo.adults}
+                  {t.adults} {guestInfo.adults}
                 </div>
-                <div className="font-light text-sm">Kids: {guestInfo.kids}</div>
+                <div className="font-light text-sm">{t.kids} {guestInfo.kids}</div>
               </div>
             </div>
             <div className="flex items-center">
               <div className="mr-2 text-right">
-                <div className="font-light text-sm">Rooms</div>
+                <div className="font-light text-sm">{t.rooms}</div>
                 <div className="text-lg font-bold">{guestInfo.rooms}</div>
               </div>
             </div>
@@ -143,7 +149,7 @@ export function BookingBar() {
           rel="noopener noreferrer"
         >
           <p>
-            CHECK AVAILABILITY
+            {t.checkAvailability}
           </p>
         </a>
       </div>

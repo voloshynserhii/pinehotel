@@ -1,7 +1,8 @@
 'use client'
 
-import { Dispatch, SetStateAction } from 'react'
+import { Dispatch, SetStateAction, useContext } from 'react'
 import { GuestInfo } from '@/app/types'
+import { DictionaryContext } from '@/context/DictionaryContext'
 
 interface GuestSelectorProps {
   guestInfo: GuestInfo
@@ -14,6 +15,7 @@ export function GuestSelector({
   setGuestInfo,
   setShowGuestSelector,
 }: GuestSelectorProps) {
+  const dict = useContext(DictionaryContext)
   const { adults, kids, rooms, kidAges } = guestInfo
 
   const handleAddKid = () => {
@@ -56,6 +58,10 @@ export function GuestSelector({
     }))
   }
 
+  if (!dict) return null
+
+  const t = dict.GuestSelector
+
   return (
     <div
       onClick={(e) => e.stopPropagation()}
@@ -64,7 +70,7 @@ export function GuestSelector({
       <div className="flex flex-col gap-4">
         {/* Adults */}
         <div className="flex justify-between items-center">
-          <span className="text-lg font-light">Adults</span>
+          <span className="text-lg font-light">{t.adults}</span>
           <div className="flex items-center gap-4">
             <button
               onClick={() => handleAdultsChange(-1)}
@@ -86,7 +92,7 @@ export function GuestSelector({
 
         {/* Kids */}
         <div className="flex justify-between items-center">
-          <span className="text-lg font-light">Kids</span>
+          <span className="text-lg font-light">{t.kids}</span>
           <div className="flex items-center gap-4">
             <button
               onClick={handleRemoveKid}
@@ -107,11 +113,11 @@ export function GuestSelector({
         {/* Kid Ages */}
         {kids > 0 && (
           <div className="flex flex-col gap-2">
-            <h3 className="text-base font-light">Age of children</h3>
+            <h3 className="text-base font-light">{t.ageOfChildren}</h3>
             <div className="grid grid-cols-3 gap-2">
               {[...Array(kids)].map((_, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <label className="text-sm">Child {i + 1}</label>
+                  <label className="text-sm">{t.child} {i + 1}</label>
                   <input
                     type="number"
                     min="0"
@@ -130,7 +136,7 @@ export function GuestSelector({
 
         {/* Rooms */}
         <div className="flex justify-between items-center">
-          <span className="text-lg font-light">Rooms</span>
+          <span className="text-lg font-light">{t.rooms}</span>
           <div className="flex items-center gap-4">
             <button
               onClick={() => handleRoomsChange(-1)}
@@ -152,7 +158,7 @@ export function GuestSelector({
         onClick={() => setShowGuestSelector(false)}
         className="w-full mt-6 bg-[#cbb8a3] text-white py-3 text-sm tracking-widest"
       >
-        DONE
+        {t.done}
       </button>
     </div>
   )

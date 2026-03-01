@@ -1,5 +1,6 @@
 import { getDictionary, Locale } from '@/get-dictionary';
 import { Hero, ContactForm } from '@/components';
+import { CONTACT } from '@/lib/constants';
 
 export default async function ContactPage({
   params,
@@ -32,10 +33,10 @@ export default async function ContactPage({
                 {t.phone}
               </h3>
               <a
-                href="tel:+34123456789"
+                href={`tel:${CONTACT.phone.replace(/\s/g, '')}`}
                 className="text-sage-700 hover:text-sage-800 font-semibold"
               >
-                +34 624 088 378
+                {CONTACT.phone}
               </a>
             </div>
 
@@ -45,10 +46,10 @@ export default async function ContactPage({
                 {t.email}
               </h3>
               <a
-                href="mailto:info@thepines-hotel.com"
+                href={`mailto:${CONTACT.email}`}
                 className="text-sage-700 hover:text-sage-800 font-semibold"
               >
-                info@thepines-hotel.com
+                {CONTACT.email}
               </a>
             </div>
 
@@ -59,16 +60,16 @@ export default async function ContactPage({
               </h3>
               <div className="space-y-2 text-sm text-stone-700">
                 <div className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span>9:00 AM - 6:00 PM</span>
+                  <span>{t.mondayFriday}</span>
+                  <span>{t.mondayFridayHours}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span>10:00 AM - 4:00 PM</span>
+                  <span>{t.saturday}</span>
+                  <span>{t.saturdayHours}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sunday:</span>
-                  <span>Closed</span>
+                  <span>{t.sunday}</span>
+                  <span>{t.sundayStatus}</span>
                 </div>
               </div>
             </div>
@@ -83,11 +84,11 @@ export default async function ContactPage({
         {/* Map Embed */}
         <div className="mt-section pt-section border-t border-stone-200">
           <h3 className="text-2xl font-serif font-bold mb-6 text-stone-900">
-            Our Location
+            {t.ourLocation}
           </h3>
           <div className="aspect-video bg-gradient-to-br from-stone-200 to-stone-300 rounded-lg flex items-center justify-center">
             <span className="text-stone-500">
-              Google Maps Embed - Placeholder
+              {t.mapPlaceholder}
             </span>
           </div>
         </div>
