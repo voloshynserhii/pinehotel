@@ -204,7 +204,6 @@
       }
     }
   },
-
   "Dine": {
     "title": "La Ruta Restaurant",
     "subtitle": "Relaxed dining in a warm and social atmosphere",
@@ -229,13 +228,42 @@
     "reserveTable": "Reserve a Table"
   },
   "Experiences": {
-    "title": "Experiences",
-    "subtitle": "Discover the beauty of slow travel",
-    "nature": "Nature",
-    "countryside": "Countryside Exploration",
-    "relaxation": "Relaxation & Wellness",
-    "adventure": "Mountain Exploration",
-    "description": "Immerse yourself in the peaceful countryside surroundings and discover activities that celebrate nature, relaxation, and exploration."
+    "title": "Personalized Experiences",
+    "text": "We believe every guest is unique. Our concierge team is happy to arrange custom experiences tailored to your interests, whether that'sphotography expeditions, botanical walks, or cultural tours.",
+    "paragraph": "Contact our team at any time during your stay to discuss personalized itineraries and special arrangements.",
+    "description": "Immerse yourself in the peaceful countryside surroundings and discover activities that celebrate nature, relaxation, and exploration.",
+    "experiences": [
+      {
+        "id": "walks",
+        "name": "Nature Walks",
+        "description": "Enjoy beautiful countryside walks through the surrounding pine forests and mountains, with paths starting directly from the hotel. Experience the peaceful natural beauty at your own pace."
+      },
+      {
+        "id": "cycling",
+        "name": "Countryside Cycling",
+        "description": "Explore the breathtaking roads and mountain climbs of Castellón on a fully supported cycling adventure, perfectly suited for road cycling, gravel riding, and mountain biking, with custom route planning and guided tours arranged to match your pace and style."
+      },
+      {
+        "id": "relaxation",
+        "name": "Wellness & Relaxation",
+        "description": "Take advantage of the pool and garden facilities, if it’s yoga sessions, or poolside relaxation , our peaceful garden areas are designed for rejuvenation and mindfulness."
+      },
+      {
+        "id": "golf",
+        "name": "Golf",
+        "description": "Discover the stunning fairways of Castellón with a premium golf excursion that combines championship courses, Mediterranean views, seamless transport, and exclusive access to the renowned Club de Campo del Mediterráneo, home course of Sergio García, for an unforgettable day on Spain’s Costa del Azahar."
+      },
+      {
+        "id": "local",
+        "name": "Local",
+        "description": "Discover the charm of Culla on a curated day tour through its medieval streets, panoramic mountain viewpoints, and local gastronomy, featuring iconic landmarks such as the Castillo de Culla for an authentic taste of inland Castellón."
+      },
+      {
+        "id": "personalised",
+        "name": "Personalised experiences",
+        "description": "Our boutique hotel in Culla is available for exclusive private hire, giving your group complete privacy and a fully bespoke experience in the heart of Castellón, a region renowned for world-class cycling and outdoor sport. From riding iconic roads featured in La Vuelta a España and tackling legendary routes around the Río Mijares (Millars), to experiencing events such as Mediterranean Epic and UCI Gravel World Series qualifiers held in the province, alongside championship golf at Club de Campo del Mediterráneo, home of Sergio García, plus guided tours, gastronomy, and tailored adventures, every detail is curated to match your group’s ambition, pace, and style for an unforgettable Mediterranean escape. Contact us directly via the WhatsApp button to start planning your personalised experience."
+      }
+    ]
   },
   "Extras": {
     "title": "Extras & Services",

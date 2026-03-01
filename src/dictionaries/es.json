@@ -204,7 +204,6 @@
       }
     }
   },
-
   "Dine": {
     "title": "Restaurante La Ruta",
     "subtitle": "Gastronomía relajada en una atmósfera cálida y acogedora",
@@ -229,13 +228,42 @@
     "reserveTable": "Reservar una Mesa"
   },
   "Experiences": {
-    "title": "Experiencias",
-    "subtitle": "Descubre la belleza del viaje lento",
-    "nature": "Naturaleza",
-    "countryside": "Exploración Rural",
-    "relaxation": "Relajación y Bienestar",
-    "adventure": "Exploración de Montaña",
-    "description": "Sumérgete en el tranquilo entorno rural y descubre actividades que celebran la naturaleza, la relajación y la exploración."
+    "title": "Experiencias Personalizadas",
+    "text": "Creemos que cada huésped es único. Nuestro equipo de conserjería estará encantado de organizar experiencias personalizadas adaptadas a sus intereses, ya sean expediciones fotográficas, paseos botánicos o visitas culturales.",
+    "paragraph": "Póngase en contacto con nuestro equipo en cualquier momento durante su estancia para hablar sobre itinerarios personalizados y arreglos especiales.",
+    "description": "Sumérjase en el tranquilo entorno rural y descubra actividades que celebran la naturaleza, la relajación y la exploración.",
+    "experiences": [
+      {
+        "id": "walks",
+        "name": "Paseos por la Naturaleza",
+        "description": "Disfrute de hermosos paseos por el campo a través de los bosques de pinos y montañas circundantes, con senderos que comienzan directamente desde el hotel. Experimente la tranquila belleza natural a su propio ritmo."
+      },
+      {
+        "id": "cycling",
+        "name": "Ciclismo Rural",
+        "description": "Explore las impresionantes carreteras y subidas de montaña de Castellón en una aventura ciclista con asistencia completa, perfectamente adaptada para ciclismo de carretera, gravel y bicicleta de montaña, con planificación de rutas personalizadas y visitas guiadas organizadas para adaptarse a su ritmo y estilo."
+      },
+      {
+        "id": "relaxation",
+        "name": "Bienestar y Relajación",
+        "description": "Aproveche las instalaciones de la piscina y el jardín, ya sean sesiones de yoga o relajación junto a la piscina; nuestras tranquilas zonas ajardinadas están diseñadas para el rejuvenecimiento y la atención plena."
+      },
+      {
+        "id": "golf",
+        "name": "Golf",
+        "description": "Descubra las impresionantes calles de Castellón con una excursión de golf premium que combina campos de campeonato, vistas al Mediterráneo, transporte fluido y acceso exclusivo al renombrado Club de Campo del Mediterráneo, campo local de Sergio García, para un día inolvidable en la Costa del Azahar de España."
+      },
+      {
+        "id": "local",
+        "name": "Local",
+        "description": "Descubra el encanto de Culla en una excursión de un día curada a través de sus calles medievales, miradores panorámicos de montaña y gastronomía local, con lugares emblemáticos como el Castillo de Culla para un sabor auténtico del interior de Castellón."
+      },
+      {
+        "id": "personalised",
+        "name": "Experiencias personalizadas",
+        "description": "Nuestro hotel boutique en Culla está disponible para alquiler privado exclusivo, brindando a su grupo total privacidad y una experiencia totalmente a medida en el corazón de Castellón, una región reconocida por el ciclismo de clase mundial y el deporte al aire libre. Desde recorrer carreteras icónicas que aparecen en La Vuelta a España y abordar rutas legendarias alrededor del Río Mijares (Millars), hasta experimentar eventos como la Mediterranean Epic y las eliminatorias de la UCI Gravel World Series celebradas en la provincia, junto con golf de campeonato en el Club de Campo del Mediterráneo, hogar de Sergio García, además de visitas guiadas, gastronomía y aventuras a medida, cada detalle está curado para coincidir con la ambición, el ritmo y el estilo de su grupo para una escapada mediterránea inolvidable. Contáctenos directamente a través del botón de WhatsApp para comenzar a planificar su experiencia personalizada."
+      }
+    ]
   },
   "Extras": {
     "title": "Servicios Adicionales",
@@ -257,7 +285,7 @@
     "contactForm": "Formulario de Contacto",
     "followUs": "Síguenos",
     "hoursTitle": "Horario de Apertura",
-    "location": "The Pines Hotel, Mountain Valley, España",
+    "location": "The Pines Hotel, Ctra Els Ivarsos a Culla KM1, Castellón, Valencia, España",
     "nameLabel": "Nombre",
     "namePlaceholder": "Tu nombre",
     "emailLabel": "Correo Electrónico",

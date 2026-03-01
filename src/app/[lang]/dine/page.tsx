@@ -13,7 +13,7 @@ export default async function DinePage({
 
   return (
     <>
-      <Hero imgSrc='https://static11.com-hotel.com/uploads/hotel/306737/photo/hotel-mas-el-cuquello_17265616858.jpg' title={t.title} subtitle={t.subtitle} />
+      <Hero imgSrc='https://plus.unsplash.com/premium_photo-1733342494312-b74cc27c4681?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' title={t.title} subtitle={t.subtitle} />
 
       <section className="py-section container mx-auto px-gutter">
         <Introduction title={t.welcome} text={t.description} paragraph={t.welcomeDescription} />

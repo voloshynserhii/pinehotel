@@ -7,8 +7,6 @@ export interface Room {
 
 export interface Experience {
   id: string
-  title: string
-  description: string
   icon: string
 }
 
