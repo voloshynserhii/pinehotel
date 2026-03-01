@@ -86,16 +86,12 @@ export default async function ContactPage({
           <h3 className="text-2xl font-serif font-bold mb-6 text-stone-900">
             {t.ourLocation}
           </h3>
-          <div className="aspect-video bg-stone-200 rounded-lg overflow-hidden">
+          <div className="aspect-video bg-stone-200 rounded-lg overflow-hidden w-[75%]">
             <iframe
               width="100%"
               height="100%"
               id="gmap_canvas"
               src={`https://maps.google.com/maps?q=${encodeURIComponent(t.location)}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
-              frameBorder="0"
-              scrolling="no"
-              marginHeight={0}
-              marginWidth={0}
               title={t.ourLocation}
               loading="lazy"
             />
