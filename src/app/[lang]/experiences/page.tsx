@@ -23,7 +23,7 @@ export default async function ExperiencesPage({
 
   return (
     <>
-      <Hero showBookingBar imgSrc='https://images.unsplash.com/photo-1600976267946-1039881b21d5?q=80&w=2334&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' title={t.title} subtitle={t.subtitle} />
+      <Hero showBookingBar imgSrc='https://images.unsplash.com/photo-1600976267946-1039881b21d5?q=80&w=2334&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
 
       <section className="py-section container mx-auto px-gutter">
         <Introduction title={t.title} text={t.text} paragraph={t.paragraph} />

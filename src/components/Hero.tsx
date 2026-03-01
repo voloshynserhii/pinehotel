@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import { BookingBar, PageTabs } from '@/components';
 
 interface HeroProps {
-  title: string;
+  title?: string;
   subtitle?: string;
   showBookingBar?: boolean;
   videoSrc?: string;
