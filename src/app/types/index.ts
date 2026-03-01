@@ -1,14 +1,7 @@
 export interface Room {
-  id: string
   slug: string
-  name: string
-  type: string
-  shortDescription: string
-  longDescription: string
   capacity: number
   area: number
-  features: string[]
-  amenities: string[]
   images: string[]
 }
 

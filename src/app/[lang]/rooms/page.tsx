@@ -19,7 +19,7 @@ export default async function RoomsPage({
       <section className="py-section container mx-auto px-gutter">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {rooms.map((room) => (
-            <RoomCard key={room.id} room={room} locale={locale} />
+            <RoomCard key={room.slug} room={room} locale={locale} />
           ))}
         </div>
 

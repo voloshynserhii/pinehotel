@@ -24,14 +24,14 @@ export function PageTabs() {
 
     return (
         <div
-            className="w-full bg-[#f5f5f5]"
+            className="w-full bg-[#f5f5f5] relative z-20"
             onMouseLeave={() => setIsRoomsDropdownOpen(false)}
         >
             <div className="max-w-[1200px] mx-auto px-6">
                 <div className="-mb-px flex h-[70px] items-center justify-center overflow-x-auto">
                     <Link
-                        href={''}
-                        className={`border-b-2 w-1/4 height-[100%] flex items-center justify-center h-full cursor-pointer text-black ${active || isRoomsDropdownOpen
+                        href={roomsTab.href}
+                        className={`border-b-2 w-1/4 h-full flex items-center justify-center cursor-pointer text-black ${active || isRoomsDropdownOpen
                             ? 'border-black'
                             : 'border-transparent hover:border-black'
                             }`}
@@ -64,24 +64,25 @@ export function PageTabs() {
             </div>
             
             {isRoomsDropdownOpen && (
-                <div className="w-full bg-[#f5f5f5] pb-0 absolute">
+                <div className="w-full bg-[#f5f5f5] absolute left-0 top-full h-auto shadow-md">
                     <div className="max-w-[1200px] mx-auto px-6">
-                        <div className="flex flex-wrap h-[50px] items-center justify-center">
+                        <div className="flex flex-wrap h-auto py-4 items-center justify-center">
                             {rooms.map((room) => {
                                 const roomPath = `/${lang}/rooms/${room.slug}`;
                                 const isRoomActive = pathname === roomPath;
+                                const roomData = dict.Rooms.data[room.slug as keyof typeof dict.Rooms.data];
 
                                 return (
                                     <Link
                                         key={room.slug}
                                         href={roomPath}
-                                        className={`w-1/5 flex items-center justify-center h-full cursor-pointer text-black hover:text-gray-500 ${isRoomActive
+                                        className={`w-1/4 h-9 flex items-center justify-center h-full cursor-pointer text-black hover:text-gray-500 ${isRoomActive
                                             ? 'font-bold'
                                             : 'hover:font-bold'
                                             }`}
                                     >
                                         <p className='font-lora-important text-sm tracking-wider transition text-center font-[400]'>
-                                            {room.name}
+                                            {roomData?.name}
                                         </p>
                                     </Link>
                                 );

@@ -45,8 +45,166 @@
     "roomSize": "Tamaño de la habitación",
     "guest": "huésped",
     "guests": "huéspedes",
-    "otherRoomTypes": "Otros tipos de habitaciones"
+    "otherRoomTypes": "Otros tipos de habitaciones",
+    "data": {
+      "benicarlo": {
+        "name": "Benicarlo",
+        "type": "Habitación Doble Estándar",
+        "shortDescription": "Nuestras Habitaciones Dobles ofrecen un refugio tranquilo y cómodo, combinando el encanto tradicional del campo con detalles de diseño moderno.",
+        "longDescription": "Nuestras Habitaciones Dobles ofrecen un refugio tranquilo y cómodo, combinando el encanto tradicional del campo con detalles de diseño moderno.\n\nCada habitación presenta tonos cálidos y naturales, iluminación suave y muebles cuidadosamente seleccionados que reflejan el entorno rural de The Pines Hotel. Las características originales se mezclan con comodidades contemporáneas, creando un espacio relajado y acogedor para descansar.",
+        "features": [
+          "Cama doble confortable con ropa de cama de calidad",
+          "Baño en suite con ducha o bañera",
+          "Aire acondicionado y calefacción",
+          "Televisión de pantalla plana",
+          "Wi-Fi gratis",
+          "Iluminación y asientos pensados",
+          "Diseño elegante con un ambiente rústico"
+        ],
+        "amenities": [
+          "Vistas al campo",
+          "Zona de trabajo",
+          "Cafetera y tetera",
+          "Artículos de tocador de lujo",
+          "Albornoces y zapatillas"
+        ]
+      },
+      "traiguera": {
+        "name": "Traiguera",
+        "type": "Habitación Doble Estándar",
+        "shortDescription": "Nuestras Habitaciones Dobles ofrecen un refugio tranquilo y cómodo, combinando el encanto tradicional del campo con detalles de diseño moderno.",
+        "longDescription": "Nuestras Habitaciones Dobles ofrecen un refugio tranquilo y cómodo, combinando el encanto tradicional del campo con detalles de diseño moderno.\n\nCada habitación presenta tonos cálidos y naturales, iluminación suave y muebles cuidadosamente seleccionados que reflejan el entorno rural de The Pines Hotel. Las características originales se mezclan con comodidades contemporáneas, creando un espacio relajado y acogedor para descansar.",
+        "features": [
+          "Cama doble confortable con ropa de cama de calidad",
+          "Baño en suite con ducha o bañera",
+          "Aire acondicionado y calefacción",
+          "Televisión de pantalla plana",
+          "Wi-Fi gratis",
+          "Iluminación y asientos pensados",
+          "Diseño elegante con un ambiente rústico"
+        ],
+        "amenities": [
+          "Vistas al campo",
+          "Zona de trabajo",
+          "Cafetera y tetera",
+          "Artículos de tocador de lujo",
+          "Albornoces y zapatillas"
+        ]
+      },
+      "la-mina": {
+        "name": "La Mina",
+        "type": "Habitación Doble Estándar",
+        "shortDescription": "Nuestras Habitaciones Dobles ofrecen un auténtico refugio campestre repleto de encanto rústico y carácter tradicional.",
+        "longDescription": "Nuestras Habitaciones Dobles ofrecen un auténtico refugio campestre repleto de encanto rústico y carácter tradicional.\n\nVigas de madera expuestas, suelos de terracota y gruesos muros encalados crean una atmósfera cálida que refleja el patrimonio del paisaje circundante. Ricas texturas naturales y detalles artesanales se combinan con comodidades modernas, ofreciendo un espacio que se siente atemporal y confortable.\n\nLa habitación cuenta con una cama doble acogedora con ropa de cama de calidad, iluminación ambiental suave y mobiliario cuidadosamente elegido que complementa el entorno rural. El baño en suite continúa el estilo tradicional con azulejos clásicos, elementos con carácter y ducha o bañera.",
+        "features": [
+          "Cama doble confortable con ropa de cama de calidad",
+          "Baño en suite con ducha o bañera",
+          "Aire acondicionado y calefacción",
+          "Televisión de pantalla plana",
+          "Wi-Fi gratis",
+          "Iluminación suave y asientos prácticos",
+          "Diseño tradicional con carácter auténtico"
+        ],
+        "amenities": [
+          "Vistas al jardín y la montaña",
+          "Zona de trabajo premium",
+          "Minibar",
+          "Artículos de tocador premium",
+          "Albornoces y zapatillas",
+          "Altavoz Bluetooth"
+        ]
+      },
+      "almenara": {
+        "name": "Almenara",
+        "type": "Habitación Superior Doble/Twin",
+        "shortDescription": "Nuestras Habitaciones Superiores Dobles/Twin ofrecen una mayor sensación de espacio y confort, combinando encanto campestre tradicional con un diseño moderno refinado.",
+        "longDescription": "Nuestras Habitaciones Superiores Dobles/Twin ofrecen una mayor sensación de espacio y confort, combinando encanto campestre tradicional con un diseño moderno refinado.\n\nAmplias y cuidadosamente diseñadas, estas habitaciones presentan tonos cálidos y naturales, iluminación ambiental suave y mobiliario seleccionado que refleja el entorno rural de The Pines Hotel. Las características arquitectónicas originales conviven con comodidades contemporáneas, creando un espacio elegante y relajado para desconectar.\n\nLa distribución más grande incluye un baño ampliado y la opción de una cama king-size o twin, ideal para parejas, amigos o viajeros solos que busquen espacio adicional.",
+        "features": [
+          "Opción de cama king-size/twin con ropa de cama de calidad",
+          "Baño en suite amplio con ducha",
+          "Aire acondicionado y calefacción",
+          "Televisión de pantalla plana",
+          "Wi-Fi gratis",
+          "Iluminación pensada y asientos cómodos",
+          "Diseño elegante con un ambiente rústico"
+        ],
+        "amenities": [
+          "Vistas al campo",
+          "Zona de trabajo",
+          "Cafetera y tetera",
+          "Artículos de tocador de lujo",
+          "Albornoces y zapatillas"
+        ]
+      },
+      "carlet": {
+        "name": "Carlet",
+        "type": "Habitación Superior Doble/Twin",
+        "shortDescription": "Nuestras Habitaciones Superiores Dobles/Twin ofrecen una mayor sensación de espacio y confort, combinando encanto campestre tradicional con un diseño moderno refinado.",
+        "longDescription": "Nuestras Habitaciones Superiores Dobles/Twin ofrecen una mayor sensación de espacio y confort, combinando encanto campestre tradicional con un diseño moderno refinado.\n\nAmplias y cuidadosamente diseñadas, estas habitaciones presentan tonos cálidos y naturales, iluminación ambiental suave y mobiliario seleccionado que refleja el entorno rural de The Pines Hotel. Las características arquitectónicas originales conviven con comodidades contemporáneas, creando un espacio elegante y relajado para desconectar.\n\nLa distribución más grande incluye un baño ampliado y la opción de una cama king-size o twin, ideal para parejas, amigos o viajeros solos que busquen espacio adicional.",
+        "features": [
+          "Opción de cama king-size/twin con ropa de cama de calidad",
+          "Baño en suite amplio con ducha",
+          "Aire acondicionado y calefacción",
+          "Televisión de pantalla plana",
+          "Wi-Fi gratis",
+          "Iluminación pensada y asientos cómodos",
+          "Diseño elegante con un ambiente rústico"
+        ],
+        "amenities": [
+          "Vistas al campo",
+          "Zona de trabajo",
+          "Cafetera y tetera",
+          "Artículos de tocador de lujo",
+          "Albornoces y zapatillas"
+        ]
+      },
+      "the-red-sand-suite": {
+        "name": "The Red Sand Suite",
+        "type": "Suite",
+        "shortDescription": "Nuestras Suites ofrecen espacio y confort adicionales, diseñadas para huéspedes que aprecian un poco más de amplitud para relajarse.",
+        "longDescription": "Nuestras Suites ofrecen espacio y confort adicionales, diseñadas para huéspedes que aprecian un poco más de amplitud para relajarse.\n\nCon áreas de descanso y dormitorio separadas, las Suites combinan un estilo elegante y moderno con detalles arquitectónicos tradicionales. Texturas naturales, colores cálidos y suaves muebles crean una atmósfera refinada pero relajada — perfecta para estancias más largas o huéspedes que buscan mayor comodidad.",
+        "features": [
+          "Cama queen-size con ropa de cama premium",
+          "Área de estar separada con sofá",
+          "Baño en suite con ducha y bañera de burbujas",
+          "Aire acondicionado y calefacción",
+          "Televisión de pantalla plana",
+          "Wi-Fi de alta velocidad",
+          "Decoración elegante inspirada en el campo"
+        ],
+        "amenities": [
+          "Vistas al campo",
+          "Zona de trabajo",
+          "Cafetera y tetera",
+          "Artículos de tocador de lujo",
+          "Albornoces y zapatillas"
+        ]
+      },
+      "cdg-retreat": {
+        "name": "CDG Retreat",
+        "type": "Habitación Familiar",
+        "shortDescription": "Nuestra Habitación Familiar ofrece un espacio amplio y privado, diseñado para familias que desean estar juntas pero con algo de separación.",
+        "longDescription": "Nuestra Habitación Familiar ofrece un espacio amplio y privado, diseñado para familias que desean estar juntas pero con algo de separación.\n\nLa habitación está distribuida como una unidad privada dividida en dos áreas de descanso distintas, proporcionando comodidad y privacidad para padres e hijos en el mismo espacio. Las características campestres tradicionales se combinan con elementos de diseño modernos, iluminación cálida y comodidades contemporáneas para crear un ambiente relajado y acogedor.",
+        "features": [
+          "Alojamiento cómodo para familias",
+          "Baño en suite con ducha y bañera",
+          "Aire acondicionado y calefacción",
+          "Televisión de pantalla plana",
+          "Wi-Fi de alta velocidad",
+          "Amplio espacio de almacenamiento y asientos",
+          "Carácter rural tradicional con comodidades modernas"
+        ],
+        "amenities": [
+          "Vistas al jardín",
+          "Kitchenette",
+          "Kit de bienvenida para niños",
+          "Zona de comedor familiar",
+          "Almacenamiento adicional"
+        ]
+      }
+    }
   },
+
   "Dine": {
     "title": "Restaurante La Ruta",
     "subtitle": "Gastronomía relajada en una atmósfera cálida y acogedora",

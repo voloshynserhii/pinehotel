@@ -27,16 +27,19 @@ export async function generateMetadata({
 }: {
   params: Promise<RoomPageProps['params']>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, lang } = await params;
   const room = getRoomBySlug(slug);
 
   if (!room) {
     return {};
   }
 
+  const dict = (await getDictionary(lang)) as typeof en;
+  const roomText = dict.Rooms.data[room.slug as keyof typeof dict.Rooms.data];
+
   return {
-    title: room.name,
-    description: room.shortDescription,
+    title: roomText?.name || room.slug,
+    description: roomText?.shortDescription || undefined,
   };
 }
 
@@ -53,12 +56,17 @@ export default async function RoomPage({
     notFound();
   }
 
-  const slides = rooms.filter((r) => r.slug !== slug && r.images && r.images.length > 0).map(room => ({
-    image: room.images[0],
-    title: room.name,
-    subtitle: room.shortDescription,
-    link: `/${lang}/rooms/${room.slug}`
-  }));
+  // pull localized text for this slug from dictionary
+  const roomText = dict.Rooms.data[room.slug as keyof typeof dict.Rooms.data];
+
+  const slides = rooms
+    .filter((r) => r.slug !== slug && r.images && r.images.length > 0)
+    .map((room) => ({
+      image: room.images[0],
+      title: dict.Rooms.data[room.slug as keyof typeof dict.Rooms.data]?.name,
+      subtitle: dict.Rooms.data[room.slug as keyof typeof dict.Rooms.data]?.shortDescription,
+      link: `/${lang}/rooms/${room.slug}`,
+    }));
 
   return (
     <>
@@ -70,7 +78,7 @@ export default async function RoomPage({
         isDark={false}
       />
 
-      <Introduction title={room.name} text={room.longDescription} />
+      <Introduction title={roomText?.name || ''} text={roomText?.longDescription || ''} />
 
       <Slider slides={room.images} />
 
@@ -85,7 +93,7 @@ export default async function RoomPage({
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {room.features.map((feature: string, i: number) => (
+                {roomText?.features.map((feature: string, i: number) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="text-sage-700 mt-1">✓</span>
                     <span className="text-stone-700">{feature}</span>
@@ -99,7 +107,7 @@ export default async function RoomPage({
                 {dict.Common.amenities}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {room.amenities.map((amenity: string, i: number) => (
+                {roomText?.amenities.map((amenity: string, i: number) => (
                   <div key={i} className="flex items-start gap-3">
                     <span className="text-sage-700 mt-1">●</span>
                     <span className="text-stone-700">{amenity}</span>

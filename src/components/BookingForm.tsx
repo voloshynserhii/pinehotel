@@ -132,11 +132,14 @@ export function BookingForm({
                 className="w-full px-4 py-2 border border-stone-300 rounded focus:outline-none focus:ring-2 focus:ring-sage-700"
               >
                 <option value="">Select a room...</option>
-                {rooms.map((room) => (
-                  <option key={room.id} value={room.slug}>
-                    {room.name}
-                  </option>
-                ))}
+                {rooms.map((room) => {
+                  const roomText = dict.Rooms.data[room.slug as keyof typeof dict.Rooms.data];
+                  return (
+                    <option key={room.slug} value={room.slug}>
+                      {roomText?.name || room.slug}
+                    </option>
+                  );
+                })}
               </select>
             </div>
           </div>
@@ -215,7 +218,9 @@ export function BookingForm({
               <div>
                 <p className="text-sm text-stone-600">Room</p>
                 <p className="font-semibold text-stone-900">
-                  {selectedRoom.name}
+                  {selectedRoom
+                    ? dict.Rooms.data[selectedRoom.slug as keyof typeof dict.Rooms.data]?.name || selectedRoom.slug
+                    : ''}
                 </p>
               </div>
               <div>

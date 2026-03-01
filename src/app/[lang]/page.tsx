@@ -18,12 +18,17 @@ export default async function Home({
   const dict = await getDictionary(lang);
   const locale = lang;
 
-  const slides = rooms.filter(room => room.images && room.images.length > 0).map(room => ({
-    image: room.images[0],
-    title: room.name,
-    subtitle: room.shortDescription,
-    link: `/${locale}/rooms/${room.slug}`
-  }));
+  const slides = rooms
+    .filter((room) => room.images && room.images.length > 0)
+    .map((room) => {
+      const roomText = dict.Rooms.data[room.slug as keyof typeof dict.Rooms.data];
+      return {
+        image: room.images[0],
+        title: roomText?.name,
+        subtitle: roomText?.shortDescription,
+        link: `/${locale}/rooms/${room.slug}`,
+      };
+    });
 
   return (
     <>

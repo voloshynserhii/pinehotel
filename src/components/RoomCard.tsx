@@ -12,6 +12,7 @@ interface RoomCardProps {
 export function RoomCard({ room, locale }: RoomCardProps) {
   const dictionary = useDictionary();
   const roomPagePath = `/${locale}/rooms/${room.slug}`;
+  const roomData = dictionary.Rooms.data[room.slug as keyof typeof dictionary.Rooms.data];
 
   return (
     <Link href={roomPagePath}>
@@ -20,7 +21,7 @@ export function RoomCard({ room, locale }: RoomCardProps) {
         <div className="aspect-video bg-stone-200 overflow-hidden mb-4 relative">
           {room.images[0] && <Image
             src={room.images[0]}
-            alt={room.name}
+            alt={roomData?.name || ''}
             fill
             className="object-cover"
           />}
@@ -29,10 +30,10 @@ export function RoomCard({ room, locale }: RoomCardProps) {
         {/* Content */}
         <div className="space-y-2">
           <h3 className="text-xl font-serif font-bold text-stone-900 group-hover:text-sage-700 transition-colors">
-            {room.name}
+            {roomData?.name}
           </h3>
           <p className="text-stone-700 text-sm line-clamp-2">
-            {room.shortDescription}
+            {roomData?.shortDescription}
           </p>
           <div className="flex items-center justify-between pt-2">
             <span className="text-sm text-stone-500">
