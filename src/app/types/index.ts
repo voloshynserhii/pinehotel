@@ -8,6 +8,7 @@ export interface Room {
 export interface Experience {
   id: string
   icon: string
+  image: string
 }
 
 export interface Extra {

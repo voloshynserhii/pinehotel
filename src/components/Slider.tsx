@@ -4,16 +4,15 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
-import NextIcon from '@/assets/icons/arrow-dx.svg';
-import PrevIcon from '@/assets/icons/arrow-sx.svg';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 export interface Slide {
+    id?: string;
     image: string;
-    title: string;
-    subtitle: string;
-    link: string;
+    title?: string;
+    subtitle?: string;
+    link?: string;
 }
 
 interface SliderProps {
@@ -27,6 +26,7 @@ const isSlide = (slide: Slide | string): slide is Slide => {
 export function Slider({ slides }: SliderProps) {
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
+    const [activeSlideIndex, setActiveSlideIndex] = useState<number | null>(null);
 
     const isImageGallery = slides && slides.length > 0 && typeof slides[0] === 'string';
 
@@ -65,33 +65,51 @@ export function Slider({ slides }: SliderProps) {
                 } : undefined}
                 className="rooms-swiper"
             >
-                {slides.map((slide) => {
+                {slides.map((slide, index) => {
                     if (isSlide(slide)) {
+                        const isActive = activeSlideIndex === index;
                         return (
                             <SwiperSlide key={`${slide.title}-${slide.image}`}>
-                                <a href={slide.link}>
-                                    <div className="relative overflow-hidden cursor-pointer group/card h-[500px]">
-                                        <div className="relative w-full h-full transition-transform duration-500 ease-in-out group-hover/card:scale-110">
+                                <a
+                                    href={slide.link}
+                                    onClick={(e) => {
+                                        if (!isActive) {
+                                            e.preventDefault();
+                                            setActiveSlideIndex(index);
+                                        }
+                                    }}
+                                    onPointerEnter={(e) => {
+                                        if (e.pointerType === 'mouse') {
+                                            setActiveSlideIndex(index);
+                                        }
+                                    }}
+                                    onPointerLeave={() => setActiveSlideIndex(null)}
+                                >
+                                    <div className="relative cursor-pointer group/card h-[600px]">
+                                        <div className={`relative w-full h-full transition-transform duration-500 ease-in-out ${isActive ? 'scale-110' : ''}`}>
                                             <Image
                                                 src={slide.image}
-                                                alt={slide.title}
+                                                alt={slide.title || slide.id || 'slide'}
                                                 fill
                                                 className="object-cover"
                                             />
                                         </div>
 
-                                        <div className="absolute bottom-0 left-0 w-[80%] bg-white p-6 transition-transform duration-500 translate-y-full group-hover/card:translate-y-0 shadow-lg">
-                                            <h3 className="text-2xl font-serif mb-2 text-gray-900 leading-tight">
+                                        <div className={`absolute bottom-0 left-0 w-[80%] bg-white p-6 transition-transform duration-500 ${isActive ? 'translate-y-0' : 'translate-y-full'} shadow-lg max-h-[80%] flex flex-col`}>
+                                            <h3 className="text-2xl font-serif mb-2 text-gray-900 leading-tight flex-shrink-0">
                                                 {slide.title}
                                             </h3>
-                                            <p className="text-sm text-gray-500 mb-4 tracking-wide">
-                                                {slide.subtitle}
-                                            </p>
-                                            <span
-                                                className="inline-block text-xs font-bold uppercase tracking-widest border-b border-gray-300 pb-1 hover:border-black transition-colors"
+                                            <div className="overflow-y-auto mb-4">
+                                                <p className="text-sm text-gray-500 tracking-wide">
+                                                    {slide.subtitle}
+                                                </p>
+                                            </div>
+                                            
+                                            {slide.link && <span
+                                                className="inline-block text-xs font-bold uppercase tracking-widest border-b border-gray-300 pb-1 hover:border-black transition-colors flex-shrink-0 self-start"
                                             >
                                                 Show more
-                                            </span>
+                                            </span>}
                                         </div>
                                     </div>
                                 </a>
