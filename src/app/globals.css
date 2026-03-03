@@ -30,3 +30,9 @@ body {
 .gallery-slide {
   width: 80% !important;
 }
+
+@media (max-width: 768px) {
+  .gallery-slide {
+    width: 100% !important;
+  }
+}

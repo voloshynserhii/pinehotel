@@ -64,7 +64,7 @@ export function Slider({ slides }: SliderProps) {
                     1024: { slidesPerView: 3 },
                     1280: { slidesPerView: 4 },
                 } : undefined}
-                className="rooms-swiper"
+                className="swiper"
             >
                 {slides.map((slide, index) => {
                     if (isSlide(slide)) {
@@ -91,7 +91,7 @@ export function Slider({ slides }: SliderProps) {
                                         }
                                     }}
                                 >
-                                    <div className="relative cursor-pointer group/card h-[600px]">
+                                    <div className="relative cursor-pointer group/card h-[350px] lg:h-[600px]">
                                         <div className={`relative w-full h-full transition-transform duration-500 ease-in-out ${isActive ? 'scale-110' : ''}`}>
                                             <Image
                                                 src={slide.image}
@@ -125,7 +125,7 @@ export function Slider({ slides }: SliderProps) {
 
                     return (
                         <SwiperSlide key={slide} className={isImageGallery ? 'gallery-slide' : ''}>
-                            <div className="relative overflow-hidden cursor-pointer group/card h-[80vh]">
+                            <div className="relative overflow-hidden cursor-pointer group/card h-[350px] lg:h-[80vh]">
                                 <div className="relative w-full h-full transition-transform duration-500 ease-in-out group-hover/card:scale-110">
                                     <Image
                                         src={slide}
