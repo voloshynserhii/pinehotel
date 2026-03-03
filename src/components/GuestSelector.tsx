@@ -65,7 +65,7 @@ export function GuestSelector({
   return (
     <div
       onClick={(e) => e.stopPropagation()}
-      className="absolute top-full mt-2 lg:top-auto lg:bottom-[75px] left-0 right-0 z-50 bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white shadow-lg p-6 w-full lg:w-[500px]"
+      className="absolute top-[71px] lg:top-auto lg:bottom-[75px] left-0 right-0 z-50 bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white shadow-lg p-6 w-full lg:w-[500px]"
     >
       <div className="flex flex-col gap-4">
         {/* Adults */}
