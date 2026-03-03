@@ -44,8 +44,8 @@ export function Slider({ slides }: SliderProps) {
                     disableOnInteraction: false,
                 } : false}
                 navigation={{
-                    nextEl: isImageGallery ? '.gallery-next' : '.custom-next',
-                    prevEl: isImageGallery ? '.gallery-prev' : '.custom-prev',
+                    nextEl: '.custom-next',
+                    prevEl: '.custom-prev',
                 }}
                 onInit={(swiper) => {
                     if (!isImageGallery) {
@@ -78,6 +78,9 @@ export function Slider({ slides }: SliderProps) {
                                         if (!isActive) {
                                             e.preventDefault();
                                             setActiveSlideIndex(index);
+                                        }
+                                        else {
+                                            setActiveSlideIndex(null);
                                         }
                                     }}
                                     onPointerEnter={(e) => {
@@ -140,7 +143,7 @@ export function Slider({ slides }: SliderProps) {
                 })}
             </Swiper>
 
-            <button className="gallery-prev absolute left-[15px] md:left-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-6 h-6 md:w-12 md:h-12 flex items-center justify-center">
+            <button className={`custom-prev absolute left-[15px] md:left-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-6 h-6 md:w-12 md:h-12 flex items-center justify-center ${isBeginning ? 'swiper-button-disabled' : ''}`}>
                 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="60px" height="126.056px" viewBox="225.957 476.972 60 126.056" enableBackground="new 225.957 476.972 60 126.056"
                 >
@@ -151,7 +154,7 @@ export function Slider({ slides }: SliderProps) {
                     </g>
                 </svg>
             </button>
-            <button className="gallery-next absolute right-[15px] md:right-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-6 h-6 md:w-12 md:h-12 flex items-center justify-center">
+            <button className={`custom-next absolute right-[15px] md:right-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-6 h-6 md:w-12 md:h-12 flex items-center justify-center ${isEnd ? 'swiper-button-disabled' : ''}`}>
                 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="60px" height="126.056px" viewBox="225.957 476.972 60 126.056" enableBackground="new 225.957 476.972 60 126.056"
                 >
