@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
   {
     id: 'relaxation',
     icon: '💆',
-    image: 'https://plus.unsplash.com/premium_photo-1723507329614-316d36a1ab81?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image: '/images/pool.png',
   },
   {
     id: 'golf',

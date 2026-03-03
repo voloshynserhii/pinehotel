@@ -33,6 +33,9 @@ export default async function Home({
   return (
     <>
       <Hero
+        videoSrc='/videos/hero_footage.mp4'
+        posterSrc='/images/hero1.jpg'
+        imgSrc='/images/hero1.jpg'
         title={dict.Home.heroTitle}
         subtitle={dict.Home.heroSubtitle}
         showBookingBar
