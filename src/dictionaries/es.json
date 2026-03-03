@@ -229,9 +229,10 @@
   },
   "Experiences": {
     "title": "Experiencias Personalizadas",
-    "text": "Creemos que cada huésped es único. Nuestro equipo de conserjería estará encantado de organizar experiencias personalizadas adaptadas a sus intereses, ya sean expediciones fotográficas, paseos botánicos o visitas culturales.",
-    "paragraph": "Póngase en contacto con nuestro equipo en cualquier momento durante su estancia para hablar sobre itinerarios personalizados y arreglos especiales.",
-    "description": "Sumérjase en el tranquilo entorno rural y descubra actividades que celebran la naturaleza, la relajación y la exploración.",
+    "text": "Nuestro hotel boutique en Culla está disponible para alquiler privado exclusivo, brindando a su grupo total privacidad y una experiencia totalmente a medida en el corazón de Castellón, una región reconocida por el ciclismo de clase mundial y el deporte al aire libre.",
+    "paragraph": "Desde recorrer carreteras icónicas que aparecen en La Vuelta a España y abordar rutas legendarias alrededor del Río Mijares (Millars), hasta experimentar eventos como la Mediterranean Epic y las eliminatorias de la UCI Gravel World Series celebradas en la provincia, junto con golf de campeonato en el Club de Campo del Mediterráneo, hogar de Sergio García, además de visitas guiadas, gastronomía y aventuras a medida, cada detalle está curado para coincidir con la ambición, el ritmo y el estilo de su grupo para una escapada mediterránea inolvidable.",
+    "reservationInfo": "Contáctenos directamente a través del botón de WhatsApp para comenzar a planificar su experiencia personalizada.",
+    "reserveExperience": "Planifique su experiencia",
     "experiences": [
       {
         "id": "walks",
