@@ -60,51 +60,47 @@ export function BookingBar() {
   return (
     <>
       <div className="w-full lg:w-[1200px] bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white h-auto lg:h-[75px] flex flex-col lg:flex-row lg:items-stretch">
-        <div
-          className="relative flex-1"
-          ref={dateSelectorRef}
-        >
+        <div className="flex lg:w-2/5" ref={dateSelectorRef}>
+          <div className="relative flex-1">
+            <div
+              className="flex flex-col justify-center p-2 lg:p-4 lg:px-6 h-auto lg:h-full cursor-pointer"
+              onClick={() => setShowDateSelector(!showDateSelector)}
+            >
+              <span className="text-xs uppercase tracking-wide opacity-70">
+                {t.checkIn}
+              </span>
+              <span className="text-lg font-light">{checkIn}</span>
+            </div>
+            {showDateSelector && (
+              <DateSelector
+                checkIn={checkIn}
+                setCheckIn={setCheckIn}
+                checkOut={checkOut}
+                setCheckOut={setCheckOut}
+                setShowDateSelector={setShowDateSelector}
+              />
+            )}
+          </div>
+
+          <div className="w-px h-auto bg-white/30 my-3 lg:my-5" />
+
           <div
-            className="flex flex-col justify-center p-4 lg:px-6 h-auto lg:h-full cursor-pointer"
+            className="flex flex-col justify-center p-2 lg:p-4 lg:px-6 flex-1 cursor-pointer"
             onClick={() => setShowDateSelector(!showDateSelector)}
           >
             <span className="text-xs uppercase tracking-wide opacity-70">
-              {t.checkIn}
+              {t.checkOut}
             </span>
-            <span className="text-lg font-light">{checkIn}</span>
+            <span className="text-lg font-light">{checkOut}</span>
           </div>
-
-          {showDateSelector && (
-            <DateSelector
-              checkIn={checkIn}
-              setCheckIn={setCheckIn}
-              checkOut={checkOut}
-              setCheckOut={setCheckOut}
-              setShowDateSelector={setShowDateSelector}
-            />
-          )}
         </div>
 
-        {/* Divider */}
-        <div className="w-full lg:w-px h-px lg:h-auto bg-white/30 lg:my-5" />
 
-        {/* Check-out */}
-        <div
-          className="flex flex-col justify-center p-4 lg:px-6 flex-1 cursor-pointer"
-          onClick={() => setShowDateSelector(!showDateSelector)}
-        >
-          <span className="text-xs uppercase tracking-wide opacity-70">
-            {t.checkOut}
-          </span>
-          <span className="text-lg font-light">{checkOut}</span>
-        </div>
-
-        {/* Divider */}
         <div className="w-full lg:w-px h-px lg:h-auto bg-white/30 lg:my-5" />
 
         {/* Guests */}
         <div
-          className="flex flex-col justify-center p-4 lg:px-6 flex-[1.5] cursor-pointer relative"
+          className="flex flex-col justify-center p-2 lg:p-4 lg:px-6 flex-[1.5] cursor-pointer relative"
           onClick={() => setShowGuestSelector(!showGuestSelector)}
           ref={guestSelectorRef}
         >
@@ -113,7 +109,7 @@ export function BookingBar() {
           </span>
           <div className="flex justify-between items-center">
             <div className="flex items-center">
-              <span className="text-4xl font-bold">
+              <span className="text-3xl lg:text-4xl font-bold">
                 {guestInfo.adults + guestInfo.kids}
               </span>
               <div className="ml-2">

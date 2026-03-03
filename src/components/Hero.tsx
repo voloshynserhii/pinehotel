@@ -48,7 +48,7 @@ export function Hero({
     <div className="relative lg:pb-4">
       <section
         className={cn(
-          'w-full relative h-[70vh] lg:h-[85vh]',
+          'w-full relative h-[85vh]',
           isDark ? 'bg-stone-900 text-cream-50' : 'bg-cream-50 text-stone-900'
         )}
       >
