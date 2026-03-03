@@ -71,15 +71,6 @@ export function BookingBar() {
               </span>
               <span className="text-lg font-light">{checkIn}</span>
             </div>
-            {showDateSelector && (
-              <DateSelector
-                checkIn={checkIn}
-                setCheckIn={setCheckIn}
-                checkOut={checkOut}
-                setCheckOut={setCheckOut}
-                setShowDateSelector={setShowDateSelector}
-              />
-            )}
           </div>
 
           <div className="w-px h-auto bg-white/30 my-3 lg:my-5" />
@@ -93,6 +84,16 @@ export function BookingBar() {
             </span>
             <span className="text-lg font-light">{checkOut}</span>
           </div>
+          
+          {showDateSelector && (
+            <DateSelector
+              checkIn={checkIn}
+              setCheckIn={setCheckIn}
+              checkOut={checkOut}
+              setCheckOut={setCheckOut}
+              setShowDateSelector={setShowDateSelector}
+            />
+          )}
         </div>
 
 

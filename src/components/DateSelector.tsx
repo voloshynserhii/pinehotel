@@ -102,7 +102,7 @@ export function DateSelector({
     const checkOutDate = checkOut ? new Date(checkOut) : null
 
     return (
-      <div className="grid grid-cols-7 text-center mt-2">
+      <div className="grid grid-cols-7 text-center">
         {days.map((day) => {
           const isCurrentMonth = isSameMonth(day, monthStart)
           const isSelected =
