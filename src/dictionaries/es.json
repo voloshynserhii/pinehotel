@@ -34,6 +34,8 @@
   "Rooms": {
     "title": "Nuestras Habitaciones",
     "subtitle": "Espacios cuidadosamente diseñados que combinan confort y elegancia",
+    "introText": "Cada una de nuestras habitaciones ha sido cuidadosamente diseñada para ofrecer una mezcla perfecta de comodidad y estilo. Ya sea que busque una escapada romántica o un retiro tranquilo, nuestras habitaciones ofrecen el entorno ideal para su estancia.",
+    "introParagraph": "El carácter original de la propiedad se ha conservado cuidadosamente, con una arquitectura tradicional y detalles rurales complementados con las comodidades modernas y el diseño contemporáneo. El resultado es un refugio tranquilo y acogedor que se siente auténtico y refinado.\\n\\nLos huéspedes pueden disfrutar de La Ruta, nuestro restaurante, que ofrece una cena relajada en un ambiente cálido y social. En el exterior, la propiedad se abre a jardines bien cuidados, zonas de estar al aire libre y una piscina, que proporcionan un espacio para relajarse, socializar o simplemente disfrutar de un entorno tranquilo.\\n\\nCon aparcamiento en el hotel, amplias zonas comunes y un entorno que invita tanto al descanso como a la exploración, The Pines Hotel es una base ideal para los huéspedes que deseen experimentar el campo español con comodidad y estilo.",
     "doubleRoom": "Habitación Doble",
     "suite": "Suite",
     "familyRoom": "Habitación Familiar",
