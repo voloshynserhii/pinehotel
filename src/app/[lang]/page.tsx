@@ -18,6 +18,19 @@ export default async function Home({
   const dict = await getDictionary(lang);
   const locale = lang;
 
+  const mobileImages = [
+    '/images/mobile/dine.png',
+    '/images/mobile/garden.png',
+    '/images/mobile/garden2.png',
+    '/images/mobile/garden3.png',
+    '/images/mobile/hotel1.png',
+    '/images/mobile/hotel2.png',
+    '/images/mobile/pool.png',
+    '/images/mobile/pool2.png',
+    '/images/mobile/pool3.png',
+  ];
+
+
   const slides = rooms
     .filter((room) => room.images && room.images.length > 0)
     .map((room) => {
@@ -35,7 +48,7 @@ export default async function Home({
       <Hero
         videoSrc='/videos/hero_footage.mp4'
         posterSrc='/images/hero1.jpg'
-        imgSrc='/images/hero1.jpg'
+        mobileImgSrc='/images/mobile/hotel2.png'
         title={dict.Home.heroTitle}
         subtitle={dict.Home.heroSubtitle}
         showBookingBar
@@ -43,6 +56,10 @@ export default async function Home({
       />
       <Introduction title={dict.Home.introTitle} text={dict.Home.introText} paragraph={dict.Home.introParagraph} />
 
+      <Slider slides={mobileImages} />
+      
+      <Introduction title={dict.Rooms.title} text={dict.Rooms.introText} paragraph={dict.Rooms.introParagraph} />
+      
       <section className="py-section bg-cream-50">
         <div className="container mx-auto px-gutter">
           <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8 mb-12">
@@ -60,10 +77,11 @@ export default async function Home({
               </div>
             </div>
           </div>
+
           <Slider slides={slides} />
         </div>
       </section>
-      
+
       {/* <CTA dict={dict} locale={locale} /> */}
     </>
   );

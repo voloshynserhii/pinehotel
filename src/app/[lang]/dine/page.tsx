@@ -13,9 +13,9 @@ export default async function DinePage({
 
   return (
     <>
-      <Hero imgSrc='/images/dine.png' title={t.title} subtitle={t.subtitle} />
+      <Hero imgSrc='/images/dine.png' mobileImgSrc='/images/mobile/dine.png' title={t.title} subtitle={t.subtitle} />
 
-      <section className="py-section container mx-auto px-gutter">
+      <section className="container mx-auto px-gutter pb-16">
         <Introduction title={t.welcome} text={t.description} paragraph={t.welcomeDescription} />
 
         {/* Restaurant Features */}

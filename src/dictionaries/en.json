@@ -34,6 +34,8 @@
   "Rooms": {
     "title": "Our Rooms",
     "subtitle": "Carefully designed spaces combining comfort and elegance",
+    "introText": "Each of our rooms has been thoughtfully designed to offer a perfect blend of comfort and style. Whether you're looking for a romantic getaway or a peaceful retreat, our rooms provide the ideal setting for your stay.",
+    "introParagraph":"The original character of the property has been carefully preserved, with traditional architecture and rural details complemented by modern comforts and contemporary design. The result is a calm, welcoming retreat that feels both authentic and refined.\n\nGuests can enjoy La Ruta, our on-site restaurant, offering relaxed dining in a warm and social setting. Outside, the property opens onto well-maintained gardens, outdoor seating areas, and a swimming pool, providing space to unwind, socialise, or simply enjoy the peaceful surroundings.\n\nWith on-site parking, generous communal areas, and a setting that invites both rest and exploration, The Pines Hotel is an ideal base for guests looking to experience the Spanish countryside in comfort and style.",
     "doubleRoom": "Double Room",
     "suite": "Suite",
     "familyRoom": "Family Room",
@@ -228,10 +230,11 @@
     "reserveTable": "Reserve a Table"
   },
   "Experiences": {
-    "title": "Personalized Experiences",
-    "text": "We believe every guest is unique. Our concierge team is happy to arrange custom experiences tailored to your interests, whether that'sphotography expeditions, botanical walks, or cultural tours.",
-    "paragraph": "Contact our team at any time during your stay to discuss personalized itineraries and special arrangements.",
-    "description": "Immerse yourself in the peaceful countryside surroundings and discover activities that celebrate nature, relaxation, and exploration.",
+    "title": "Personalised Experiences",
+    "text": "Our boutique hotel in Culla is available for exclusive private hire, giving your group complete privacy and a fully bespoke experience in the heart of Castellón, a region renowned for world-class cycling and outdoor sport.",
+    "paragraph": "From riding iconic roads featured in La Vuelta a España and tackling legendary routes around the Río Mijares (Millars), to experiencing events such as Mediterranean Epic and UCI Gravel World Series qualifiers held in the province, alongside championship golf at Club de Campo del Mediterráneo, home of Sergio García, plus guided tours, gastronomy, and tailored adventures, every detail is curated to match your group’s ambition, pace, and style for an unforgettable Mediterranean escape.",
+    "reservationInfo": "Contact us directly via the WhatsApp button to start planning your personalised experience.",
+    "reserveExperience": "Plan Your Experience",
     "experiences": [
       {
         "id": "walks",

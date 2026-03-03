@@ -14,7 +14,7 @@ export default async function RoomsPage({
 
   return (
     <>
-      <Hero showBookingBar imgSrc='/images/hero2.jpg' title={t.title} subtitle={t.subtitle} />
+      <Hero showBookingBar imgSrc='/images/hero2.jpg' mobileImgSrc='/images/mobile/hotel1.png' title={t.title} subtitle={t.subtitle} />
 
       <section className="py-section container mx-auto px-gutter">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

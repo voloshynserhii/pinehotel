@@ -31,12 +31,13 @@ export function Slider({ slides }: SliderProps) {
     const isImageGallery = slides && slides.length > 0 && typeof slides[0] === 'string';
 
     return (
-        <div className="relative container mx-auto px-gutter py-12">
+        <div className="relative mx-auto py-12">
             <Swiper
                 modules={[Navigation, Autoplay]}
                 spaceBetween={isImageGallery ? 0 : 20}
-                slidesPerView={1}
+                slidesPerView={isImageGallery ? 'auto' : 1}
                 loop={isImageGallery}
+                centeredSlides={isImageGallery}
                 speed={1000}
                 autoplay={isImageGallery ? {
                     delay: 5000,
@@ -68,6 +69,7 @@ export function Slider({ slides }: SliderProps) {
                 {slides.map((slide, index) => {
                     if (isSlide(slide)) {
                         const isActive = activeSlideIndex === index;
+
                         return (
                             <SwiperSlide key={`${slide.title}-${slide.image}`}>
                                 <a
@@ -83,7 +85,11 @@ export function Slider({ slides }: SliderProps) {
                                             setActiveSlideIndex(index);
                                         }
                                     }}
-                                    onPointerLeave={() => setActiveSlideIndex(null)}
+                                    onPointerLeave={(e) => {
+                                        if (e.pointerType === 'mouse') {
+                                            setActiveSlideIndex(null);
+                                        }
+                                    }}
                                 >
                                     <div className="relative cursor-pointer group/card h-[600px]">
                                         <div className={`relative w-full h-full transition-transform duration-500 ease-in-out ${isActive ? 'scale-110' : ''}`}>
@@ -118,7 +124,7 @@ export function Slider({ slides }: SliderProps) {
                     }
 
                     return (
-                        <SwiperSlide key={slide}>
+                        <SwiperSlide key={slide} className={isImageGallery ? 'gallery-slide' : ''}>
                             <div className="relative overflow-hidden cursor-pointer group/card h-[80vh]">
                                 <div className="relative w-full h-full transition-transform duration-500 ease-in-out group-hover/card:scale-110">
                                     <Image

@@ -13,7 +13,7 @@ export default async function ContactPage({
 
   return (
     <>
-      <Hero title={t.title} subtitle={t.subtitle} />
+      <Hero imgSrc='/images/pool1.png' mobileImgSrc='/images/mobile/garden2.png' title={t.title} subtitle={t.subtitle} />
 
       <section className="py-section container mx-auto px-gutter">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

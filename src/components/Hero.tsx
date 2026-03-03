@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { BookingBar, PageTabs } from '@/components';
+import { useEffect, useState } from 'react';
 
 interface HeroProps {
   title?: string;
@@ -10,6 +11,7 @@ interface HeroProps {
   showBookingBar?: boolean;
   videoSrc?: string;
   imgSrc?: string;
+  mobileImgSrc?: string;
   isDark?: boolean;
   posterSrc?: string;
 }
@@ -20,15 +22,33 @@ export function Hero({
   subtitle,
   showBookingBar,
   imgSrc = defaultImage,
+  mobileImgSrc,
   videoSrc,
   isDark = false,
   posterSrc,
 }: HeroProps) {
+  const [effectiveImgSrc, setEffectiveImgSrc] = useState(imgSrc);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768 && mobileImgSrc) {
+        setEffectiveImgSrc(mobileImgSrc);
+      } else {
+        setEffectiveImgSrc(imgSrc);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // run on initial render
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, [imgSrc, mobileImgSrc]);
+
   return (
-    <div className="relative pb-4">
+    <div className="relative lg:pb-4">
       <section
         className={cn(
-          'w-full relative h-[85vh]',
+          'w-full relative h-[70vh] lg:h-[85vh]',
           isDark ? 'bg-stone-900 text-cream-50' : 'bg-cream-50 text-stone-900'
         )}
       >
@@ -49,7 +69,7 @@ export function Hero({
             </video>
             {(imgSrc || posterSrc) && (
               <Image
-                src={imgSrc}
+                src={effectiveImgSrc}
                 alt="Background"
                 fill
                 style={{ objectFit: 'cover' }}
@@ -59,9 +79,9 @@ export function Hero({
             )}
           </>
         ) : (
-          imgSrc && (
+          effectiveImgSrc && (
             <Image
-              src={imgSrc}
+              src={effectiveImgSrc}
               alt="Background"
               fill
               style={{ objectFit: 'cover' }}

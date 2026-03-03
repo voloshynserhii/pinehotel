@@ -26,3 +26,7 @@ body {
 .date-input::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
+
+.gallery-slide {
+  width: 80% !important;
+}

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { getDictionary, Locale } from '@/get-dictionary';
 import { Hero, ExperienceCard, Introduction, Slider } from '@/components';
 import { experiences } from '@/content/experiences';
@@ -13,7 +14,7 @@ export default async function ExperiencesPage({
 
   const experienceSlides = experiences.map((experience) => {
     const experienceData = t.experiences.find((e: any) => e.id === experience.id);
-    
+
     return {
       image: experience.image,
       title: experienceData?.name,
@@ -26,21 +27,26 @@ export default async function ExperiencesPage({
       <Hero showBookingBar imgSrc='https://images.unsplash.com/photo-1600976267946-1039881b21d5?q=80&w=2334&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' />
 
       <section className="py-section container mx-auto px-gutter">
-        <Introduction title={t.title} text={t.text} paragraph={t.paragraph} />
 
         <Slider slides={experienceSlides} />
 
-{/*         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+        <Introduction title={t.title} text={t.text} paragraph={t.paragraph} />
+
+        {/* CTA */}
+        <div className="text-center">
+          <p className="text-stone-700 mb-6">
+            {t.reservationInfo}
+          </p>
+          <Link href="https://wa.me/34624088379" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 bg-[#c8b89a] text-cream-50 font-semibold hover:bg-[#b8a882] transition-colors">
+            {t.reserveExperience}
+          </Link>
+        </div>
+
+        {/*         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           {experiences.map((experience) => (
             <ExperienceCard key={experience.id} experience={experience} t={t} />
           ))}
         </div> */}
-
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-lg text-stone-700 leading-relaxed">
-            {t.description}
-          </p>
-        </div>
       </section>
     </>
   );
