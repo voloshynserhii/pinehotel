@@ -16,6 +16,19 @@ import IconWifi from '@/assets/icons/icon-wifi.svg';
 import IconWindow from '@/assets/icons/icon-window.svg';
 import IconKitchen from '@/assets/icons/icon-kitchen.svg';
 
+const PlaceholderIcon = (props: any) => (
+  <svg
+    width='66'
+    height='66'
+    viewBox='0 0 66 66'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    {...props}
+  >
+    <rect width='66' height='66' fill='currentColor' opacity='0.1' />
+  </svg>
+);
+
 export const icons = {
   'icon-2persons': Icon2Persons,
   'icon-3bed': Icon3Bed,
@@ -34,28 +47,29 @@ export const icons = {
   'icon-wifi': IconWifi,
   'icon-window': IconWindow,
   'icon-kitchen': IconKitchen,
+  'icon-light': PlaceholderIcon,
+  'icon-design': PlaceholderIcon,
+  'icon-workspace': PlaceholderIcon,
+  'icon-robes': PlaceholderIcon,
+  'icon-bt': PlaceholderIcon,
+  'icon-kids': PlaceholderIcon,
+  'icon-dining': PlaceholderIcon,
+  'icon-storage': PlaceholderIcon,
 };
 
-const PlaceholderIcon = (props: any) => (
-  <svg
-    width="66"
-    height="66"
-    viewBox="0 0 66 66"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <rect width="66" height="66" fill="currentColor" opacity="0.1" />
-  </svg>
-);
-
-const Icon = ({ name, ...props }: { name: string, [key:string]: any }) => {
+const Icon = ({
+  name,
+  ...props
+}: {
+  name: keyof typeof icons;
+  [key: string]: any;
+}) => {
   const IconComponent = (icons as any)[name];
   if (!IconComponent) {
     return <PlaceholderIcon {...props} />;
   }
-  
-  return <IconComponent fill="currentColor" {...props} />;
+
+  return <IconComponent fill='currentColor' {...props} />;
 };
 
 export default Icon;
