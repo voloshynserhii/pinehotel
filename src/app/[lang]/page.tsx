@@ -56,7 +56,7 @@ export default async function Home({
       />
       <Introduction title={dict.Home.introTitle} text={dict.Home.introText} paragraph={dict.Home.introParagraph} />
 
-      <Slider slides={mobileImages} />
+      <Slider slides={mobileImages} className="h-[350px] lg:h-[80vh]" />
       
       <Introduction title={dict.Rooms.title} text={dict.Rooms.introText} paragraph={dict.Rooms.introParagraph} />
       

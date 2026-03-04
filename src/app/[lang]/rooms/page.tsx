@@ -16,8 +16,8 @@ export default async function RoomsPage({
     <>
       <Hero showBookingBar imgSrc='/images/hero2.jpg' mobileImgSrc='/images/mobile/hotel1.png' title={t.title} subtitle={t.subtitle} />
 
-      <section className="py-section container mx-auto px-gutter">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="py-section container mx-auto px-gutter max-w-7xl">
+        <div className="flex flex-col space-y-8">
           {rooms.map((room) => (
             <RoomCard key={room.slug} room={room} locale={locale} />
           ))}
@@ -27,36 +27,18 @@ export default async function RoomsPage({
         <div className="mt-section pt-section border-t border-stone-200">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-2xl font-serif font-bold mb-4 text-stone-900">
-              Room Features
+              {t.roomFeatures}
             </h2>
-            <p className="text-stone-700 mb-6">
-              All our rooms feature premium bedding, modern en-suite bathrooms,
-              free Wi-Fi, and views of the surrounding countryside. Each room has
-              been thoughtfully designed to provide comfort while preserving the
-              authentic character of our historic property.
-            </p>
+            <p className="text-stone-700 mb-6">{t.introParagraph}</p>
             <h3 className="text-xl font-serif font-bold mb-3 text-stone-900">
-              Included in All Rooms
+              {t.includedInAllRoomsTitle}
             </h3>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-stone-700 text-sm">
-              <li className="flex items-start gap-2">
-                <span className="text-sage-700">✓</span> Daily housekeeping
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-sage-700">✓</span> Premium toiletries
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-sage-700">✓</span> Luxury bedding
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-sage-700">✓</span> Climate control
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-sage-700">✓</span> Free Wi-Fi
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-sage-700">✓</span> 24/7 Room service
-              </li>
+              {t.allRoomsAmenities.map((amenity) => (
+                <li key={amenity} className="flex items-start gap-2">
+                  <span className="text-sage-700">✓</span> {amenity}
+                </li>
+              ))}
             </ul>
           </div>
         </div>

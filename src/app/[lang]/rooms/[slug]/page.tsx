@@ -151,7 +151,7 @@ export default async function RoomPage({
             {dict.Rooms.otherRoomTypes}
           </h2>
           
-          <Slider slides={slides} />
+          <Slider slides={slides} className="h-[350px] lg:h-[80vh]"/>
         </div>
       </section>
     </>

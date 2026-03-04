@@ -1,34 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="800" height="260">
+<svg
+  width="600"
+  height="220"
+  viewBox="0 0 600 220"
+  xmlns="http://www.w3.org/2000/svg">
+
   <style>
-    .small {
-      font-family: "Libre Bodoni", "Didot", "Bodoni MT", serif;
-      font-size: 28px;
-      letter-spacing: 0.25em;
-    }
-    .main {
-      font-family: "Libre Bodoni", "Didot", "Bodoni MT", serif;
-      font-size: 72px;
+    .line1 {
+      font-family: "Cormorant Garamond", "Playfair Display", "Times New Roman", serif;
+      font-size: 48px;
+      font-weight: 400;
       letter-spacing: 0.12em;
     }
-    .meta {
-      font-family: "Libre Bodoni", "Didot", "Bodoni MT", serif;
-      font-size: 26px;
-      letter-spacing: 0.3em;
+
+    .line2 {
+      font-family: "Cormorant Garamond", "Playfair Display", "Times New Roman", serif;
+      font-size: 72px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
     }
   </style>
 
-  <!-- Top small text -->
-  <text x="400" y="60" text-anchor="middle" class="small" fill="#ffffff">
-    THE
+  <text
+    x="50%"
+    y="80"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    class="line1">
+    The
   </text>
 
-  <!-- Main title -->
-  <text x="400" y="140" text-anchor="middle" class="main" fill="#ffffff">
-    PINES HOTEL
+  <text
+    x="50%"
+    y="150"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    class="line2">
+    Pines Hotel
   </text>
 
-  <!-- Bottom line -->
-  <text x="400" y="200" text-anchor="middle" class="meta" fill="#ffffff">
-    EST. 18—
-  </text>
 </svg>

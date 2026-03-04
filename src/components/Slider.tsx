@@ -17,13 +17,14 @@ export interface Slide {
 
 interface SliderProps {
     slides: (Slide | string)[];
+    className?: string;
 }
 
 const isSlide = (slide: Slide | string): slide is Slide => {
     return (slide as Slide).image !== undefined;
 }
 
-export function Slider({ slides }: SliderProps) {
+export function Slider({ slides, className }: SliderProps) {
     const [isBeginning, setIsBeginning] = useState(true);
     const [isEnd, setIsEnd] = useState(false);
     const [activeSlideIndex, setActiveSlideIndex] = useState<number | null>(null);
@@ -31,7 +32,7 @@ export function Slider({ slides }: SliderProps) {
     const isImageGallery = slides && slides.length > 0 && typeof slides[0] === 'string';
 
     return (
-        <div className="relative mx-auto py-12">
+        <div className={`relative mx-auto ${className}`}>
             <Swiper
                 modules={[Navigation, Autoplay]}
                 spaceBetween={isImageGallery ? 0 : 20}
@@ -127,8 +128,8 @@ export function Slider({ slides }: SliderProps) {
                     }
 
                     return (
-                        <SwiperSlide key={slide} className={isImageGallery ? 'gallery-slide' : ''}>
-                            <div className="relative overflow-hidden cursor-pointer group/card h-[350px] lg:h-[80vh]">
+                        <SwiperSlide key={slide} className={isImageGallery && !className ? 'gallery-slide' : ''}>
+                            <div className={className ? `relative overflow-hidden cursor-pointer group/card ${className}` : `relative overflow-hidden cursor-pointer group/card h-[350px] lg:h-[80vh]`}>
                                 <div className="relative w-full h-full transition-transform duration-500 ease-in-out group-hover/card:scale-110">
                                     <Image
                                         src={slide}

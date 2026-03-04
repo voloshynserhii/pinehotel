@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Room } from '@/app/types';
 import { useDictionary } from '@/context/DictionaryContext';
+import { BookingButton, Slider } from '@/components';
 
 interface RoomCardProps {
   room: Room;
@@ -15,36 +16,34 @@ export function RoomCard({ room, locale }: RoomCardProps) {
   const roomData = dictionary.Rooms.data[room.slug as keyof typeof dictionary.Rooms.data];
 
   return (
-    <Link href={roomPagePath}>
-      <div className="group cursor-pointer">
-        {/* Image */}
-        <div className="aspect-video bg-stone-200 overflow-hidden mb-4 relative">
-          {room.images[0] && <Image
-            src={room.images[0]}
-            alt={roomData?.name || ''}
-            fill
-            className="object-cover"
-          />}
-        </div>
-
-        {/* Content */}
-        <div className="space-y-2">
-          <h3 className="text-xl font-serif font-bold text-stone-900 group-hover:text-sage-700 transition-colors">
+    <div className="flex flex-col lg:flex-row gap-8">
+      <div className="space-y-2 lg:w-[35%] lg:pr-16 flex flex-col justify-between">
+        <div>
+          <h3 className="text-3xl font-lora-important text-stone-900 group-hover:text-sage-700 transition-colors mb-5">
             {roomData?.name}
           </h3>
-          <p className="text-stone-700 text-sm line-clamp-2">
+
+          <p className="text-stone-700 text-[17px] font-light">
             {roomData?.shortDescription}
           </p>
-          <div className="flex items-center justify-between pt-2">
-            <span className="text-sm text-stone-500">
-              {room.capacity}{' '}
-              {room.capacity === 1
-                ? dictionary.Rooms.guest
-                : dictionary.Rooms.guests}
-            </span>
-          </div>
         </div>
+
+
+        <div>
+          <Link href={roomPagePath}>
+            <span className="font-lora-important block border-b border-sage-900 pb-1 text-sage-900 font-normal text-base mb-5 hover:border-black transition-colors"
+            >
+              {dictionary.Rooms.moreInfo}
+            </span>
+          </Link>
+
+          <BookingButton slug={room.slug} title={dictionary.Rooms.checkAvailability} />
+        </div>
+
       </div>
-    </Link>
+      <div className="lg:w-[65%]">
+        <Slider slides={room.images} className="h-[200px] lg:h-[400px]" />
+      </div>
+    </div>
   );
 }
