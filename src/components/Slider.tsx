@@ -105,7 +105,7 @@ export function Slider({ slides, className }: SliderProps) {
                                             />
                                         </div>
 
-                                        <div className={`absolute bottom-0 left-0 w-[80%] bg-white p-6 transition-transform duration-500 ${isActive ? 'translate-y-0' : 'translate-y-full'} shadow-lg max-h-[80%] flex flex-col`}>
+                                        <div className={`absolute bottom-0 left-0 w-[80%] bg-white p-3 lg:p-6 transition-transform duration-500 ${isActive ? 'translate-y-0' : 'translate-y-full'} shadow-lg max-h-[85%] flex flex-col`}>
                                             <h3 className="text-xl lg:text-2xl font-serif mb-2 text-gray-900 leading-tight flex-shrink-0">
                                                 {slide.title}
                                             </h3>
