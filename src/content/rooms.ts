@@ -17,12 +17,11 @@ export const rooms: Room[] = [
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
-      { icon: 'icon-kettle', name: 'kettle' },
+      /* { icon: 'icon-kettle', name: 'kettle' }, */
       { icon: 'icon-light', name: 'thoughtfulLighting' },
       { icon: 'icon-design', name: 'chicDesign' },
-      { icon: 'icon-workspace', name: 'workspace' },
+      /* { icon: 'icon-workspace', name: 'workspace' }, */
       { icon: 'icon-towels', name: 'luxuryToiletries' },
-      { icon: 'icon-robes', name: 'robesAndSlippers' },
     ],
   },
   {
@@ -41,12 +40,11 @@ export const rooms: Room[] = [
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
-      { icon: 'icon-kettle', name: 'kettle' },
+      /* { icon: 'icon-kettle', name: 'kettle' }, */
       { icon: 'icon-light', name: 'thoughtfulLighting' },
       { icon: 'icon-design', name: 'chicDesign' },
-      { icon: 'icon-workspace', name: 'workspace' },
+      /* { icon: 'icon-workspace', name: 'workspace' }, */
       { icon: 'icon-towels', name: 'luxuryToiletries' },
-      { icon: 'icon-robes', name: 'robesAndSlippers' },
     ],
   },
   {
@@ -71,13 +69,12 @@ export const rooms: Room[] = [
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
-      { icon: 'icon-kettle', name: 'kettle' },
+      /* { icon: 'icon-kettle', name: 'kettle' }, */
       { icon: 'icon-light', name: 'softLighting' },
       { icon: 'icon-design', name: 'traditionalDesign' },
       { icon: 'icon-workspace', name: 'premiumWorkspace' },
       { icon: 'icon-bar', name: 'minibar' },
       { icon: 'icon-towels', name: 'premiumToiletries' },
-      { icon: 'icon-robes', name: 'robesAndSlippers' },
       { icon: 'icon-bt', name: 'bluetoothSpeaker' },
     ],
   },
@@ -104,12 +101,11 @@ export const rooms: Room[] = [
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
-      { icon: 'icon-kettle', name: 'kettle' },
+      /* { icon: 'icon-kettle', name: 'kettle' }, */
       { icon: 'icon-light', name: 'thoughtfulLighting' },
       { icon: 'icon-design', name: 'chicDesign' },
-      { icon: 'icon-workspace', name: 'workspace' },
+      /* { icon: 'icon-workspace', name: 'workspace' }, */
       { icon: 'icon-towels', name: 'luxuryToiletries' },
-      { icon: 'icon-robes', name: 'robesAndSlippers' },
     ],
   },
   {
@@ -134,12 +130,11 @@ export const rooms: Room[] = [
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
-      { icon: 'icon-kettle', name: 'kettle' },
+      /* { icon: 'icon-kettle', name: 'kettle' }, */
       { icon: 'icon-light', name: 'thoughtfulLighting' },
       { icon: 'icon-design', name: 'chicDesign' },
-      { icon: 'icon-workspace', name: 'workspace' },
+      /* { icon: 'icon-workspace', name: 'workspace' }, */
       { icon: 'icon-towels', name: 'luxuryToiletries' },
-      { icon: 'icon-robes', name: 'robesAndSlippers' },
     ],
   },
   {
@@ -164,13 +159,12 @@ export const rooms: Room[] = [
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
-      { icon: 'icon-kettle', name: 'kettle' },
+      /* { icon: 'icon-kettle', name: 'kettle' }, */
       { icon: 'icon-bar', name: 'minibar' },
       { icon: 'icon-design', name: 'stylishDecor' },
       { icon: 'icon-window', name: 'countrysideViews' },
-      { icon: 'icon-workspace', name: 'workspace' },
+      /* { icon: 'icon-workspace', name: 'workspace' }, */
       { icon: 'icon-towels', name: 'luxuryToiletries' },
-      { icon: 'icon-robes', name: 'robesAndSlippers' },
     ],
   },
   {
@@ -195,13 +189,13 @@ export const rooms: Room[] = [
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
-      { icon: 'icon-kettle', name: 'kettle' },
+      /* { icon: 'icon-kettle', name: 'kettle' }, */
       { icon: 'icon-kitchen', name: 'kitchenette' },
       { icon: 'icon-design', name: 'traditionalRuralCharacter' },
       { icon: 'icon-window', name: 'gardenViews' },
-      { icon: 'icon-kids', name: 'kidsWelcomeKit' },
+/*       { icon: 'icon-kids', name: 'kidsWelcomeKit' },
       { icon: 'icon-dining', name: 'familyDiningArea' },
-      { icon: 'icon-storage', name: 'extraStorage' },
+      { icon: 'icon-storage', name: 'extraStorage' }, */
     ],
   },
 ];

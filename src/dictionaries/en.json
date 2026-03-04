@@ -126,8 +126,7 @@
       "panoramicView": "Countryside views",
       "workspace": "Workspace",
       "kettle": "Coffee & tea facilities",
-      "luxuryToiletries": "Luxury toiletries",
-      "robesAndSlippers": "Robes and slippers"
+      "luxuryToiletries": "Luxury toiletries"
     },
     "traiguera": {
       "2guests": "2 guests",
@@ -142,8 +141,7 @@
       "thoughtfulLighting": "Thoughtful lighting and comfortable seating",
       "chicDesign": "Chic design with a traditional countryside feel",
       "workspace": "Workspace",
-      "luxuryToiletries": "Luxury toiletries",
-      "robesAndSlippers": "Robes and slippers"
+      "luxuryToiletries": "Luxury toiletries"
     },
     "la-mina": {
       "2guests": "2 guests",
@@ -153,14 +151,13 @@
       "wifi": "Free Wi-Fi",
       "airConditioning": "Air conditioning and heating",
       "tv": "Flat-screen TV",
-      "shower": "En-suite bathroom with walk-in shower or bath tub",
+      "shower": "Shower with bathtub",
       "kettle": "Coffee & tea facilities",
       "softLighting": "Soft lighting and practical seating",
       "traditionalDesign": "Traditional design with authentic rural character",
       "premiumWorkspace": "Premium workspace",
       "minibar": "Minibar",
       "premiumToiletries": "Premium toiletries",
-      "robesAndSlippers": "Bathrobes and slippers",
       "bluetoothSpeaker": "Bluetooth speaker"
     },
     "almenara": {
@@ -176,8 +173,7 @@
       "thoughtfulLighting": "Thoughtful lighting and comfortable seating",
       "chicDesign": "Chic design with a traditional countryside feel",
       "workspace": "Workspace",
-      "luxuryToiletries": "Luxury toiletries",
-      "robesAndSlippers": "Robes and slippers"
+      "luxuryToiletries": "Luxury toiletries"
     },
     "carlet": {
       "2guests": "2 guests",
@@ -192,8 +188,7 @@
       "thoughtfulLighting": "Thoughtful lighting and comfortable seating",
       "chicDesign": "Chic design with a traditional countryside feel",
       "workspace": "Workspace",
-      "luxuryToiletries": "Luxury toiletries",
-      "robesAndSlippers": "Robes and slippers"
+      "luxuryToiletries": "Luxury toiletries"
     },
     "the-red-sand-suite": {
       "2guests": "2 guests",
@@ -203,14 +198,13 @@
       "wifi": "High-speed Wi-Fi",
       "airConditioning": "Air conditioning and heating",
       "tv": "Flat-screen TV",
-      "shower": "En-suite bathroom with walk-in shower and bubble tub",
+      "shower": "Jacuzzi bubble bath tub",
       "kettle": "Coffee & tea facilities",
       "minibar": "Minibar",
       "stylishDecor": "Stylish décor inspired by the surrounding countryside",
       "countrysideViews": "Countryside views",
       "workspace": "Workspace",
-      "luxuryToiletries": "Luxury toiletries",
-      "robesAndSlippers": "Robes and slippers"
+      "luxuryToiletries": "Luxury toiletries"
     },
     "cdg-retreat": {
       "4guests": "4 guests",
@@ -224,10 +218,7 @@
       "kettle": "Coffee & tea facilities",
       "kitchenette": "Kitchenette",
       "traditionalRuralCharacter": "Traditional rural character with modern amenities",
-      "gardenViews": "Garden views",
-      "kidsWelcomeKit": "Kids welcome kit",
-      "familyDiningArea": "Family dining area",
-      "extraStorage": "Extra storage"
+      "gardenViews": "Garden views"
     }
   },
   "Dine": {

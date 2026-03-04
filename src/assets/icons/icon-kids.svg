@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="123px"
+	 height="66px" viewBox="0 0 123 66" enable-background="new 0 0 123 66" xml:space="preserve">
+<g id="Layer_1">
+	<g id="Livello_1-2" transform="translate(1 1)">
+		<g id="Raggruppa_122" transform="translate(40 20)">
+			<path id="Tracciato_101" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+				M10,15 L10,30 L30,30 L30,15 L10,15 Z"/>
+			<path id="Tracciato_102" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+				M10,22.5 L30,22.5"/>
+			<path id="Tracciato_103" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+				M20,15 L20,30"/>
+            <path id="Tracciato_104" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+                M20,15 C 17,10 15,10 15,5 C 15,0 20,0 20,5 C 20,0 25,0 25,5 C 25,10 23,10 20,15 Z"/>
+		</g>
+	</g>
+</g>
+</svg>

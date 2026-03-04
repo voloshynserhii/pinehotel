@@ -1,0 +1,25 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="123px"
+	 height="66px" viewBox="0 0 123 66" enable-background="new 0 0 123 66" xml:space="preserve">
+<g id="Layer_1">
+	<g id="Livello_1-2" transform="translate(1 1)">
+		<g id="Raggruppa_122" transform="translate(0 0)">
+            <!-- Person -->
+            <path id="Tracciato_101" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M45,25 a5,5 0 1,1 10,0 a5,5 0 1,1 -10,0"/>
+            <path id="Tracciato_102" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M50,30 v15"/>
+
+            <!-- Table -->
+			<line id="Linea_6" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="30" y1="45" x2="90" y2="45"/>
+            <line id="Linea_7" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="35" y1="45" x2="35" y2="55"/>
+            <line id="Linea_8" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="85" y1="45" x2="85" y2="55"/>
+
+            <!-- Laptop -->
+            <polyline id="Tracciato_103" points="60,35 75,35 75,45 60,45" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <line id="Linea_9" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="58" y1="45" x2="77" y2="45" />
+
+            <!-- Lamp -->
+            <path id="Tracciato_104" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" d="M80,20 l5,5 l-10,10"/>
+            <path id="Tracciato_105" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" d="M72,38 l-5,5"/>
+		</g>
+	</g>
+</g>
+</svg>

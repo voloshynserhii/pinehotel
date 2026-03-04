@@ -15,6 +15,11 @@ import IconTv from '@/assets/icons/icon-tv.svg';
 import IconWifi from '@/assets/icons/icon-wifi.svg';
 import IconWindow from '@/assets/icons/icon-window.svg';
 import IconKitchen from '@/assets/icons/icon-kitchen.svg';
+import IconLight from '@/assets/icons/icon-light.svg';
+import IconDesign from '@/assets/icons/icon-design.svg';
+import IconWorkspace from '@/assets/icons/icon-workspace.svg';
+import IconRobes from '@/assets/icons/icon-robes.svg';
+import IconBt from '@/assets/icons/icon-bt.svg';
 
 const PlaceholderIcon = (props: any) => (
   <svg
@@ -47,11 +52,11 @@ export const icons = {
   'icon-wifi': IconWifi,
   'icon-window': IconWindow,
   'icon-kitchen': IconKitchen,
-  'icon-light': PlaceholderIcon,
-  'icon-design': PlaceholderIcon,
-  'icon-workspace': PlaceholderIcon,
-  'icon-robes': PlaceholderIcon,
-  'icon-bt': PlaceholderIcon,
+  'icon-light': IconLight,
+  'icon-design': IconDesign,
+  'icon-workspace': IconWorkspace,
+  'icon-robes': IconRobes,
+  'icon-bt': IconBt,
   'icon-kids': PlaceholderIcon,
   'icon-dining': PlaceholderIcon,
   'icon-storage': PlaceholderIcon,
