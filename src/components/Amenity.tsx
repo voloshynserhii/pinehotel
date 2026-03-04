@@ -6,7 +6,7 @@ const Amenity = ({ icon, name }: { icon: keyof typeof icons; name: string }) => 
   return (
     <div className='flex flex-col items-center gap-4 text-stone-700'>
       <Icon name={icon} className='shrink-0' />
-      <span className='text-sm font-light text-stone-600'>{name}</span>
+      <span className='text-sm font-light text-stone-600 text-center'>{name}</span>
     </div>
   )
 }
