@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220" viewBox="0 0 600 220"><style>
+    .line1 {
+      font-family: "Cormorant Garamond", "Playfair Display", "Times New Roman", serif;
+      font-size: 48px;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+    }
+
+    .line2 {
+      font-family: "Cormorant Garamond", "Playfair Display", "Times New Roman", serif;
+      font-size: 72px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+  </style><text x="50%" y="80" text-anchor="middle" fill="#FFFFFF" class="line1">
+    The
+  </text><text x="50%" y="150" text-anchor="middle" fill="#FFFFFF" class="line2">
+    Pines Hotel
+  </text></svg>

@@ -1,8 +1,11 @@
+import { icons } from '@/components/Icon';
 export interface Room {
   slug: string
   capacity: number
   area: number
   images: string[]
+  characteristics: { icon: keyof typeof icons; name: string }[]
+  services: { icon: keyof typeof icons; name: string }[]
 }
 
 export interface Experience {

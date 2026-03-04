@@ -14,4 +14,5 @@ export { CTA } from './CTA';
 export { Slider } from './Slider';
 export type { Slide } from './Slider';
 export { BookingBar } from './BookingBar';
-export { PageTabs } from './PageTabs';export * from './Maintenance';
+export { PageTabs } from './PageTabs';
+export * from './Maintenance';

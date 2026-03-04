@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getRoomBySlug, getAllRoomSlugs, rooms } from '@/content/rooms';
 import type { Metadata } from 'next';
-import { BookingButton, Introduction, Hero, Slider } from '@/components';
+import { BookingButton, Introduction, Hero, Slider, Amenities } from '@/components';
 import { Locale, getDictionary } from '@/get-dictionary';
 import en from '@/dictionaries/en.json';
 
@@ -78,69 +78,38 @@ export default async function RoomPage({
         isDark={false}
       />
 
-      <Introduction title={roomText?.name || ''} text={roomText?.longDescription || ''} />
+      <div className='py-section container mx-auto px-gutter flex flex-row'>
+        <Introduction title={roomText?.name || ''} text={roomText?.longDescription || ''} />
+      </div>
+
+      <div className='py-section container mx-auto px-gutter flex flex-row items-center gap-12'>
+        <div className='w-1/4'>
+          <BookingButton slug={room.slug} title={dict.Rooms.checkAvailability} />
+        </div>
+        <div className='w-full'>
+          <Amenities data={room.characteristics} />
+        </div>
+      </div>
 
       <Slider slides={room.images} />
 
-      {/* Main Content */}
-      <div className="py-section container mx-auto px-gutter">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Left Column - Images and Details */}
-          <div className="lg:col-span-2">
-            <div className="mb-12">
-              <h3 className="text-2xl font-serif font-bold mb-6 text-stone-900">
-                {dict.Rooms.roomFeatures}
-              </h3>
+      <div className='py-section container mx-auto px-gutter flex flex-row items-center gap-12'>
+        <h3 className='w-1/4 text-2xl font-serif text-stone-900'>
+          Room services
+        </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {roomText?.features.map((feature: string, i: number) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="text-sage-700 mt-1">✓</span>
-                    <span className="text-stone-700">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className='w-full'>
+          <Amenities data={room.services.slice(1, room.services.length)} />
+        </div>
+      </div>
 
-            <div>
-              <h3 className="text-2xl font-serif font-bold mb-6 text-stone-900">
-                {dict.Common.amenities}
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {roomText?.amenities.map((amenity: string, i: number) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <span className="text-sage-700 mt-1">●</span>
-                    <span className="text-stone-700">{amenity}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column - Booking Card */}
-          <div className="lg:col-span-1">
-            <div className="bg-cream-50 rounded-lg p-8 sticky top-24 space-y-6">
-              {/* Details */}
-              <div className="space-y-4">
-                <div>
-                  <p className="text-stone-600 text-sm mb-1">{dict.Common.capacity}</p>
-                  <p className="font-semibold text-stone-900">
-                    {room.capacity}{' '}
-                    {room.capacity === 1 ? dict.Rooms.guest : dict.Rooms.guests}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-stone-600 text-sm mb-1">{dict.Rooms.roomSize}</p>
-                  <p className="font-semibold text-stone-900">
-                    {room.area} m²
-                  </p>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <BookingButton slug={room.slug} title={dict.Rooms.bookRoom} />
-            </div>
-          </div>
+      <div className='py-section container mx-auto px-gutter flex flex-row items-center gap-12'>
+        <h3 className='w-1/4 text-2xl font-serif text-stone-900'>
+          The Pine Hotel's services
+        </h3>
+        
+        <div className='w-full'>
+          <Amenities data={room.services.slice(0, 1)} />
         </div>
       </div>
 
@@ -150,8 +119,8 @@ export default async function RoomPage({
           <h2 className="text-3xl font-serif font-bold mb-8 text-center text-stone-900">
             {dict.Rooms.otherRoomTypes}
           </h2>
-          
-          <Slider slides={slides} className="h-[350px] lg:h-[80vh]"/>
+
+          <Slider slides={slides} className="h-[350px] lg:h-[80vh]" />
         </div>
       </section>
     </>
