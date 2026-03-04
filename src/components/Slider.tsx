@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
+import type { NavigationOptions } from 'swiper';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -31,6 +32,24 @@ export function Slider({ slides, className }: SliderProps) {
 
     const isImageGallery = slides && slides.length > 0 && typeof slides[0] === 'string';
 
+    const prevRef = useRef<HTMLButtonElement>(null);
+    const nextRef = useRef<HTMLButtonElement>(null);
+    const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
+    // when swiper instance and nav button refs are ready, initialize/update navigation
+    useEffect(() => {
+        if (swiperInstance && prevRef.current && nextRef.current) {
+            // assign elements (cast because navigation can be boolean)
+            (swiperInstance.params.navigation as NavigationOptions).prevEl = prevRef.current;
+            (swiperInstance.params.navigation as NavigationOptions).nextEl = nextRef.current;
+            // ensure navigation is initialised
+            if (swiperInstance.navigation) {
+                swiperInstance.navigation.init();
+                swiperInstance.navigation.update();
+            }
+        }
+    }, [swiperInstance]);
+
     return (
         <div className={`relative mx-auto ${className}`}>
             <Swiper
@@ -40,13 +59,22 @@ export function Slider({ slides, className }: SliderProps) {
                 loop={isImageGallery}
                 centeredSlides={isImageGallery}
                 speed={1000}
-                autoplay={isImageGallery ? {
+                autoplay={isImageGallery && !className ? {
                     delay: 5000,
                     disableOnInteraction: false,
                 } : false}
-                navigation={{
-                    nextEl: '.custom-next',
-                    prevEl: '.custom-prev',
+                navigation={
+                    {
+                        prevEl: prevRef.current!,
+                        nextEl: nextRef.current!,
+                    } as NavigationOptions
+                }
+                onSwiper={(swiper) => setSwiperInstance(swiper)}
+                onBeforeInit={(swiper) => {
+                    if (swiper.params.navigation) {
+                        (swiper.params.navigation as NavigationOptions).prevEl = prevRef.current;
+                        (swiper.params.navigation as NavigationOptions).nextEl = nextRef.current;
+                    }
                 }}
                 onInit={(swiper) => {
                     if (!isImageGallery) {
@@ -144,7 +172,7 @@ export function Slider({ slides, className }: SliderProps) {
                 })}
             </Swiper>
 
-            <button className={`custom-prev absolute left-[15px] md:left-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-6 h-6 md:w-12 md:h-12 flex items-center justify-center ${isBeginning ? 'swiper-button-disabled' : ''}`}>
+            <button ref={prevRef} className={`absolute left-[15px] md:left-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-6 h-6 md:w-12 md:h-12 flex items-center justify-center ${isBeginning ? 'swiper-button-disabled' : ''}`}>
                 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="60px" height="126.056px" viewBox="225.957 476.972 60 126.056" enableBackground="new 225.957 476.972 60 126.056"
                 >
@@ -155,7 +183,7 @@ export function Slider({ slides, className }: SliderProps) {
                     </g>
                 </svg>
             </button>
-            <button className={`custom-next absolute right-[15px] md:right-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-6 h-6 md:w-12 md:h-12 flex items-center justify-center ${isEnd ? 'swiper-button-disabled' : ''}`}>
+            <button ref={nextRef} className={`absolute right-[15px] md:right-[30px] top-1/2 -translate-y-1/2 z-20 transition-colors w-6 h-6 md:w-12 md:h-12 flex items-center justify-center ${isEnd ? 'swiper-button-disabled' : ''}`}>
                 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                     width="60px" height="126.056px" viewBox="225.957 476.972 60 126.056" enableBackground="new 225.957 476.972 60 126.056"
                 >
