@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="123px"
+	 height="66px" viewBox="0 0 123 66" enable-background="new 0 0 123 66" xml:space="preserve">
+<g id="Layer_2_1_">
+</g>
+<g id="Layer_1">
+	<g id="Layer_3">
+	</g>
+	<g id="Layer_2">
+	</g>
+	<g id="Livello_1-2" transform="translate(0 0)">
+		<g id="Raggruppa_dine" transform="translate(0 0)">
+			<!-- Plate -->
+			<circle id="plate" cx="35" cy="38" r="18" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+			<!-- Plate inner circle -->
+			<circle id="plate_inner" cx="35" cy="38" r="12" fill="none" stroke="#BAAA98" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+			<!-- Fork -->
+			<line id="fork_handle" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="65" y1="52" x2="75" y2="22"/>
+			<line id="fork_prong1" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="69" y1="25" x2="67" y2="40"/>
+			<line id="fork_prong2" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="73" y1="25" x2="73" y2="40"/>
+			<line id="fork_prong3" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="77" y1="25" x2="79" y2="40"/>
+			<!-- Knife -->
+			<line id="knife_handle" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="85" y1="50" x2="95" y2="25"/>
+			<path id="knife_blade" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+				M95,25 L98,38 Q97,42 95,45"/>
+			<!-- Spoon -->
+			<path id="spoon_handle" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+				M15,50 L20,28"/>
+			<circle id="spoon_bowl" cx="20" cy="22" r="5" fill="none" stroke="#BAAA98" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+		</g>
+	</g>
+</g>
+</svg>

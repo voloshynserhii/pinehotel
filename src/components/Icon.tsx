@@ -20,6 +20,9 @@ import IconDesign from '@/assets/icons/icon-design.svg';
 import IconWorkspace from '@/assets/icons/icon-workspace.svg';
 import IconRobes from '@/assets/icons/icon-robes.svg';
 import IconBt from '@/assets/icons/icon-bt.svg';
+import IconTerrace from '@/assets/icons/icon-terrace.svg';
+import IconPool from '@/assets/icons/icon-pool.svg';
+import IconDine from '@/assets/icons/icon-dine.svg';
 
 const PlaceholderIcon = (props: any) => (
   <svg
@@ -57,6 +60,9 @@ export const icons = {
   'icon-workspace': IconWorkspace,
   'icon-robes': IconRobes,
   'icon-bt': IconBt,
+  'icon-terrace': IconTerrace,
+  'icon-pool': IconPool,
+  'icon-dine': IconDine,
   'icon-kids': PlaceholderIcon,
   'icon-dining': PlaceholderIcon,
   'icon-storage': PlaceholderIcon,

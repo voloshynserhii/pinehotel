@@ -157,7 +157,7 @@
       "traditionalDesign": "Diseño tradicional con carácter auténtico",
       "premiumWorkspace": "Zona de trabajo premium",
       "minibar": "Minibar",
-      "premiumToiletries": "Artículos de tocador premium",
+      "luxuryToiletries": "Artículos de tocador de lujo",
       "bluetoothSpeaker": "Altavoz Bluetooth"
     },
     "almenara": {
@@ -221,7 +221,9 @@
       "gardenViews": "Vistas al jardín",
       "kidsWelcomeKit": "Kit de bienvenida para niños",
       "familyDiningArea": "Zona de comedor familiar",
-      "extraStorage": "Almacenamiento adicional"
+      "extraStorage": "Almacenamiento adicional",
+      "luxuryToiletries": "Artículos de tocador de lujo",
+      "roofTerrace": "Terraza privada con vistas a la montaña"
     }
   },
   "Dine": {

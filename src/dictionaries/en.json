@@ -157,7 +157,7 @@
       "traditionalDesign": "Traditional design with authentic rural character",
       "premiumWorkspace": "Premium workspace",
       "minibar": "Minibar",
-      "premiumToiletries": "Premium toiletries",
+      "luxuryToiletries": "Luxury toiletries",
       "bluetoothSpeaker": "Bluetooth speaker"
     },
     "almenara": {
@@ -218,7 +218,9 @@
       "kettle": "Coffee & tea facilities",
       "kitchenette": "Kitchenette",
       "traditionalRuralCharacter": "Traditional rural character with modern amenities",
-      "gardenViews": "Garden views"
+      "gardenViews": "Garden views",
+      "roofTerrace": "Private roof terrace with mountain views",
+      "luxuryToiletries": "Luxury toiletries"
     }
   },
   "Dine": {

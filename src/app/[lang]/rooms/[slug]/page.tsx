@@ -100,7 +100,7 @@ export default async function RoomPage({
 
         <div className='w-full'>
           <Amenities
-            data={room.services.slice(1, room.services.length)}
+            data={room.services.slice(3, room.services.length)}
             dict={dict.Amenities}
             slug={slug}
           />
@@ -113,7 +113,7 @@ export default async function RoomPage({
         </h3>
 
         <div className='w-full'>
-          <Amenities data={room.services.slice(0, 1)} dict={dict.Amenities} slug={slug} />
+          <Amenities data={room.services.slice(0, 3)} dict={dict.Amenities} slug={slug} />
         </div>
       </div>
 

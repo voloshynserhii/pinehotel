@@ -14,6 +14,8 @@ export const rooms: Room[] = [
     ],
     services: [
       { icon: 'icon-wifi', name: 'wifi' },
+      { icon: 'icon-pool', name: 'pool' },
+      { icon: 'icon-dine', name: 'restaurant' },
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
@@ -27,16 +29,18 @@ export const rooms: Room[] = [
   {
     slug: 'traiguera',
     capacity: 2,
-    area: 35,
+    area: 28,
     images: [],
     characteristics: [
       { icon: 'icon-2persons', name: '2guests' },
-      { icon: 'icon-measures', name: '35m' },
+      { icon: 'icon-measures', name: '28m' },
       { icon: 'icon-bed', name: 'doubleBed' },
       { icon: 'icon-window', name: 'panoramicView' },
     ],
     services: [
       { icon: 'icon-wifi', name: 'wifi' },
+      { icon: 'icon-pool', name: 'pool' },
+      { icon: 'icon-dine', name: 'restaurant' },
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
@@ -50,7 +54,7 @@ export const rooms: Room[] = [
   {
     slug: 'la-mina',
     capacity: 2,
-    area: 45,
+    area: 28,
     images: [
       '/images/rooms/ROOM_4_1.jpg',
       '/images/rooms/ROOM_4_2.jpg',
@@ -60,28 +64,30 @@ export const rooms: Room[] = [
     ],
     characteristics: [
       { icon: 'icon-2persons', name: '2guests' },
-      { icon: 'icon-measures', name: '45m' },
+      { icon: 'icon-measures', name: '28m' },
       { icon: 'icon-bed', name: 'doubleBed' },
       { icon: 'icon-window', name: 'panoramicView' },
     ],
     services: [
       { icon: 'icon-wifi', name: 'wifi' },
+      { icon: 'icon-pool', name: 'pool' },
+      { icon: 'icon-dine', name: 'restaurant' },
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
       /* { icon: 'icon-kettle', name: 'kettle' }, */
       { icon: 'icon-light', name: 'softLighting' },
       { icon: 'icon-design', name: 'traditionalDesign' },
-      { icon: 'icon-workspace', name: 'premiumWorkspace' },
-      { icon: 'icon-bar', name: 'minibar' },
-      { icon: 'icon-towels', name: 'premiumToiletries' },
-      { icon: 'icon-bt', name: 'bluetoothSpeaker' },
+      /* { icon: 'icon-workspace', name: 'premiumWorkspace' }, */
+      /* { icon: 'icon-bar', name: 'minibar' }, */
+      { icon: 'icon-towels', name: 'luxuryToiletries' },
+      /* { icon: 'icon-bt', name: 'bluetoothSpeaker' }, */
     ],
   },
   {
     slug: 'almenara',
     capacity: 2,
-    area: 28,
+    area: 35,
     images: [
       '/images/rooms/ROOM_1_1.jpg',
       '/images/rooms/ROOM_1_2.jpg',
@@ -92,12 +98,14 @@ export const rooms: Room[] = [
     ],
     characteristics: [
       { icon: 'icon-2persons', name: '2guests' },
-      { icon: 'icon-measures', name: '28m' },
+      { icon: 'icon-measures', name: '35m' },
       { icon: 'icon-bed', name: 'doubleBed' },
       { icon: 'icon-window', name: 'panoramicView' },
     ],
     services: [
       { icon: 'icon-wifi', name: 'wifi' },
+      { icon: 'icon-pool', name: 'pool' },
+      { icon: 'icon-dine', name: 'restaurant' },
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
@@ -127,6 +135,8 @@ export const rooms: Room[] = [
     ],
     services: [
       { icon: 'icon-wifi', name: 'wifi' },
+      { icon: 'icon-pool', name: 'pool' },
+      { icon: 'icon-dine', name: 'restaurant' },
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
@@ -156,6 +166,8 @@ export const rooms: Room[] = [
     ],
     services: [
       { icon: 'icon-wifi', name: 'wifi' },
+      { icon: 'icon-pool', name: 'pool' },
+      { icon: 'icon-dine', name: 'restaurant' },
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
@@ -186,13 +198,17 @@ export const rooms: Room[] = [
     ],
     services: [
       { icon: 'icon-wifi', name: 'wifi' },
+      { icon: 'icon-pool', name: 'pool' },
+      { icon: 'icon-dine', name: 'restaurant' },
       { icon: 'icon-airc', name: 'airConditioning' },
       { icon: 'icon-tv', name: 'tv' },
       { icon: 'icon-shower', name: 'shower' },
+      { icon: 'icon-towels', name: 'luxuryToiletries' },
       /* { icon: 'icon-kettle', name: 'kettle' }, */
-      { icon: 'icon-kitchen', name: 'kitchenette' },
+      /* { icon: 'icon-kitchen', name: 'kitchenette' }, */
       { icon: 'icon-design', name: 'traditionalRuralCharacter' },
       { icon: 'icon-window', name: 'gardenViews' },
+      { icon: 'icon-terrace', name: 'roofTerrace' },
 /*       { icon: 'icon-kids', name: 'kidsWelcomeKit' },
       { icon: 'icon-dining', name: 'familyDiningArea' },
       { icon: 'icon-storage', name: 'extraStorage' }, */
