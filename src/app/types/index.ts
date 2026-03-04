@@ -4,8 +4,8 @@ export interface Room {
   capacity: number
   area: number
   images: string[]
-  characteristics: { icon: keyof typeof icons; name: string }[]
-  services: { icon: keyof typeof icons; name: string }[]
+  characteristics: { icon: string; name: string }[]
+  services: { icon: string; name: string }[]
 }
 
 export interface Experience {

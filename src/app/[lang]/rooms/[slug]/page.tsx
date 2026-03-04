@@ -87,7 +87,7 @@ export default async function RoomPage({
           <BookingButton slug={room.slug} title={dict.Rooms.checkAvailability} />
         </div>
         <div className='w-full'>
-          <Amenities data={room.characteristics} />
+          <Amenities data={room.characteristics} dict={dict.Amenities} slug={slug} />
         </div>
       </div>
 
@@ -95,21 +95,25 @@ export default async function RoomPage({
 
       <div className='py-section container mx-auto px-gutter flex flex-row items-center gap-12'>
         <h3 className='w-1/4 text-2xl font-serif text-stone-900'>
-          Room services
+          {dict.roomPage.services}
         </h3>
 
         <div className='w-full'>
-          <Amenities data={room.services.slice(1, room.services.length)} />
+          <Amenities
+            data={room.services.slice(1, room.services.length)}
+            dict={dict.Amenities}
+            slug={slug}
+          />
         </div>
       </div>
 
       <div className='py-section container mx-auto px-gutter flex flex-row items-center gap-12'>
         <h3 className='w-1/4 text-2xl font-serif text-stone-900'>
-          The Pine Hotel's services
+          {dict.roomPage.hotelServices}
         </h3>
-        
+
         <div className='w-full'>
-          <Amenities data={room.services.slice(0, 1)} />
+          <Amenities data={room.services.slice(0, 1)} dict={dict.Amenities} slug={slug} />
         </div>
       </div>
 

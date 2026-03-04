@@ -34,11 +34,25 @@ export const icons = {
   'icon-window': IconWindow,
 };
 
-const Icon = ({ name, ...props }: { name: keyof typeof icons, [key: string]: any }) => {
-  const IconComponent = icons[name];
+const PlaceholderIcon = (props: any) => (
+  <svg
+    width="66"
+    height="66"
+    viewBox="0 0 66 66"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <rect width="66" height="66" fill="currentColor" opacity="0.1" />
+  </svg>
+);
+
+const Icon = ({ name, ...props }: { name: string, [key:string]: any }) => {
+  const IconComponent = (icons as any)[name];
   if (!IconComponent) {
-    return null;
+    return <PlaceholderIcon {...props} />;
   }
+  
   return <IconComponent fill="currentColor" {...props} />;
 };
 
