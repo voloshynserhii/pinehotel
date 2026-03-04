@@ -95,7 +95,7 @@ export default async function RoomPage({
 
       <div className='py-section container mx-auto px-gutter flex flex-row items-center gap-12'>
         <h3 className='w-1/4 text-2xl font-serif text-stone-900'>
-          {dict.roomPage.services}
+          {dict.roomPage.amenities}
         </h3>
 
         <div className='w-full'>

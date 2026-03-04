@@ -91,7 +91,7 @@ export default async function ContactPage({
               width="100%"
               height="100%"
               id="gmap_canvas"
-              src={`https://maps.google.com/maps?q=${encodeURIComponent(t.location)}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+              src="https://maps.google.com/maps?q=40.2352706,-0.0881236&t=&z=17&ie=UTF8&iwloc=&output=embed"
               title={t.ourLocation}
               loading="lazy"
             />
