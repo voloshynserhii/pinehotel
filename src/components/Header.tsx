@@ -42,7 +42,7 @@ export function Header() {
           href={`/${lang}`}
           className="text-white text-xl tracking-wide"
         >
-          <Image src="/images/logo.svg" alt="The Pines Hotel" width={250} height={70} />
+          <Image src="/pineslogo.png" alt="The Pines Hotel" width={350} height={300} className='w-[280px] h-[245px] lg:w-[350px] lg:h-[300px] transform translate-y-[70px] lg:translate-y-[85px]' />
         </Link>
 
         <Link
