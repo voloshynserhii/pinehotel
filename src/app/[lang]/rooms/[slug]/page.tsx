@@ -71,7 +71,7 @@ export default async function RoomPage({
   return (
     <>
       <Hero
-        imgSrc={room.images[0]}
+        imgSrc={room.images[0] || '/images/rooms/ROOM_2_1.jpg'}
         title={dict.Home.heroTitle}
         subtitle={dict.Home.heroSubtitle}
         showBookingBar

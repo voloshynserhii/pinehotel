@@ -66,7 +66,7 @@ export function PageTabs() {
             {isRoomsDropdownOpen && (
                 <div className="w-full bg-[#f5f5f5] absolute left-0 top-full h-auto shadow-md">
                     <div className="max-w-[1200px] mx-auto px-6">
-                        <div className="flex flex-wrap h-auto py-4 items-center justify-center">
+                        <div className="flex flex-wrap h-auto py-8 items-center justify-center">
                             {rooms.map((room) => {
                                 const roomPath = `/${lang}/rooms/${room.slug}`;
                                 const isRoomActive = pathname === roomPath;
@@ -76,7 +76,7 @@ export function PageTabs() {
                                     <Link
                                         key={room.slug}
                                         href={roomPath}
-                                        className={`w-1/4 h-9 flex items-center justify-center h-full cursor-pointer text-black hover:text-gray-500 ${isRoomActive
+                                        className={`w-1/4 h-9 py-2 flex items-center justify-center h-full cursor-pointer text-black hover:text-gray-500 ${isRoomActive
                                             ? 'font-bold'
                                             : 'hover:font-bold'
                                             }`}
