@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import type { NavigationOptions } from 'swiper';
+import type { NavigationOptions } from 'swiper/types';
 import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';

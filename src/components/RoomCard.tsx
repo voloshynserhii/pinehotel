@@ -16,7 +16,7 @@ export function RoomCard({ room, locale }: RoomCardProps) {
   const roomData = dictionary.Rooms.data[room.slug as keyof typeof dictionary.Rooms.data];
 
   return (
-    <div className="flex flex-col lg:flex-row gap-8">
+    <div className="flex flex-col lg:flex-row">
       <div className="space-y-2 lg:w-[35%] lg:pr-16 flex flex-col justify-between">
         <div>
           <h3 className="text-3xl font-lora-important text-stone-900 group-hover:text-sage-700 transition-colors mb-5">
@@ -42,7 +42,7 @@ export function RoomCard({ room, locale }: RoomCardProps) {
 
       </div>
       <div className="lg:w-[65%]">
-        <Slider slides={room.images} className="h-[200px] lg:h-[400px]" />
+        <Slider slides={room.images} className="h-[200px] lg:h-[350px]" />
       </div>
     </div>
   );
