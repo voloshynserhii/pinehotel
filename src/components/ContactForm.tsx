@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { Dictionary } from '@/get-dictionary';
+import { sendContactEmail } from '@/app/actions/send-email';
 
 export function ContactForm({
   contact,
@@ -16,6 +17,8 @@ export function ContactForm({
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -24,15 +27,28 @@ export function ContactForm({
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.SubmitEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here (API call, email service, etc.)
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const result = await sendContactEmail(formData);
+
+      if (result.success) {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 3000);
+      } else {
+        setError(result.error || 'Failed to send email');
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -134,10 +150,17 @@ export function ContactForm({
 
       <button
         type="submit"
-        className="w-full bg-[#c8b89a] text-cream-50 py-3 font-semibold hover:bg-[#b8a882] transition-colors"
+        disabled={loading}
+        className="w-full bg-[#c8b89a] text-cream-50 py-3 font-semibold hover:bg-[#b8a882] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {contact.send}
+        {loading ? 'Sending...' : contact.send}
       </button>
+
+      {error && (
+        <div className="bg-red-100 text-red-800 p-4 rounded text-center">
+          {error}
+        </div>
+      )}
 
       {submitted && (
         <div className="bg-sage-100 text-sage-800 p-4 rounded text-center">

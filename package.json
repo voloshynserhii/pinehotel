@@ -1,5 +1,5 @@
 {
-  "name": "pinehotel",
+  "name": "thepineshotel",
   "version": "1.0.0",
   "description": "The Pines Hotel - A 4★ boutique countryside hotel website",
   "private": true,
@@ -19,6 +19,7 @@
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "react-player": "^3.4.0",
+    "resend": "^6.9.3",
     "swiper": "^12.1.2"
   },
   "devDependencies": {
