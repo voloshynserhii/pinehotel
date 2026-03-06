@@ -157,6 +157,7 @@ export const rooms: Room[] = [
       '/images/rooms/ROOM_3_3.jpg',
       '/images/rooms/ROOM_3_4.jpg',
       '/images/rooms/ROOM_3_5.jpg',
+      '/images/rooms/ROOM_3_6.jpg'
     ],
     characteristics: [
       { icon: 'icon-2persons', name: '2guests' },
