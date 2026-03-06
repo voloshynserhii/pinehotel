@@ -15,11 +15,9 @@ interface HeroProps {
   isDark?: boolean;
   posterSrc?: string;
 }
-const defaultImage = 'https://www.collealberti.com/images/header-country-house.jpg';
+const defaultImage = '/images/hero1.jpg';
 
 export function Hero({
-  title,
-  subtitle,
   showBookingBar,
   imgSrc = defaultImage,
   mobileImgSrc,
@@ -74,7 +72,7 @@ export function Hero({
                 fill
                 style={{ objectFit: 'cover' }}
                 className="z-0 block md:hidden"
-                priority
+                loading='lazy'
               />
             )}
           </>
@@ -86,20 +84,10 @@ export function Hero({
               fill
               style={{ objectFit: 'cover' }}
               className="z-0"
-              priority
+              loading='lazy'
             />
           )
         )}
-        {/*         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-11/12 max-w-4xl text-center bg-white px-6 sm:px-12 py-8 rounded-lg backdrop-blur-sm bg-opacity-30">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-10 leading-tight">
-            {title}
-          </h1>
-          {subtitle && (
-            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
-              {subtitle}
-            </p>
-          )}
-        </div> */}
 
         {showBookingBar && (
           <div className="absolute bottom-[50px] left-0 w-full z-10 px-[5%] flex items-center justify-center">

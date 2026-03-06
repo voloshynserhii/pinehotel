@@ -18,16 +18,13 @@ export default async function Home({
   const dict = await getDictionary(lang);
   const locale = lang;
 
-  const mobileImages = [
-    '/images/mobile/dine.png',
-    '/images/mobile/garden.png',
-    '/images/mobile/garden2.png',
-    '/images/mobile/garden3.png',
-    '/images/mobile/hotel1.png',
-    '/images/mobile/hotel2.png',
-    '/images/mobile/pool.png',
-    '/images/mobile/pool2.png',
-    '/images/mobile/pool3.png',
+  const sliderImages = [
+    '/images/hotel/1.png',
+    '/images/hotel/2.png',
+    '/images/hotel/3.png',
+    '/images/hotel/4.png',
+    '/images/hotel/5.png',
+    '/images/hotel/6.png',
   ];
 
 
@@ -56,7 +53,7 @@ export default async function Home({
       />
       <Introduction title={dict.Home.introTitle} text={dict.Home.introText} paragraph={dict.Home.introParagraph} />
 
-      <Slider slides={mobileImages} className="h-[350px] lg:h-[80vh]" />
+      <Slider slides={sliderImages} className="h-[350px] lg:h-[80vh]" />
       
       <Introduction title={dict.Rooms.title} text={dict.Rooms.introText} paragraph={dict.Rooms.introParagraph} />
       
