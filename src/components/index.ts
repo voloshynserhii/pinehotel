@@ -15,4 +15,6 @@ export { Slider } from './Slider';
 export type { Slide } from './Slider';
 export { BookingBar } from './BookingBar';
 export { PageTabs } from './PageTabs';
+export { default as Icon } from './Icon';
 export * from './Maintenance';
+export { RestaurantFeatures } from './RestaurantFeatures';

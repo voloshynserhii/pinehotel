@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getDictionary, Locale } from '@/get-dictionary';
-import { Hero, Introduction } from '@/components';
+import { Hero, Introduction, RestaurantFeatures } from '@/components';
 
 export default async function DinePage({
   params,
@@ -18,36 +18,7 @@ export default async function DinePage({
       <section className="container mx-auto px-gutter pb-16">
         <Introduction title={t.welcome} text={t.description} paragraph={t.welcomeDescription} />
 
-        {/* Restaurant Features */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-12 text-center">
-          <div className="space-y-4">
-            <div className="text-5xl">🍴</div>
-            <h3 className="text-xl font-serif font-bold text-stone-900">
-              {t.localCuisineTitle}
-            </h3>
-            <p className="text-stone-700">
-              {t.localCuisineDescription}
-            </p>
-          </div>
-          <div className="space-y-4">
-            <div className="text-5xl">🍷</div>
-            <h3 className="text-xl font-serif font-bold text-stone-900">
-              {t.wineSelectionTitle}
-            </h3>
-            <p className="text-stone-700">
-              {t.wineSelectionDescription}
-            </p>
-          </div>
-          <div className="space-y-4">
-            <div className="text-5xl">👥</div>
-            <h3 className="text-xl font-serif font-bold text-stone-900">
-              {t.socialDiningTitle}
-            </h3>
-            <p className="text-stone-700">
-              {t.socialDiningDescription}
-            </p>
-          </div>
-        </div>
+        <RestaurantFeatures t={t} />
 
         {/* Opening Hours */}
         <div className="bg-cream-50 p-8 rounded-lg my-12">

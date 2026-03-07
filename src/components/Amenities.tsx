@@ -1,3 +1,5 @@
+'use client';
+
 import type { Room } from '@/app/types';
 import Amenity from './Amenity';
 

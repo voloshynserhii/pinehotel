@@ -1,28 +1,27 @@
-import Icon2Persons from '@/assets/icons/icon-2persons.svg';
-import Icon3Bed from '@/assets/icons/icon-3bed.svg';
-import IconAirc from '@/assets/icons/icon-airc.svg';
-import IconBar from '@/assets/icons/icon-bar.svg';
-import IconBed from '@/assets/icons/icon-bed.svg';
-import IconKettle from '@/assets/icons/icon-kettle.svg';
-import IconKit from '@/assets/icons/icon-kit.svg';
-import IconMeasures from '@/assets/icons/icon-measures.svg';
-import IconPhon from '@/assets/icons/icon-phon.svg';
-import IconSafe from '@/assets/icons/icon-safe.svg';
-import IconShower from '@/assets/icons/icon-shower.svg';
-import IconSofa from '@/assets/icons/icon-sofa.svg';
-import IconTowels from '@/assets/icons/icon-towels.svg';
-import IconTv from '@/assets/icons/icon-tv.svg';
-import IconWifi from '@/assets/icons/icon-wifi.svg';
-import IconWindow from '@/assets/icons/icon-window.svg';
-import IconKitchen from '@/assets/icons/icon-kitchen.svg';
-import IconLight from '@/assets/icons/icon-light.svg';
-import IconDesign from '@/assets/icons/icon-design.svg';
-import IconWorkspace from '@/assets/icons/icon-workspace.svg';
-import IconRobes from '@/assets/icons/icon-robes.svg';
-import IconBt from '@/assets/icons/icon-bt.svg';
-import IconTerrace from '@/assets/icons/icon-terrace.svg';
-import IconPool from '@/assets/icons/icon-pool.svg';
-import IconDine from '@/assets/icons/icon-dine.svg';
+'use client';
+
+import Icon2Persons from '@/assets/icons/people.svg';
+import IconAirc from '@/assets/icons/aircon.svg';
+import IconBar from '@/assets/icons/minibar.svg';
+import IconBed from '@/assets/icons/double.svg';
+import IconMeasures from '@/assets/icons/size.svg';
+import IconSofa from '@/assets/icons/sofa.svg';
+import IconTowels from '@/assets/icons/toiletries.svg';
+import IconTv from '@/assets/icons/tv.svg';
+import IconWifi from '@/assets/icons/wifi.svg';
+import IconPanoramic from '@/assets/icons/mountain-view.svg';
+import IconGarden from '@/assets/icons/garden-view.svg';
+import IconCountrySide from '@/assets/icons/hiking-routes.svg';
+import IconPool from '@/assets/icons/pool.svg';
+import IconTerrace from '@/assets/icons/terrace.svg';
+import IconDine from '@/assets/icons/dine.svg';
+import IconDesign from '@/assets/icons/rural-decor.svg';
+import IconLight from '@/assets/icons/outdoor-sitting.svg';
+import IconLocalCuisine from '@/assets/icons/restaurant.svg';
+import IconWine from '@/assets/icons/rural-cuisine.svg';
+
+import IconShower from '@/assets/icons/shower.svg';
+import IconJakuzzi from '@/assets/icons/jacuzzi-bathtub.svg';
 
 const PlaceholderIcon = (props: any) => (
   <svg
@@ -39,33 +38,26 @@ const PlaceholderIcon = (props: any) => (
 
 export const icons = {
   'icon-2persons': Icon2Persons,
-  'icon-3bed': Icon3Bed,
   'icon-airc': IconAirc,
   'icon-bar': IconBar,
   'icon-bed': IconBed,
-  'icon-kettle': IconKettle,
-  'icon-kit': IconKit,
   'icon-measures': IconMeasures,
-  'icon-phon': IconPhon,
-  'icon-safe': IconSafe,
   'icon-shower': IconShower,
+  'icon-jakuzzi': IconJakuzzi,
   'icon-sofa': IconSofa,
   'icon-towels': IconTowels,
   'icon-tv': IconTv,
   'icon-wifi': IconWifi,
-  'icon-window': IconWindow,
-  'icon-kitchen': IconKitchen,
+  'icon-panoramic-view': IconPanoramic,
+  'icon-garden-view': IconGarden,
+  'icon-hiking': IconCountrySide,
   'icon-light': IconLight,
   'icon-design': IconDesign,
-  'icon-workspace': IconWorkspace,
-  'icon-robes': IconRobes,
-  'icon-bt': IconBt,
   'icon-terrace': IconTerrace,
   'icon-pool': IconPool,
   'icon-dine': IconDine,
-  'icon-kids': PlaceholderIcon,
-  'icon-dining': PlaceholderIcon,
-  'icon-storage': PlaceholderIcon,
+  'icon-local-cuisine': IconLocalCuisine,
+  'icon-wine': IconWine,
 };
 
 const Icon = ({
