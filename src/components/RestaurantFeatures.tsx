@@ -8,7 +8,7 @@ export const RestaurantFeatures = ({ t }: { t: any }) => {
 
       <div className='space-y-4'>
         <div className='text-5xl'>
-          <Icon name='icon-outdoor' className='text-stone-900 h-12 w-12 mx-auto' />
+          <Icon name='icon-grill' className='text-stone-900 h-12 w-12 mx-auto' />
         </div>
         <h3 className='text-xl font-serif font-bold text-stone-900'>
           {t.bbqTitle}

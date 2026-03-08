@@ -20,6 +20,7 @@ import IconLight from '@/assets/icons/outdoor-sitting.svg';
 import IconOutdoor from '@/assets/icons/outdoor.svg';
 import IconLocalCuisine from '@/assets/icons/restaurant.svg';
 import IconWine from '@/assets/icons/rural-cuisine.svg';
+import IconGrill from '@/assets/icons/grill.svg';
 
 import IconShower from '@/assets/icons/shower.svg';
 import IconJakuzzi from '@/assets/icons/jacuzzi-bathtub.svg';
@@ -59,7 +60,8 @@ export const icons = {
   'icon-dine': IconDine,
   'icon-local-cuisine': IconLocalCuisine,
   'icon-wine': IconWine,
-  'icon-outdoor': IconOutdoor
+  'icon-outdoor': IconOutdoor,
+  'icon-grill': IconGrill,
 };
 
 const Icon = ({
