@@ -5,7 +5,14 @@ export const rooms: Room[] = [
     slug: 'benicarlo',
     capacity: 2,
     area: 28,
-    images: [],
+    images: [
+      '/images/rooms/ROOM6_1.jpg',
+      '/images/rooms/ROOM6_2.jpg',
+      '/images/rooms/ROOM6_3.jpg',
+      '/images/rooms/ROOM6_4.jpg',
+      '/images/rooms/ROOM6_5.jpg',
+      '/images/rooms/ROOM6_6.jpg',
+    ],
     characteristics: [
       { icon: 'icon-2persons', name: '2guests' },
       { icon: 'icon-measures', name: '28m' },
@@ -28,7 +35,13 @@ export const rooms: Room[] = [
     slug: 'traiguera',
     capacity: 2,
     area: 28,
-    images: [],
+    images: [
+      '/images/rooms/ROOM7_1.jpg',
+      '/images/rooms/ROOM7_2.jpg',
+      '/images/rooms/ROOM7_3.jpg',
+      '/images/rooms/ROOM7_4.jpg',
+      '/images/rooms/ROOM7_5.jpg',
+    ],
     characteristics: [
       { icon: 'icon-2persons', name: '2guests' },
       { icon: 'icon-measures', name: '28m' },

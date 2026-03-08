@@ -13,7 +13,7 @@ export const Amenities = ({
   slug: string;
 }) => {
   return (
-    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-4'>
+    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-4 gap-x-2'>
       {data.map(({ icon, name }) => (
         <Amenity key={name} icon={icon} name={dict[slug]?.[name] || name} />
       ))}

@@ -82,8 +82,8 @@ export default async function RoomPage({
         <Introduction title={roomText?.name || ''} text={roomText?.longDescription || ''} />
       </div>
 
-      <div className='py-section container mx-auto px-gutter flex flex-row items-center gap-12'>
-        <div className='w-1/4'>
+      <div className='py-8 lg:py-section container mx-auto px-gutter flex flex-col lg:flex-row items-center gap-12'>
+        <div className='w-full text-center lg:w-1/4'>
           <BookingButton slug={room.slug} title={dict.Rooms.checkAvailability} />
         </div>
         <div className='w-full'>
@@ -93,8 +93,8 @@ export default async function RoomPage({
 
       <Slider slides={room.images} />
 
-      <div className='py-section container mx-auto px-gutter flex flex-row items-center gap-12'>
-        <h3 className='w-1/4 text-2xl font-serif text-stone-900'>
+      <div className='py-8 lg:py-section container mx-auto px-gutter flex flex-col lg:flex-row items-center gap-12'>
+        <h3 className='w-full text-center lg:w-1/4 text-2xl font-serif text-stone-900'>
           {dict.roomPage.amenities}
         </h3>
 
@@ -107,8 +107,8 @@ export default async function RoomPage({
         </div>
       </div>
 
-      <div className='py-section container mx-auto px-gutter flex flex-row items-center gap-12'>
-        <h3 className='w-1/4 text-2xl font-serif text-stone-900'>
+      <div className='py-8 lg:py-section container mx-auto px-gutter flex flex-col lg:flex-row items-center gap-12'>
+        <h3 className='w-full text-center lg:w-1/4 text-2xl font-serif text-stone-900'>
           {dict.roomPage.hotelServices}
         </h3>
 
