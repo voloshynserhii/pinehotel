@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { getDictionary, Locale } from '@/get-dictionary';
-import { Hero, ExperienceCard, Introduction, Slider } from '@/components';
+import { Hero, Introduction, Slider } from '@/components';
 import { experiences } from '@/content/experiences';
 
 export default async function ExperiencesPage({
@@ -17,6 +17,7 @@ export default async function ExperiencesPage({
 
     return {
       image: experience.image,
+      mobileImage: experience.mobileImage,
       title: experienceData?.name,
       subtitle: experienceData?.description,
     };

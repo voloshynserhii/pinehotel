@@ -12,6 +12,7 @@ export interface Experience {
   id: string
   icon: string
   image: string
+  mobileImage: string
 }
 
 export interface Extra {

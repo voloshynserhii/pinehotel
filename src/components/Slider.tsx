@@ -11,6 +11,7 @@ import 'swiper/css/navigation';
 export interface Slide {
     id?: string;
     image: string;
+    mobileImage?: string;
     title?: string;
     subtitle?: string;
     link?: string;
@@ -129,8 +130,16 @@ export function Slider({ slides, className }: SliderProps) {
                                                 src={slide.image}
                                                 alt={slide.title || slide.id || 'slide'}
                                                 fill
-                                                className="object-cover"
+                                                className={`object-cover ${slide.mobileImage ? 'hidden md:block' : 'block'}`}
                                             />
+                                            {slide.mobileImage && (
+                                                <Image
+                                                    src={slide.mobileImage}
+                                                    alt={slide.title || slide.id || 'slide'}
+                                                    fill
+                                                    className="object-cover block md:hidden"
+                                                />
+                                            )}
                                         </div>
 
                                         <div className={`absolute bottom-0 left-0 w-[80%] bg-white p-3 lg:p-6 transition-transform duration-500 ${isActive ? 'translate-y-0' : 'translate-y-full'} shadow-lg max-h-[85%] flex flex-col`}>
