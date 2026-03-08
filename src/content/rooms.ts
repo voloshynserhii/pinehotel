@@ -6,10 +6,10 @@ export const rooms: Room[] = [
     capacity: 2,
     area: 28,
     images: [
-      '/images/rooms/ROOM6_1.jpg',
-      '/images/rooms/ROOM6_2.jpg',
-      '/images/rooms/ROOM6_3.jpg',
       '/images/rooms/ROOM6_4.jpg',
+      '/images/rooms/ROOM6_1.jpg',
+      /* '/images/rooms/ROOM6_2.jpg', */
+      '/images/rooms/ROOM6_3.jpg',
       '/images/rooms/ROOM6_5.jpg',
       '/images/rooms/ROOM6_6.jpg',
     ],
@@ -36,10 +36,10 @@ export const rooms: Room[] = [
     capacity: 2,
     area: 28,
     images: [
-      '/images/rooms/ROOM7_1.jpg',
-      '/images/rooms/ROOM7_2.jpg',
+      /* '/images/rooms/ROOM7_1.jpg', */
       '/images/rooms/ROOM7_3.jpg',
       '/images/rooms/ROOM7_4.jpg',
+      '/images/rooms/ROOM7_2.jpg',
       '/images/rooms/ROOM7_5.jpg',
     ],
     characteristics: [
@@ -153,10 +153,10 @@ export const rooms: Room[] = [
     capacity: 2,
     area: 50,
     images: [
+      '/images/rooms/ROOM_3_4.jpg',
       '/images/rooms/ROOM_3_1.jpg',
       '/images/rooms/ROOM_3_2.jpg',
       '/images/rooms/ROOM_3_3.jpg',
-      '/images/rooms/ROOM_3_4.jpg',
       '/images/rooms/ROOM_3_5.jpg',
       '/images/rooms/ROOM_3_6.jpg'
     ],

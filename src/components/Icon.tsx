@@ -17,6 +17,7 @@ import IconTerrace from '@/assets/icons/terrace.svg';
 import IconDine from '@/assets/icons/dine.svg';
 import IconDesign from '@/assets/icons/rural-decor.svg';
 import IconLight from '@/assets/icons/outdoor-sitting.svg';
+import IconOutdoor from '@/assets/icons/outdoor.svg';
 import IconLocalCuisine from '@/assets/icons/restaurant.svg';
 import IconWine from '@/assets/icons/rural-cuisine.svg';
 
@@ -58,6 +59,7 @@ export const icons = {
   'icon-dine': IconDine,
   'icon-local-cuisine': IconLocalCuisine,
   'icon-wine': IconWine,
+  'icon-outdoor': IconOutdoor
 };
 
 const Icon = ({
