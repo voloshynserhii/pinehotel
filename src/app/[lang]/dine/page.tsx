@@ -21,27 +21,18 @@ export default async function DinePage({
         <RestaurantFeatures t={t} />
 
         {/* Opening Hours */}
-        <div className="bg-cream-50 p-8 rounded-lg my-12">
+        <div className="bg-cream-50 pb-8 rounded-lg my-12 flex flex-col md:w-[50%] margin-auto">
           <h3 className="text-2xl font-serif font-bold mb-6 text-stone-900">
             {t.openingHours}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <p className="font-semibold text-stone-900 mb-2">{t.breakfast}</p>
-              <p className="text-stone-700">{t.breakfastHours}</p>
-            </div>
-            <div>
-              <p className="font-semibold text-stone-900 mb-2">{t.dinner}</p>
-              <p className="text-stone-700">
-                {t.dinnerHours}
-              </p>
-            </div>
-            <div>
-              <p className="font-semibold text-stone-900 mb-2">
-                {t.weekends}
-              </p>
-              <p className="text-stone-700">{t.weekendsHours}</p>
-            </div>
+
+          <div className="flex flex-col">
+            {(t.schedule as Array<{ day: string; hours: string }>).map((item, index) => (
+              <div key={index} className="flex justify-between items-center">
+                <p className="font-semibold text-stone-900">{item.day}</p>
+                <p className="text-stone-700 text-xs sm:text-lg">{item.hours}</p>
+              </div>
+            ))}
           </div>
         </div>
 

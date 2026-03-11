@@ -250,12 +250,36 @@
     "terraceTitle": "Garden Terrace",
     "terraceDescription": "Dine outdoors in our garden surrounded by nature, where panoramic mountain views and the beauty of the countryside elevate every meal.",
     "openingHours": "Opening Hours",
-    "breakfast": "Breakfast",
-    "breakfastHours": "8:00 AM - 10:00 AM daily",
-    "dinner": "Dinner",
-    "dinnerHours": "7:00 PM - 11:00 PM daily",
-    "weekends": "Weekends",
-    "weekendsHours": "Open all day",
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "Closed"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "20:00 - 23:00"
+      },
+      {
+        "day": "Thursday",
+        "hours": "20:00 - 23:00"
+      },
+      {
+        "day": "Friday",
+        "hours": "20:00 - 23:00"
+      },
+      {
+        "day": "Saturday",
+        "hours": "13:00 - 17:00 / 20:00 - 23:00"
+      },
+      {
+        "day": "Sunday",
+        "hours": "13:00 - 17:00 / 20:00 - 23:00"
+      }
+    ],
     "makeReservation": "Make a Reservation",
     "reservationInfo": "For reservations and special dietary requirements, please contact us",
     "reserveTable": "Reserve a Table"

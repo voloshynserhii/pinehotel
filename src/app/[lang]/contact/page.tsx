@@ -54,7 +54,7 @@ export default async function ContactPage({
             </div>
 
             {/* Hours */}
-            <div className="bg-cream-50 lg:p-6 rounded-lg">
+{/*             <div className="bg-cream-50 lg:p-6 rounded-lg">
               <h3 className="font-serif font-bold text-lg mb-3 text-stone-900">
                 {t.hoursTitle}
               </h3>
@@ -72,7 +72,7 @@ export default async function ContactPage({
                   <span>{t.sundayStatus}</span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}
