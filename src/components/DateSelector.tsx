@@ -62,6 +62,7 @@ export function DateSelector({
     return (
       <div className="flex justify-between items-center mb-4">
         <button
+          type="button"
           onClick={() => setCurrentMonth(subMonths(currentMonth, 1))}
           className="w-8 h-8 border border-white/40 text-lg"
         >
@@ -71,6 +72,7 @@ export function DateSelector({
           {format(currentMonth, 'MMMM yyyy')}
         </span>
         <button
+          type="button"
           onClick={() => setCurrentMonth(addMonths(currentMonth, 1))}
           className="w-8 h-8 border border-white/40 text-lg"
         >
@@ -140,7 +142,7 @@ export function DateSelector({
   }
 
   return (
-    <div className="absolute top-[137px] lg:top-auto lg:bottom-[75px] left-0 z-50 bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white shadow-lg p-6 w-full lg:w-[500px]">
+    <div className="absolute top-[137px] lg:top-auto lg:bottom-[75px] left-0 z-50 bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white shadow-lg p-6 w-full lg:w-[500px] z-index-100">
       {renderHeader()}
       {renderDays()}
       {renderCells()}

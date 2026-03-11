@@ -60,7 +60,7 @@ export function BookingBar() {
   return (
     <>
       <div className="w-full lg:w-[1200px] bg-stone-900 backdrop-blur-sm bg-opacity-60 text-white h-auto lg:h-[75px] flex flex-col lg:flex-row lg:items-stretch">
-        <div className="flex lg:w-2/5" ref={dateSelectorRef}>
+        <div className="relative flex lg:w-2/5" ref={dateSelectorRef}>
           <div className="relative flex-1">
             <div
               className="flex flex-col justify-center p-2 lg:p-4 lg:px-6 h-auto lg:h-full cursor-pointer"
@@ -117,15 +117,22 @@ export function BookingBar() {
                 <div className="font-light text-sm">
                   {t.adults} {guestInfo.adults}
                 </div>
-                <div className="font-light text-sm">{t.kids} {guestInfo.kids}</div>
+{/*                 <div className="font-light text-sm">{t.kids} {guestInfo.kids}</div> */}
               </div>
             </div>
             <div className="flex items-center">
               <div className="mr-2 text-right">
+                <div className="font-light text-sm">{t.kids}</div>
+                <div className="text-lg font-bold">{guestInfo.kids}</div>
+              </div>
+            </div>
+            
+{/*             <div className="flex items-center">
+              <div className="mr-2 text-right">
                 <div className="font-light text-sm">{t.rooms}</div>
                 <div className="text-lg font-bold">{guestInfo.rooms}</div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {showGuestSelector && (

@@ -135,7 +135,7 @@ export function GuestSelector({
         )}
 
         {/* Rooms */}
-        <div className="flex justify-between items-center">
+{/*         <div className="flex justify-between items-center">
           <span className="text-lg font-light">{t.rooms}</span>
           <div className="flex items-center gap-4">
             <button
@@ -152,7 +152,7 @@ export function GuestSelector({
               +
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
       <button
         onClick={() => setShowGuestSelector(false)}
