@@ -53,7 +53,7 @@ export default async function RootLayout({
   const headersList = await headers();
   const host = headersList.get('host');
 
-  if (host === 'thepines-hotel.com' || host === 'www.thepines-hotel.com') {
+/*   if (host === 'thepines-hotel.com' || host === 'www.thepines-hotel.com') {
     return (
       <html lang={lang}>
         <body
@@ -63,7 +63,7 @@ export default async function RootLayout({
         </body>
       </html>
     );
-  }
+  } */
 
   const dict = await getDictionary(lang as Locale);
 
