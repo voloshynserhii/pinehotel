@@ -53,18 +53,6 @@ export default async function RootLayout({
   const headersList = await headers();
   const host = headersList.get('host');
 
-/*   if (host === 'thepines-hotel.com' || host === 'www.thepines-hotel.com') {
-    return (
-      <html lang={lang}>
-        <body
-          className={`${roboto.variable} ${lora.variable} font-sans antialiased bg-cream-50 text-stone-900`}
-        >
-          <Maintenance />
-        </body>
-      </html>
-    );
-  } */
-
   const dict = await getDictionary(lang as Locale);
 
   return (
